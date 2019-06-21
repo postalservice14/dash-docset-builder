@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Form Group | Components | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Form Group | Components | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="Easily add some structure to forms. Its purpose is to pair form controls with a legend or label, and to provide help text and invalid/valid feedback text, as well as visual (color) contextual state feedback."><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="Easily add some structure to forms. Its purpose is to pair form controls with a legend or label, and to provide help text and invalid/valid feedback text, as well as visual (color) contextual state feedback."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="modulepreload" href="a6f8df338a2c2a457341.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//src/components/form-group/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="form-group"><span class="bd-content-title">Form group</span></h1>
+<p class="bd-lead">The <code>&lt;b-form-group&gt;</code> component is the easiest way to add some structure to forms. Its purpose is
+to pair form controls with a legend or label, and to provide help text and invalid/valid feedback
+text, as well as visual (color) contextual state feedback.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span>
+      <span class="hljs-attr">id</span>=<span class="hljs-string">"fieldset-1"</span>
+      <span class="hljs-attr">description</span>=<span class="hljs-string">"Let us know your name."</span>
+      <span class="hljs-attr">label</span>=<span class="hljs-string">"Enter your name"</span>
+      <span class="hljs-attr">label-for</span>=<span class="hljs-string">"input-1"</span>
+      <span class="hljs-attr">:invalid-feedback</span>=<span class="hljs-string">"invalidFeedback"</span>
+      <span class="hljs-attr">:valid-feedback</span>=<span class="hljs-string">"validFeedback"</span>
+      <span class="hljs-attr">:state</span>=<span class="hljs-string">"state"</span>
+    &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-1"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">:state</span>=<span class="hljs-string">"state"</span> <span class="hljs-attr">trim</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    <span class="hljs-attr">computed</span>: {
+      state() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name.length &gt;= <span class="hljs-number">4</span> ? <span class="hljs-literal">true</span> : <span class="hljs-literal">false</span>
+      },
+      invalidFeedback() {
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.name.length &gt; <span class="hljs-number">4</span>) {
+          <span class="hljs-keyword">return</span> <span class="hljs-string">''</span>
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.name.length &gt; <span class="hljs-number">0</span>) {
+          <span class="hljs-keyword">return</span> <span class="hljs-string">'Enter at least 4 characters'</span>
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">return</span> <span class="hljs-string">'Please enter something'</span>
+        }
+      },
+      validFeedback() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.state === <span class="hljs-literal">true</span> ? <span class="hljs-string">'Thank you'</span> : <span class="hljs-string">''</span>
+      }
+    },
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">''</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-group.vue --&gt;</span></pre><h2 id="label"><a id="label" name="//apple_ref/cpp/Section/Label" class="dashAnchor"></a><span class="bd-content-title">Label<a class="anchorjs-link" href="form-group.html#label" aria-label="Anchor"></a></span></h2>
+<p>Use the prop <code>label</code> to set the content of the generated <code>&lt;legend&gt;</code> or <code>&lt;label&gt;</code> element, or by
+using the named slot <code>label</code>, You may optionally visually hide the label text while still making it
+available to screen readers by setting the prop <code>label-sr-only</code>.</p>
+<p><code>&lt;b-form-group&gt;</code> will render a <code>&lt;fieldset&gt;</code> with <code>&lt;legend&gt;</code> if the <code>label-for</code> prop is not set. If
+an input ID is provided to the <code>label-for</code> prop, then a <code>&lt;div&gt;</code> with <code>&lt;label&gt;</code> will be rendered.</p>
+<p>If you provide an input <code>id</code> value to the <code>label-for</code> prop (the <code>id</code> must exist on the input
+contained within the <code>&lt;b-form-group&gt;</code>), a <code>&lt;label&gt;</code> element will be rendered instead of a <code>&lt;legend&gt;</code>
+element, and will have the <code>for</code> attribute set to the <code>id</code> specified. When specifying the id, <strong>do
+not</strong> prepend it with <code>#</code>. The <code>label-for</code> prop should only be used when you have a single form
+input inside the <code>&lt;b-form-group&gt;</code> component. Do not set the <code>label-for</code> prop when using
+<code>&lt;b-form-radio-group&gt;</code>, <code>&lt;b-form-checkbox-group&gt;</code>, <code>&lt;b-form-radio&gt;</code>, <code>&lt;b-form-checkbox&gt;</code> or
+<code>&lt;b-form-file&gt;</code> components (or when placing multiple inputs in the same form group), as these inputs
+include integrated label element(s) and the <code>&lt;legend&gt;</code> element is more suitable.</p>
+<p>You can also apply additional classes to the label via the <code>label-class</code> prop, such as responsive
+padding and text alignment utility classes. The <code>label-class</code> prop accepts either a string or array
+of strings.</p>
+<h3 id="horizontal-layout"><a id="horizontal-layout" name="//apple_ref/cpp/Section/Horizontal%20layout" class="dashAnchor"></a><span class="bd-content-title">Horizontal layout<a class="anchorjs-link" href="form-group.html#horizontal-layout" aria-label="Anchor"></a></span></h3>
+<p>By default, the label appears above the input element(s), but you may optionally render horizontal
+(label to the left of the input) at the various standard Bootstrap breakpoints.</p>
+<p>The props<code>label-cols</code> and <code>label-cols-{breakpoint}</code> allow you to specify how many columns the label
+should occupy in the row. The input(s) will fill the rest of the row. The value must be a number
+greater than <code>0</code>. Or you can set the prop to <code>true</code> to make the label and input(s) each occupy half
+of the width of the rendered row (handy if you have custom Bootstrap with an odd number of columns).</p>
+<div class="table-responsive-sm"><table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>prop</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>label-cols</code></td>
+<td>Applies to breakpoint <code>xs</code> up</td>
+</tr>
+<tr>
+<td><code>label-cols-sm</code></td>
+<td>Applies to breakpoint <code>sm</code> and up</td>
+</tr>
+<tr>
+<td><code>label-cols-md</code></td>
+<td>Applies to breakpoint <code>md</code> and up</td>
+</tr>
+<tr>
+<td><code>label-cols-lg</code></td>
+<td>Applies to breakpoint <code>lg</code> and up</td>
+</tr>
+<tr>
+<td><code>label-cols-xl</code></td>
+<td>Applies to breakpoint <code>xl</code> and up</td>
+</tr>
+</tbody></table>
+</div><pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span>
+      <span class="hljs-attr">id</span>=<span class="hljs-string">"fieldset-horizontal"</span>
+      <span class="hljs-attr">label-cols-sm</span>=<span class="hljs-string">"4"</span>
+      <span class="hljs-attr">label-cols-lg</span>=<span class="hljs-string">"3"</span>
+      <span class="hljs-attr">description</span>=<span class="hljs-string">"Let us know your name."</span>
+      <span class="hljs-attr">label</span>=<span class="hljs-string">"Enter your name"</span>
+      <span class="hljs-attr">label-for</span>=<span class="hljs-string">"input-horizontal"</span>
+    &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-horizontal"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-group-horizontal.vue --&gt;</span></pre><p><strong>Deprecation warning:</strong> The props <code>horizontal</code> and <code>breakpoint</code> have been deprecated in favour of
+using the <code>label-cols</code> and <code>label-cols-{breakpoint}</code> props.</p>
+<h3 id="label-size"><a id="label-size" name="//apple_ref/cpp/Section/Label%20size" class="dashAnchor"></a><span class="bd-content-title">Label size<a class="anchorjs-link" href="form-group.html#label-size" aria-label="Anchor"></a></span></h3>
+<p>You can control the label text size match the size of your form input(s) via the optional
+<code>label-size</code> prop. Values can be <code>'sm'</code> or <code>'lg'</code> for small or large label, respectively. Sizes work
+for both <code>horizontal</code> and non-horizontal form groups.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label-cols</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">label-cols-lg</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">label-size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Small"</span> <span class="hljs-attr">label-for</span>=<span class="hljs-string">"input-sm"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-sm"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label-cols</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">label-cols-lg</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Default"</span> <span class="hljs-attr">label-for</span>=<span class="hljs-string">"input-default"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-default"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label-cols</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">label-cols-lg</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">label-size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Large"</span> <span class="hljs-attr">label-for</span>=<span class="hljs-string">"input-lg"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-lg"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-group-label-size.vue --&gt;</span></pre><h3 id="label-text-alignment"><a id="label-text-alignment" name="//apple_ref/cpp/Section/Label%20text%20alignment" class="dashAnchor"></a><span class="bd-content-title">Label text alignment<a class="anchorjs-link" href="form-group.html#label-text-alignment" aria-label="Anchor"></a></span></h3>
+<p>The label text may also optionally be aligned <code>left</code>, <code>center</code> or <code>right</code> by setting the respective
+value via the prop <code>label-text-align</code> and/or <code>label-align-{breakpoint}</code>.</p>
+<div class="table-responsive-sm"><table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>prop</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>label-align</code></td>
+<td>Applies to breakpoint <code>xs</code> up</td>
+</tr>
+<tr>
+<td><code>label-align-sm</code></td>
+<td>Applies to breakpoint <code>sm</code> and up</td>
+</tr>
+<tr>
+<td><code>label-align-md</code></td>
+<td>Applies to breakpoint <code>md</code> and up</td>
+</tr>
+<tr>
+<td><code>label-align-lg</code></td>
+<td>Applies to breakpoint <code>lg</code> and up</td>
+</tr>
+<tr>
+<td><code>label-align-xl</code></td>
+<td>Applies to breakpoint <code>xl</code> and up</td>
+</tr>
+</tbody></table>
+</div><p>Alignment has no effect if the <code>label-sr-only</code> prop is set.</p>
+<h2 id="description"><a id="description" name="//apple_ref/cpp/Section/Description" class="dashAnchor"></a><span class="bd-content-title">Description<a class="anchorjs-link" href="form-group.html#description" aria-label="Anchor"></a></span></h2>
+<p>Optional descriptive text which is always shown with the <code>.text-muted</code> class by setting the
+<code>description</code> prop or using the named slot <code>description</code>. The description text is rendered using the
+<a href="form.html#helper-components"><code>&lt;b-form-text&gt;</code></a> form sub-component.</p>
+<h2 id="nested-form-groups"><a id="nested-form-groups" name="//apple_ref/cpp/Section/Nested%20form%20groups" class="dashAnchor"></a><span class="bd-content-title">Nested form groups<a class="anchorjs-link" href="form-group.html#nested-form-groups" aria-label="Anchor"></a></span></h2>
+<p>Feel free to nest <code>&lt;b-form-group&gt;</code> components to produce advanced form layouts and semantic grouping
+of related form controls:</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">bg-variant</span>=<span class="hljs-string">"light"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span>
+      <span class="hljs-attr">label-cols-lg</span>=<span class="hljs-string">"3"</span>
+      <span class="hljs-attr">label</span>=<span class="hljs-string">"Shipping Address"</span>
+      <span class="hljs-attr">label-size</span>=<span class="hljs-string">"lg"</span>
+      <span class="hljs-attr">label-class</span>=<span class="hljs-string">"font-weight-bold pt-0"</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-0"</span>
+    &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span>
+        <span class="hljs-attr">label-cols-sm</span>=<span class="hljs-string">"3"</span>
+        <span class="hljs-attr">label</span>=<span class="hljs-string">"Street:"</span>
+        <span class="hljs-attr">label-align-sm</span>=<span class="hljs-string">"right"</span>
+        <span class="hljs-attr">label-for</span>=<span class="hljs-string">"nested-street"</span>
+      &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"nested-street"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span>
+        <span class="hljs-attr">label-cols-sm</span>=<span class="hljs-string">"3"</span>
+        <span class="hljs-attr">label</span>=<span class="hljs-string">"City:"</span>
+        <span class="hljs-attr">label-align-sm</span>=<span class="hljs-string">"right"</span>
+        <span class="hljs-attr">label-for</span>=<span class="hljs-string">"nested-city"</span>
+      &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"nested-city"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span>
+        <span class="hljs-attr">label-cols-sm</span>=<span class="hljs-string">"3"</span>
+        <span class="hljs-attr">label</span>=<span class="hljs-string">"State:"</span>
+        <span class="hljs-attr">label-align-sm</span>=<span class="hljs-string">"right"</span>
+        <span class="hljs-attr">label-for</span>=<span class="hljs-string">"nested-state"</span>
+      &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"nested-state"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span>
+        <span class="hljs-attr">label-cols-sm</span>=<span class="hljs-string">"3"</span>
+        <span class="hljs-attr">label</span>=<span class="hljs-string">"Country:"</span>
+        <span class="hljs-attr">label-align-sm</span>=<span class="hljs-string">"right"</span>
+        <span class="hljs-attr">label-for</span>=<span class="hljs-string">"nested-country"</span>
+      &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"nested-country"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span>
+        <span class="hljs-attr">label-cols-sm</span>=<span class="hljs-string">"3"</span>
+        <span class="hljs-attr">label</span>=<span class="hljs-string">"Ship via:"</span>
+        <span class="hljs-attr">label-align-sm</span>=<span class="hljs-string">"right"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-0"</span>
+      &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">"pt-2"</span>
+          <span class="hljs-attr">:options</span>=<span class="hljs-string">"['Air', 'Courier', 'Mail']"</span>
+        &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio-group</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-group-nested.vue --&gt;</span></pre><h2 id="disabled-form-group"><a id="disabled-form-group" name="//apple_ref/cpp/Section/Disabled%20form-group" class="dashAnchor"></a><span class="bd-content-title">Disabled form-group<a class="anchorjs-link" href="form-group.html#disabled-form-group" aria-label="Anchor"></a></span></h2>
+<p>Setting the <code>disabled</code> prop will disable the rendered <code>&lt;fieldset&gt;</code> and, on most browsers, will
+disable all the input elements contained within the fieldset.</p>
+<p><code>disabled</code> has no effect when <code>label-for</code> is set (as a <code>fieldset</code> element is not rendered).</p>
+<h2 id="validation-state-feedback"><a id="validation-state-feedback" name="//apple_ref/cpp/Section/Validation%20state%20feedback" class="dashAnchor"></a><span class="bd-content-title">Validation state feedback<a class="anchorjs-link" href="form-group.html#validation-state-feedback" aria-label="Anchor"></a></span></h2>
+<p>Bootstrap includes validation styles for <code>valid</code> and <code>invalid</code> states on most form controls.</p>
+<p>Generally speaking, you'll want to use a particular state for specific types of feedback:</p>
+<ul>
+<li><code>'invalid'</code> is great for when there's a blocking or required field. A user must fill in this field
+properly to submit the form.</li>
+<li><code>'valid'</code> is ideal for situations when you have per-field validation throughout a form and want to
+encourage a user through the rest of the fields.</li>
+<li><code>null</code> Displays no validation state</li>
+</ul>
+<p>To apply one of the contextual states on <code>&lt;b-form-group&gt;</code>, set the <code>state</code> prop to <code>'invalid'</code> (or
+<code>false</code>), <code>'valid'</code> (or <code>true</code>), or <code>null</code>. This will programmatically show the appropriate feedback
+text.</p>
+<p>Bootstrap v4 uses sibling CSS selectors of <code>:invalid</code> or <code>:valid</code> inputs to show the feedback text.
+Some form controls (such as checkboxes, radios, and file inputs, or inputs inside input-groups) are
+wrapped in additional markup that will no longer make the feedback text a sibling of the input, and
+hence the feedback will not show. In these situations you will need to set the validity <code>state</code> on
+the <code>&lt;b-form-group&gt;</code> <em>as well as</em> the input.</p>
+<p>Feedback will be shown if the parent <code>&lt;b-form&gt;</code> component does <em>not</em> have the <code>novalidate</code> prop set
+(or set to <code>false</code>) along with the <code>vadidated</code> prop set (and the input fails or passes native
+browser validation constraints such as <code>required</code>). Refer to Bootstrap v4's
+<a href="http://getbootstrap.com/docs/4.0/components/forms/#validation">Form component</a> documentation for
+details on validation methods.</p>
+<p>You should always provide content via the <code>invalid-feedback</code> prop (or slot) to aid users using
+assistive technologies when setting a contextual <code>invalid</code> state.</p>
+<h3 id="invalid-feedback"><a id="invalid-feedback" name="//apple_ref/cpp/Section/Invalid%20feedback" class="dashAnchor"></a><span class="bd-content-title">Invalid feedback<a class="anchorjs-link" href="form-group.html#invalid-feedback" aria-label="Anchor"></a></span></h3>
+<p>Show optional invalid state feedback text to provide textual state feedback (html supported) by
+setting the prop <code>invalid-feedback</code> or using the named slot <code>invalid-feedback</code>.</p>
+<p>Invalid feedback is rendered using the
+<a href="form.html#helper-components"><code>&lt;b-form-invalid-feedback&gt;</code></a> form sub-component.</p>
+<p><strong>Note:</strong> The prop <code>feedback</code> has been deprecated in favor of the <code>invalid-feedback</code> prop.</p>
+<h3 id="valid-feedback"><a id="valid-feedback" name="//apple_ref/cpp/Section/Valid%20feedback" class="dashAnchor"></a><span class="bd-content-title">Valid feedback<a class="anchorjs-link" href="form-group.html#valid-feedback" aria-label="Anchor"></a></span></h3>
+<p>Show optional valid state feedback text to provide textual state feedback (html supported) by
+setting the prop <code>valid-feedback</code> or using the named slot <code>valid-feedback</code>.</p>
+<p>Valid feedback is rendered using the
+<a href="form.html#helper-components"><code>&lt;b-form-valid-feedback&gt;</code></a> form sub-component.</p>
+<h3 id="feedback-style"><a id="feedback-style" name="//apple_ref/cpp/Section/Feedback%20style" class="dashAnchor"></a><span class="bd-content-title">Feedback style<a class="anchorjs-link" href="form-group.html#feedback-style" aria-label="Anchor"></a></span></h3>
+<p>By default, when visible, feedback (valid or invalid) will show as a block of text. You can change
+the feedback so that it shows as a static tooltip when visible, by setting the prop <code>tooltip</code> to
+<code>true</code>.</p>
+<h3 id="feedback-limitations"><a id="feedback-limitations" name="//apple_ref/cpp/Section/Feedback%20limitations" class="dashAnchor"></a><span class="bd-content-title">Feedback limitations<a class="anchorjs-link" href="form-group.html#feedback-limitations" aria-label="Anchor"></a></span></h3>
+<p><strong>Note:</strong> When using <code>&lt;b-input-group&gt;</code>, <code>&lt;b-form-file&gt;</code>, <code>&lt;b-form-radio-group&gt;</code>, <code>&lt;b-form-radio&gt;</code>,
+<code>&lt;b-form-checkbox-group&gt;</code> or <code>&lt;b-form-checkbox&gt;</code> inside a <code>&lt;b-form-group&gt;</code>, setting an invalid (or
+valid) <code>state</code> on the <code>input</code> alone will <strong>not</strong> trigger the invalid (or valid) feedback to show
+(due to limitations with the new Bootstrap v4 validation CSS). To get around this, <strong>you must also</strong>
+set the invalid/valid <code>state</code> on <code>&lt;b-form-group&gt;</code>. Native browser validation will <strong>not</strong> trigger
+the invalid feedback to show when using one of the above mentioned form controls.</p>
+<h2 id="accessibility"><a id="accessibility" name="//apple_ref/cpp/Section/Accessibility" class="dashAnchor"></a><span class="bd-content-title">Accessibility<a class="anchorjs-link" href="form-group.html#accessibility" aria-label="Anchor"></a></span></h2>
+<p>To enable auto-generation of <code>aria-*</code> attributes, you should supply a unique <code>id</code> prop to
+<code>&lt;b-form-group&gt;</code>. This will associate the help text and feedback text to the <code>&lt;b-form-group&gt;</code> and,
+indirectly to its input control(s).</p>
+<p>By default, when no <code>label-for</code> value is provided, <code>&lt;b-form-group&gt;</code> renders the input control(s)
+inside a an HTML <code>&lt;fieldset&gt;</code> element with the label content placed inside the fieldset's <code>&lt;legend&gt;</code>
+element. By nature of this markup, the legend content is automatically associated to the containing
+input control(s).</p>
+<p>It is <strong>highly recommended</strong> that you provide a unique <code>id</code> prop on your input element and set the
+<code>label-for</code> prop to this id, when you have only a single input in the <code>&lt;b-form-group&gt;</code>.</p>
+<p>When multiple form controls are placed inside <code>&lt;b-form-group&gt;</code> (i.e. a series or radio or checkbox
+inputs, or a series of related inputs), <strong>do not set</strong> the <code>label-for</code> prop, as a label can only be
+associated with a single input. It is best to use the default rendered markup that produces a
+<code>&lt;fieldset&gt;</code> + <code>&lt;legend&gt;</code> which will describe the group of inputs.</p>
+<p>When placing multiple form controls inside a <code>&lt;b-form-group&gt;</code> (and you are not nesting
+<code>&lt;b-form-group&gt;</code>components), it is recommended to give each control its own associated <code>&lt;label&gt;</code>
+(which may be visually hidden using the <code>.sr-only</code> class) and set the labels <code>for</code> attribute to the
+<code>id</code> of the associated input control. Alternatively, you can set the <code>aria-label</code> attribute on each
+input control instead of using a <code>&lt;label&gt;</code>. For <code>&lt;b-form-radio&gt;</code> and <code>&lt;b-form-checkbox&gt;</code> (or the
+group versions), you do not need to set individual labels, as the rendered markup for these types of
+inputs already includes a <code>&lt;label&gt;</code> element.</p>
+<!-- Component reference added automatically from component package.json -->
+</section><section class="bd-content bd-component-reference"><h2 id="component-reference" tabindex="-1"><a id="component-reference" name="//apple_ref/cpp/Section/Component%20reference" class="dashAnchor"></a><span class="bd-content-title">Component reference<a href="form-group.html#component-reference" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h2><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-form-group" tabindex="-1"><a id="b-form-group" name="//apple_ref/cpp/Section/%3Cb-form-group%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-form-group&gt;</code><a href="form-group.html#comp-ref-b-form-group" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <!----></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/form-group/form-group.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <!----> <article class="bd-content"><h4 id="comp-ref-b-form-group-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="form-group.html#comp-ref-b-form-group-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">id</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">state</code> <!----></td><td role="cell" aria-colindex="2">String or Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-for</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-size</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-sr-only</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-cols</code> <!----></td><td role="cell" aria-colindex="2">Number or String or Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-cols-sm</code> <!----></td><td role="cell" aria-colindex="2">Number or String or Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-cols-md</code> <!----></td><td role="cell" aria-colindex="2">Number or String or Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-cols-lg</code> <!----></td><td role="cell" aria-colindex="2">Number or String or Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-cols-xl</code> <!----></td><td role="cell" aria-colindex="2">Number or String or Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-align</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-align-sm</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-align-md</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-align-lg</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-align-xl</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-class</code> <!----></td><td role="cell" aria-colindex="2">String or Array or Object</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">description</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">invalid-feedback</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">valid-feedback</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">tooltip</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">feedback-aria-live</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>assertive</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">validated</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">disabled</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row" class="b-table-has-details"><td role="cell" aria-colindex="1"><code class="text-nowrap">horizontal</code> <span class="badge badge-danger">Deprecated</span></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><tr aria-hidden="true" role="presentation" class="d-none"></tr><tr role="row" class="b-table-details"><td colspan="3" role="cell"><p class="mb-1 small">
+          Props "horizontal" and "breakpoint" are deprecated. Use "label-cols(-{breakpoint})" props instead.
+        </p> <!----></td></tr><tr role="row" class="b-table-has-details"><td role="cell" aria-colindex="1"><code class="text-nowrap">breakpoint</code> <span class="badge badge-danger">Deprecated</span></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><tr aria-hidden="true" role="presentation" class="d-none"></tr><tr role="row" class="b-table-details"><td colspan="3" role="cell"><p class="mb-1 small">
+          Props "horizontal" and "breakpoint" are deprecated. Use "label-cols(-{breakpoint})" props instead.
+        </p> <!----></td></tr><!----><!----></tbody></table></div> <!----></article> <article class="bd-content"><h4 id="comp-ref-b-form-group-slots" tabindex="-1"><span class="bd-content-title">
+      Slots
+    <a href="form-group.html#comp-ref-b-form-group-slots" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Slot</th><th role="columnheader" scope="col" aria-colindex="2">Description</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label</code></td><td role="cell" aria-colindex="2">Content to place inside the &lt;label&gt; element.</td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">description</code></td><td role="cell" aria-colindex="2">Content to place in the description area.</td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">invalid-feedback</code></td><td role="cell" aria-colindex="2">Content to place in the invalid feedback area</td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">valid-feedback</code></td><td role="cell" aria-colindex="2">Content to place in the valid feedback area</td></tr><!----><!----></tbody></table></div></article> <!----> <!----></section><section class="bd-content"><article class="bd-content"><h3 id="importing-individual-components" tabindex="-1"><a id="importing-individual-components" name="//apple_ref/cpp/Section/Importing%20individual%20components" class="dashAnchor"></a><span class="bd-content-title">
+        Importing individual components
+      <a href="form-group.html#importing-individual-components" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> You can
+        import individual components into your project via the following named exports:
+      </p> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Component</th><th role="columnheader" scope="col" aria-colindex="2">Named Export</th><th role="columnheader" scope="col" aria-colindex="3">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-form-group&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BFormGroup</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><!----><!----></tbody></table></div> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">import { BFormGroup } from 'bootstrap-vue'
+Vue.component('b-form-group', BFormGroup)</pre></article> <!----> <article class="bd-content"><h3 id="importing-as-a-plugin" tabindex="-1"><a id="importing-as-a-vuejs-plugin" name="//apple_ref/cpp/Section/Importing%20as%20a%20Vue.js%20plugin" class="dashAnchor"></a><span class="bd-content-title">
+      Importing as a Vue.js plugin
+    <a href="form-group.html#importing-as-a-plugin" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> Importing plugins
+      has been simplified.
+    </p> <p>
+      This plugin includes all of the above listed individual
+      components<!---->.
+      Plugins also include any component aliases.
+    </p> <div class="bv-docs-table table-responsive-sm"><table fileds="namedExport,importPath" aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><caption class="b-table-caption-top">The plugin can be imported via several methods</caption><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Named Export</th><th role="columnheader" scope="col" aria-colindex="2">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">FormGroupPlugin</code> <span class="badge small badge-success">PREFERRED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">FormGroupPlugin</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">default</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components/form-group</code></td></tr><!----><!----></tbody></table></div> <!----> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">// Importing the named export
+import { FormGroupPlugin } from 'bootstrap-vue'
+Vue.use(FormGroupPlugin)</pre></article> <aside class="alert alert-warning my-4"><p class="mb-0"><strong class="badge badge-warning">Deprecation Warning as of v2.0.0-rc.22:</strong>
+      Importing components, directives and plugins from <code>bootstrap-vue/es/*</code> has been
+      deprecated. All components, directives and plugins are now available as top-level named
+      exports in the <code>ESM</code> and <code>CommonJS</code> builds. The <code>es/</code>
+      directory build will be removed in a future release.
+    </p></aside></section></section></main></div></div></div></div></div>
+  </body>
+</html>

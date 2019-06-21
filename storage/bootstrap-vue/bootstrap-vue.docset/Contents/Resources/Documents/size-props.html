@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Size props and classes | Reference | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Size props and classes | Reference | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="Bootstrap v4 CSS provides several classes that control the sizing of elements, of which some of these have been translated into props on components."><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="Bootstrap v4 CSS provides several classes that control the sizing of elements, of which some of these have been translated into props on components."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//docs/markdown/reference/size-props/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="sizing-props-and-classes"><span class="bd-content-title">Sizing props and classes</span></h1>
+<p class="bd-lead">Bootstrap v4 CSS provides several classes that control the sizing of elements, of which some of
+these have been translated into props on components.</p>
+<h2 id="component-size-prop"><a id="component-size-prop" name="//apple_ref/cpp/Section/Component%20size%20prop" class="dashAnchor"></a><span class="bd-content-title">Component <code>size</code> prop<a class="anchorjs-link" href="size-props.html#component-size-prop" aria-label="Anchor"></a></span></h2>
+<p>Various components allow for an optional size (via the <code>size</code> prop). Below are the sizes supported
+via the default Bootstrap v4 CSS.</p>
+<p>Available Sizes:</p>
+<ul>
+<li><code>sm</code> small</li>
+<li><code>lg</code> large</li>
+</ul>
+<p>When no size is specified, this results in normal sized appearance (usually referred to as <code>md</code>).</p>
+<p>These size values will be translated into the appropriate Bootstrap CSS class, depending on the
+component used on, such as <code>.btn-&lt;size&gt;</code> for buttons, <code>.modal-&lt;size&gt;</code> for modal,
+<code>.form-control-&lt;size&gt;</code> for form elements, <code>.pagination-&lt;size&gt;</code> for pagination buttons, etc.</p>
+<h2 id="breakpoint-sizes"><a id="breakpoint-sizes" name="//apple_ref/cpp/Section/Breakpoint%20sizes" class="dashAnchor"></a><span class="bd-content-title">Breakpoint sizes<a class="anchorjs-link" href="size-props.html#breakpoint-sizes" aria-label="Anchor"></a></span></h2>
+<p>Bootstrap v4 also includes viewport breakpoint sizes: <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>xl</code>. which refer
+to the width of the user's view port.</p>
+<p>For details on breakpoint sizes, please check the <a href="https://bootstrap-vue.js.org/docs/layout/">Layout and Grid</a> documentation.</p>
+<h2 id="sizing-utility-classes"><a id="sizing-utility-classes" name="//apple_ref/cpp/Section/Sizing%20utility%20classes" class="dashAnchor"></a><span class="bd-content-title">Sizing utility classes<a class="anchorjs-link" href="size-props.html#sizing-utility-classes" aria-label="Anchor"></a></span></h2>
+<p>Easily make an element as wide or as tall (relative to its parent) with the width and height
+utilities classes.</p>
+<p>Width and height utilities are generated from the <code>$sizes</code> Sass map in Bootstrap's
+<code>_variables.scss</code>. Includes support for <code>25%</code>, <code>50%</code>, <code>75%</code>, and <code>100%</code> by default. Modify those
+values as you need to generate different utilities here.</p>
+<p><strong>Widths:</strong></p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-25 p-3 mb-1 bg-secondary"</span>&gt;</span>Width 25%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-50 p-3 mb-1 bg-secondary"</span>&gt;</span>Width 50%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-75 p-3 mb-1 bg-secondary"</span>&gt;</span>Width 75%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-100 p-3 bg-secondary"</span>&gt;</span>Width 100%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- widths.vue --&gt;</span></pre><p><strong>Heights:</strong></p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height: 100px; background-color: rgba(255,0,0,0.1);"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-25 d-inline-block"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 120px; background-color: rgba(0,0,255,.1)"</span>&gt;</span>
+    Height 25%
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-50 d-inline-block"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 120px; background-color: rgba(0,0,255,.1)"</span>&gt;</span>
+    Height 50%
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-75 d-inline-block"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 120px; background-color: rgba(0,0,255,.1)"</span>&gt;</span>
+    Height 75%
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-100 d-inline-block"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 120px; background-color: rgba(0,0,255,.1)"</span>&gt;</span>
+    Height 100%
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- heights.vue --&gt;</span></pre><p><strong>Max width and height:</strong></p>
+<p>You can also use <code>mw-100</code> (<code>max-width: 100%;</code>) and <code>mh-100</code> (<code>max-height: 100%;</code>) utilities as
+needed.</p>
+<h2 id="additional-resources"><a id="additional-resources" name="//apple_ref/cpp/Section/Additional%20resources" class="dashAnchor"></a><span class="bd-content-title">Additional resources<a class="anchorjs-link" href="size-props.html#additional-resources" aria-label="Anchor"></a></span></h2>
+<p>Refer to <a href="https://getbootstrap.com/">Bootstrap v4</a> official documentation site for more information.</p>
+</section></main></div></div></div></div></div>
+  </body>
+</html>

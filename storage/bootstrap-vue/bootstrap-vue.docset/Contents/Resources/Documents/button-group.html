@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Button Group | Components | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Button Group | Components | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="Group a series of buttons together on a single line with &lt;b-button-group&gt;."><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="Group a series of buttons together on a single line with &lt;b-button-group&gt;."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="modulepreload" href="a6f8df338a2c2a457341.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//src/components/button-group/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="button-group"><span class="bd-content-title">Button group</span></h1>
+<p class="bd-lead">Group a series of buttons together on a single line with <code>&lt;b-button-group&gt;</code>.</p>
+<p><strong>Example 1:</strong> Default button group and button group using contextual variants</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button-group</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-button-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button-group</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span>&gt;</span>Info<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"warning"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-button-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-button-group.vue --&gt;</span></pre><h2 id="sizing"><a id="sizing" name="//apple_ref/cpp/Section/Sizing" class="dashAnchor"></a><span class="bd-content-title">Sizing<a class="anchorjs-link" href="button-group.html#sizing" aria-label="Anchor"></a></span></h2>
+<p>Set the size prop to <code>lg</code> or <code>sm</code> to render larger or smaller, respectively, buttons. There is no
+need to specify the size on the individual buttons.</p>
+<p><strong>Example 2:</strong> Default, Small, and Large button groups</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button-group</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Button 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Button 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Button 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-button-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button-group</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Middle<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-button-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button-group</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Middle<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-button-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-button-group-sizes.vue --&gt;</span></pre><h2 id="vertical-variation"><a id="vertical-variation" name="//apple_ref/cpp/Section/Vertical%20variation" class="dashAnchor"></a><span class="bd-content-title">Vertical variation<a class="anchorjs-link" href="button-group.html#vertical-variation" aria-label="Anchor"></a></span></h2>
+<p>Make a set of buttons appear vertically stacked rather than horizontally by setting the <code>vertical</code>
+prop. Split button dropdowns are not supported here.</p>
+<p><strong>Example 3:</strong> Vertical button group</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-button-group</span> <span class="hljs-attr">vertical</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Top<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Middle<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Bottom<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-button-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-button-group-vertical.vue --&gt;</span></pre><h2 id="dropdown-menu-support"><a id="dropdown-menu-support" name="//apple_ref/cpp/Section/Dropdown%20menu%20support" class="dashAnchor"></a><span class="bd-content-title">Dropdown menu support<a class="anchorjs-link" href="button-group.html#dropdown-menu-support" aria-label="Anchor"></a></span></h2>
+<p>Add <a href="dropdown.html"><code>&lt;b-dropdown&gt;</code></a> menus directly inside your <code>&lt;b-button-group&gt;</code>. Note
+that split dropdown menus are not supported when prop <code>vertical</code> is set.</p>
+<p><strong>Example 4:</strong> button group with dropdown menus</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-button-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown</span> <span class="hljs-attr">right</span> <span class="hljs-attr">text</span>=<span class="hljs-string">"Menu"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-divider</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-divider</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown</span> <span class="hljs-attr">right</span> <span class="hljs-attr">split</span> <span class="hljs-attr">text</span>=<span class="hljs-string">"Split Menu"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-divider</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-divider</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-button-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-button-group-menu.vue --&gt;</span></pre><h2 id="see-also"><a id="see-also" name="//apple_ref/cpp/Section/See%20also" class="dashAnchor"></a><span class="bd-content-title">See also<a class="anchorjs-link" href="button-group.html#see-also" aria-label="Anchor"></a></span></h2>
+<p>Also check out the <a href="button-toolbar.html"><code>&lt;b-button-toolbar&gt;</code></a> component for generating
+toolbars containing button groups and input groups.</p>
+<!-- Component reference added automatically from component package.json -->
+</section><section class="bd-content bd-component-reference"><h2 id="component-reference" tabindex="-1"><a id="component-reference" name="//apple_ref/cpp/Section/Component%20reference" class="dashAnchor"></a><span class="bd-content-title">Component reference<a href="button-group.html#component-reference" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h2><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-button-group" tabindex="-1"><a id="b-button-group" name="//apple_ref/cpp/Section/%3Cb-button-group%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-button-group&gt;</code><a href="button-group.html#comp-ref-b-button-group" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <a rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary">
+        Functional Component
+      </a></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/button-group/button-group.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <article class="bd-content"><h4 id="comp-ref-b-button-group-aliases" tabindex="-1"><span class="bd-content-title">
+      Component aliases
+    <a href="button-group.html#comp-ref-b-button-group-aliases" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <p><code>&lt;b-button-group&gt;</code> can also be used via the following aliases:</p> <ul><li><code>&lt;b-btn-group&gt;</code></li></ul> <p class="small text-muted">
+      Note: component aliases are only available when importing all of BootstrapVue or using
+      the component group plugin.
+    </p></article> <article class="bd-content"><h4 id="comp-ref-b-button-group-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="button-group.html#comp-ref-b-button-group-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">vertical</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">size</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">tag</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>div</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">aria-role</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>group</code></td></tr><!----><!----><!----><!----></tbody></table></div> <!----></article> <!----> <!----> <!----></section><section class="bd-content"><article class="bd-content"><h3 id="importing-individual-components" tabindex="-1"><a id="importing-individual-components" name="//apple_ref/cpp/Section/Importing%20individual%20components" class="dashAnchor"></a><span class="bd-content-title">
+        Importing individual components
+      <a href="button-group.html#importing-individual-components" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> You can
+        import individual components into your project via the following named exports:
+      </p> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Component</th><th role="columnheader" scope="col" aria-colindex="2">Named Export</th><th role="columnheader" scope="col" aria-colindex="3">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-button-group&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BButtonGroup</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><!----><!----></tbody></table></div> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">import { BButtonGroup } from 'bootstrap-vue'
+Vue.component('b-button-group', BButtonGroup)</pre></article> <!----> <article class="bd-content"><h3 id="importing-as-a-plugin" tabindex="-1"><a id="importing-as-a-vuejs-plugin" name="//apple_ref/cpp/Section/Importing%20as%20a%20Vue.js%20plugin" class="dashAnchor"></a><span class="bd-content-title">
+      Importing as a Vue.js plugin
+    <a href="button-group.html#importing-as-a-plugin" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> Importing plugins
+      has been simplified.
+    </p> <p>
+      This plugin includes all of the above listed individual
+      components<!---->.
+      Plugins also include any component aliases.
+    </p> <div class="bv-docs-table table-responsive-sm"><table fileds="namedExport,importPath" aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><caption class="b-table-caption-top">The plugin can be imported via several methods</caption><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Named Export</th><th role="columnheader" scope="col" aria-colindex="2">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">ButtonGroupPlugin</code> <span class="badge small badge-success">PREFERRED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">ButtonGroupPlugin</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">default</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components/button-group</code></td></tr><!----><!----></tbody></table></div> <!----> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">// Importing the named export
+import { ButtonGroupPlugin } from 'bootstrap-vue'
+Vue.use(ButtonGroupPlugin)</pre></article> <aside class="alert alert-warning my-4"><p class="mb-0"><strong class="badge badge-warning">Deprecation Warning as of v2.0.0-rc.22:</strong>
+      Importing components, directives and plugins from <code>bootstrap-vue/es/*</code> has been
+      deprecated. All components, directives and plugins are now available as top-level named
+      exports in the <code>ESM</code> and <code>CommonJS</code> builds. The <code>es/</code>
+      directory build will be removed in a future release.
+    </p></aside></section></section></main></div></div></div></div></div>
+  </body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Form Input | Components | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Form Input | Components | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="Create various type inputs such as: text, password, number, url, email, search, range, date and more."><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="Create various type inputs such as: text, password, number, url, email, search, range, date and more."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="modulepreload" href="a6f8df338a2c2a457341.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//src/components/form-input/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="textual-and-value-inputs"><span class="bd-content-title">Textual and Value inputs</span></h1>
+<p class="bd-lead">Create various type inputs such as: <code>text</code>, <code>password</code>, <code>number</code>, <code>url</code>, <code>email</code>, <code>search</code>,
+<code>range</code>, <code>date</code> and more.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your name"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span>Value: {{ text }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">text</span>: <span class="hljs-string">''</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-input.vue --&gt;</span></pre><h2 id="input-type"><a id="input-type" name="//apple_ref/cpp/Section/Input%20type" class="dashAnchor"></a><span class="bd-content-title">Input type<a class="anchorjs-link" href="form-input.html#input-type" aria-label="Anchor"></a></span></h2>
+<p><code>&lt;b-form-input&gt;</code> defaults to a <code>text</code> input, but you can set the <code>type</code> prop to one of the supported
+native browser HTML5 types: <code>text</code>, <code>password</code>, <code>email</code>, <code>number</code>, <code>url</code>, <code>tel</code>, <code>search</code>, <code>date</code>,
+<code>datetime</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>range</code>, or <code>color</code>.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-1"</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"type in types"</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">"type"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">:for</span>=<span class="hljs-string">"`type-${type}`"</span>&gt;</span>Type {{ type }}:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"9"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">:id</span>=<span class="hljs-string">"`type-${type}`"</span> <span class="hljs-attr">:type</span>=<span class="hljs-string">"type"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">types</span>: [
+          <span class="hljs-string">'text'</span>,
+          <span class="hljs-string">'password'</span>,
+          <span class="hljs-string">'email'</span>,
+          <span class="hljs-string">'number'</span>,
+          <span class="hljs-string">'url'</span>,
+          <span class="hljs-string">'tel'</span>,
+          <span class="hljs-string">'date'</span>,
+          <span class="hljs-string">`time`</span>,
+          <span class="hljs-string">'range'</span>,
+          <span class="hljs-string">'color'</span>
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-input-types.vue --&gt;</span></pre><p>If the <code>type</code> prop is set to an input type that is not supported (see above), a <code>text</code> input will be
+rendered and a console warning will be issued.</p>
+<p><strong>Caveats with input types:</strong></p>
+<ul>
+<li>Not all browsers support all input types, nor do some types render in the same format across
+browser types/versions.</li>
+<li>Browsers that do not support a particular type will fall back to a <code>text</code> input type (event
+through the rendered <code>type</code> attribute markup shows the requested type).</li>
+<li>No testing is performed to see if the requested input type is supported by the browser.</li>
+<li>Chrome lost support for <code>datetime</code> in version 26, Opera in version 15, and Safari in iOS 7.
+Instead of using <code>datetime</code>, since support should be deprecated, use <code>date</code> and <code>time</code> as two
+separate inputs.</li>
+<li><code>date</code> and <code>time</code> inputs are native browser types, and are not a custom date/time picker.</li>
+<li>For date and time style inputs, where supported, the displayed value in the GUI may be different
+than what is returned by it's value (i.e. ordering of year-month-date).</li>
+<li>Regardless of input type, the value is <strong>always</strong> returned as a string representation.</li>
+<li><code>v-model.lazy</code> is not supported by <code>&lt;b-form-input&gt;</code> (nor any custom Vue component).</li>
+<li><code>v-model</code> modifiers <code>.number</code> and <code>.trim</code> can cause unexpected cursor jumps when the user is
+typing (this is a Vue issue with <code>v-model</code> on custom components). <em>Avoid using these modifiers</em>.</li>
+<li>Older version of Firefox may not support <code>readonly</code> for <code>range</code> type inputs.</li>
+<li>Input types that do not support <code>min</code>, <code>max</code> and <code>step</code> (i.e. <code>text</code>, <code>password</code>, <code>tel</code>, <code>email</code>,
+<code>url</code>, etc) will silently ignore these values (although they will still be rendered on the input
+markup).</li>
+</ul>
+<h3 id="range-type-input"><a id="range-type-input" name="//apple_ref/cpp/Section/Range%20type%20input" class="dashAnchor"></a><span class="bd-content-title">Range type input<a class="anchorjs-link" href="form-input.html#range-type-input" aria-label="Anchor"></a></span></h3>
+<p>Inputs with type <code>range</code> render using Bootstrap v4's <code>.custom-range</code> class. The track (the
+background) and thumb (the value) are both styled to appear the same across browsers.</p>
+<p>Range inputs have implicit values for <code>min</code> and <code>max</code> of <code>0</code> and <code>100</code> respectively. You may specify
+new values for those using the <code>min</code> and <code>max</code> props.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"range-1"</span>&gt;</span>Example range with min and max<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"range-1"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"range"</span> <span class="hljs-attr">min</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">max</span>=<span class="hljs-string">"5"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span>Value: {{ value }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-string">'2'</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-input-range.vue --&gt;</span></pre><p>By default, range inputs &ldquo;snap&rdquo; to integer values. To change this, you can specify a <code>step</code> value.
+In the example below, we double the number of steps by using step="0.5".</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"range-2"</span>&gt;</span>Example range with step value<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"range-2"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"range"</span> <span class="hljs-attr">min</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">max</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">step</span>=<span class="hljs-string">"0.5"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span>Value: {{ value }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-string">'2'</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-input-range-step.vue --&gt;</span></pre><p><strong>Note:</strong> Range inputs (as do all input types) return their value as a string. You may need to
+convert the value to a native number by using <code>Number(value)</code>, <code>parseInt(value, 10)</code>,
+<code>parseFloat(value)</code>, or use the <code>number</code> prop.</p>
+<p><strong>Note:</strong> Bootstrap v4.1 CSS does not include styling for range inputs inside input groups, nor
+validation styling on range inputs. However, BootstrapVue includes custom styling to handle these
+situations until styling is included in Bootstrap v4.</p>
+<h2 id="control-sizing"><a id="control-sizing" name="//apple_ref/cpp/Section/Control%20sizing" class="dashAnchor"></a><span class="bd-content-title">Control sizing<a class="anchorjs-link" href="form-input.html#control-sizing" aria-label="Anchor"></a></span></h2>
+<p>Set heights using the <code>size</code> prop to <code>sm</code> or <code>lg</code> for small or large respectively.</p>
+<p>To control width, place the input inside standard Bootstrap grid column.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"2"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-small"</span>&gt;</span>Small:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"10"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-small"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your name"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"2"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-default"</span>&gt;</span>Default:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"10"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-default"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your name"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"2"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-large"</span>&gt;</span>Large:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"10"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-large"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your name"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-input-size.vue --&gt;</span></pre><p><strong>Note:</strong> Input type <code>range</code> currently does not support control sizing unless it is placed inside a
+<code>&lt;b-input-group&gt;</code> which has its <code>size</code> prop set.</p>
+<p><strong>Note:</strong> The native HTML <code>&lt;input&gt;</code> attribute <code>size</code> (which sets a horizontal width on the <code>&lt;input&gt;</code>
+in characters) is not supported. Use styling, utility classes, or the layout rows (<code>&lt;b-row&gt;</code>) and
+columns (<code>&lt;b-col&gt;</code>) to set the desired width.</p>
+<h2 id="contextual-states"><a id="contextual-states" name="//apple_ref/cpp/Section/Contextual%20states" class="dashAnchor"></a><span class="bd-content-title">Contextual states<a class="anchorjs-link" href="form-input.html#contextual-states" aria-label="Anchor"></a></span></h2>
+<p>Bootstrap includes validation styles for <code>valid</code> and <code>invalid</code> states on most form controls.</p>
+<p>Generally speaking, you'll want to use a particular state for specific types of feedback:</p>
+<ul>
+<li><code>'invalid'</code> (or <code>false</code>) is great for when there's a blocking or required field. A user must fill
+in this field properly to submit the form.</li>
+<li><code>'valid'</code> (or <code>true</code>) is ideal for situations when you have per-field validation throughout a form
+and want to encourage a user through the rest of the fields.</li>
+<li><code>null</code> Displays no validation state</li>
+</ul>
+<p>To apply one of the contextual state icons on <code>&lt;b-form-input&gt;</code>, set the <code>state</code> prop to:</p>
+<ul>
+<li>The string <code>'invalid'</code> or boolean <code>false</code> for invalid contextual state</li>
+<li>The string <code>'valid'</code> or boolean <code>true</code> for the valid contextual state</li>
+<li><code>null</code> for no validation contextual state (default)</li>
+</ul>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-none"</span>&gt;</span>No State:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"9"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-none"</span> <span class="hljs-attr">:state</span>=<span class="hljs-string">"null"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"No validation"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-valid"</span>&gt;</span>Valid State:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"9"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-valid"</span> <span class="hljs-attr">:state</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Valid input"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-invalid"</span>&gt;</span>Invalid State:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"9"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-invalid"</span> <span class="hljs-attr">:state</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Invalid input"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-input-states.vue --&gt;</span></pre><p><strong>Live Example</strong></p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-live"</span>&gt;</span>Name:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span>
+      <span class="hljs-attr">id</span>=<span class="hljs-string">"input-live"</span>
+      <span class="hljs-attr">v-model</span>=<span class="hljs-string">"name"</span>
+      <span class="hljs-attr">:state</span>=<span class="hljs-string">"nameState"</span>
+      <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"input-live-help input-live-feedback"</span>
+      <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your name"</span>
+      <span class="hljs-attr">trim</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- This will only be shown if the preceding input has an invalid state --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-invalid-feedback</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-live-feedback"</span>&gt;</span>
+      Enter at least 3 letters
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-invalid-feedback</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- This is a form text block (formerly known as help block) --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-text</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-live-help"</span>&gt;</span>Your full name.<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-text</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    <span class="hljs-attr">computed</span>: {
+      nameState() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name.length &gt; <span class="hljs-number">2</span> ? <span class="hljs-literal">true</span> : <span class="hljs-literal">false</span>
+      }
+    },
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">''</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-input-states-feedback.vue --&gt;</span></pre><p class="bd-lead"><strong>Tip:</strong> Use the <a href="form-group.html"><code>&lt;b-form-group&gt;</code></a> component to automatically
+generate markup similar to above.</p>
+<h3 id="conveying-contextual-state-to-assistive-technologies-and-colorblind-users"><a id="conveying-contextual-state-to-assistive-technologies-and-colorblind-users" name="//apple_ref/cpp/Section/Conveying%20contextual%20state%20to%20assistive%20technologies%20and%20colorblind%20users" class="dashAnchor"></a><span class="bd-content-title">Conveying contextual state to assistive technologies and colorblind users<a class="anchorjs-link" href="form-input.html#conveying-contextual-state-to-assistive-technologies-and-colorblind-users" aria-label="Anchor"></a></span></h3>
+<p>Using these contextual states to denote the state of a form control only provides a visual,
+color-based indication, which will not be conveyed to users of assistive technologies - such as
+screen readers - or to colorblind users.</p>
+<p>Ensure that an alternative indication of state is also provided. For instance, you could include a
+hint about state in the form control's <code>&lt;label&gt;</code> text itself, or by providing an additional help
+text block.</p>
+<h3 id="aria-aria-invalid-attribute"><a id="aria-aria-invalid-attribute" name="//apple_ref/cpp/Section/ARIA%20aria-invalid%20attribute" class="dashAnchor"></a><span class="bd-content-title">ARIA <code>aria-invalid</code> attribute<a class="anchorjs-link" href="form-input.html#aria-aria-invalid-attribute" aria-label="Anchor"></a></span></h3>
+<p>Specifically for assistive technologies, invalid form controls can also be assigned an
+<code>aria-invalid="true"</code> attribute.</p>
+<p>When <code>&lt;b-form-input&gt;</code> has an invalid contextual state (i.e. <code>'invalid'</code> or <code>false</code>) you may also
+want to set the <code>&lt;b-form-input&gt;</code> prop <code>aria-invalid</code> to <code>true</code>, or to one of the supported values:</p>
+<ul>
+<li><code>false</code>: Convey no errors detected (default)</li>
+<li><code>true</code> (or <code>'true'</code>): Convey that the value has failed validation.</li>
+<li><code>'grammar'</code> Convey that a grammatical error has been detected.</li>
+<li><code>'spelling'</code> Convey that a spelling error has been detected.</li>
+</ul>
+<p>If <code>aria-invalid</code> is not explicitly set and <code>state</code> is set to <code>false</code> (or <code>'invalid'</code>), then the
+<code>aria-invalid</code> attribute on the input will automatically be set to <code>'true'</code>;</p>
+<h2 id="formatter-support"><a id="formatter-support" name="//apple_ref/cpp/Section/Formatter%20support" class="dashAnchor"></a><span class="bd-content-title">Formatter support<a class="anchorjs-link" href="form-input.html#formatter-support" aria-label="Anchor"></a></span></h2>
+<p><code>&lt;b-form-input&gt;</code> and <code>&lt;b-form-textarea&gt;</code> optionally supports formatting by passing a function
+reference to the <code>formatter</code> prop.</p>
+<p>Formatting (when a formatter function is supplied) occurs when the control's native <code>input</code> and
+<code>change</code> events fire. You can use the boolean prop <code>lazy-formatter</code> to restrict the formatter
+function to being called on the control's native <code>blur</code> event.</p>
+<p>The <code>formatter</code> function receives two arguments: the raw <code>value</code> of the input element, and the
+native <code>event</code> object that triggered the format (if available).</p>
+<p>The <code>formatter</code> function should return the formatted value as a <em>string</em>.</p>
+<p>Formatting does not occur if a <code>formatter</code> is not provided.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-formatter"</span>&gt;</span>Text input with formatter (on input)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span>
+      <span class="hljs-attr">id</span>=<span class="hljs-string">"input-formatter"</span>
+      <span class="hljs-attr">v-model</span>=<span class="hljs-string">"text1"</span>
+      <span class="hljs-attr">:formatter</span>=<span class="hljs-string">"format"</span>
+      <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your name"</span>
+      <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"input-formatter-help"</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-text</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-formatter-help"</span>&gt;</span>
+      We will convert your name to lowercase instantly
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Value: {{ text1 }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-lazy"</span>&gt;</span>Text input with lazy formatter (on blur)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span>
+      <span class="hljs-attr">id</span>=<span class="hljs-string">"input-lazy"</span>
+      <span class="hljs-attr">v-model</span>=<span class="hljs-string">"text2"</span>
+      <span class="hljs-attr">:formatter</span>=<span class="hljs-string">"format"</span>
+      <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your name"</span>
+      <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"input-lazy-help"</span>
+      <span class="hljs-attr">lazy-formatter</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-text</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-lazy-help"</span>&gt;</span>This one is a little lazy!<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Value: {{ text2 }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">text1</span>: <span class="hljs-string">''</span>,
+        <span class="hljs-attr">text2</span>: <span class="hljs-string">''</span>
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      format(value, event) {
+        <span class="hljs-keyword">return</span> value.toLowerCase()
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-input-formatter.vue --&gt;</span></pre><p><strong>Note:</strong> When using a non-text-like input (i.e. <code>color</code>, <code>range</code>, <code>date</code>, <code>number</code>, <code>email</code> etc),
+ensure that your formatter function returns the value in the expected format for the input type. The
+formatter <strong>must</strong> return the value as a <em>string</em>.</p>
+<p><strong>Note:</strong> With non-lazy formatting, if the cursor is not at the end of the input value, the cursor
+may jump to the end <em>after</em> a character is typed. You can use the provided event object and the
+<code>event.target</code> to access the native input's selection methods and properties to control where the
+insertion point is. This is left as an exercise for the reader.</p>
+<h2 id="readonly-plain-text"><a id="readonly-plain-text" name="//apple_ref/cpp/Section/Readonly%20plain%20text" class="dashAnchor"></a><span class="bd-content-title">Readonly plain text<a class="anchorjs-link" href="form-input.html#readonly-plain-text" aria-label="Anchor"></a></span></h2>
+<p>If you want to have <code>&lt;b-form-input readonly&gt;</code> elements in your form styled as plain text, set the
+<code>plaintext</code> prop (no need to set <code>readonly</code>) to remove the default form field styling and preserve
+the correct margin and padding.</p>
+<p>The <code>plaintext</code> option is not supported by input types <code>color</code> or <code>range</code>.</p>
+<h2 id="disabling-mousewheel-events-on-numeric-like-inputs"><a id="disabling-mousewheel-events-on-numeric-like-inputs" name="//apple_ref/cpp/Section/Disabling%20mousewheel%20events%20on%20numeric-like%20inputs" class="dashAnchor"></a><span class="bd-content-title">Disabling mousewheel events on numeric-like inputs<a class="anchorjs-link" href="form-input.html#disabling-mousewheel-events-on-numeric-like-inputs" aria-label="Anchor"></a></span></h2>
+<p>On some browsers, scrolling the mousewheel while a numeric-like input is focused will increment or
+decrement the input's value. To disable this browser feature, just set the <code>no-wheel</code> prop to
+<code>true</code>.</p>
+<h2 id="datalist-support"><a id="datalist-support" name="//apple_ref/cpp/Section/Datalist%20support" class="dashAnchor"></a><span class="bd-content-title">Datalist support<a class="anchorjs-link" href="form-input.html#datalist-support" aria-label="Anchor"></a></span></h2>
+<p>Datalists are a native HTML tag <code>&lt;datalist&gt;</code> that contains a list of <code>&lt;option&gt;</code> tags. By assigning
+an ID to the datalist tag, the list can be references from a text input by adding a <code>list</code>
+attribute.</p>
+<p>This gives the input the behavior of a combo box or auto-complete, allowing existing values to be
+chosen, or new values to be entered.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">list</span>=<span class="hljs-string">"my-list-id"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">datalist</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-list-id"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Manual Option<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"size in sizes"</span>&gt;</span>{{ size }}<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">datalist</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">sizes</span>: [<span class="hljs-string">'Small'</span>, <span class="hljs-string">'Medium'</span>, <span class="hljs-string">'Large'</span>, <span class="hljs-string">'Extra Large'</span>]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-input-datalist.vue --&gt;</span></pre><p>BootstrapVue provides the form helper component
+<a href="form.html#datalist-helper"><code>&lt;b-form-datalist&gt;</code></a> for quickly creating a <code>&lt;datalist&gt;</code>
+from an array of options.</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Datalists work in conjunction with the browser's built in auto-complete, displaying datalist
+options first, followed by auto-complete options. To only display datalist options, set
+<code>autocomplete="off"</code>.</li>
+<li>Datalists cannot be applied to input fields with <code>type="password"</code>.</li>
+<li>Not all browsers fully support <code>&lt;datalist&gt;</code> and implementations can be buggy. It is recommended
+that datalists be treated as an enhancement and not be relied upon at this time. Check
+<a href="https://caniuse.com/#feat=datalist">Can I Use</a> for full support details on all browsers.</li>
+</ul>
+<h2 id="v-model-modifiers"><a id="v-model-modifiers" name="//apple_ref/cpp/Section/v-model%20modifiers" class="dashAnchor"></a><span class="bd-content-title"><code>v-model</code> modifiers<a class="anchorjs-link" href="form-input.html#v-model-modifiers" aria-label="Anchor"></a></span></h2>
+<p>Vue does not officially support <code>.lazy</code>, <code>.trim</code>, and <code>.number</code> modifiers on the <code>v-model</code> of custom
+component based inputs, and may generate a bad user experience. Avoid using Vue's native modifiers.</p>
+<p>To get around this, <code>&lt;b-form-input&gt;</code> and <code>&lt;b-form-textarea&gt;</code> have two boolean props <code>trim</code> and
+<code>number</code> which emulate the native Vue <code>v-model</code> modifiers <code>.trim</code> and <code>.number</code> respectively.
+Emulation of the <code>.lazy</code> modifier is <em>not</em> supported (listen for <code>change</code> or <code>blur</code> events instead).</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>The <code>number</code> prop takes precedence over the <code>trim</code> prop (i.e. <code>trim</code> will have no effect when
+<code>number</code> is set).</li>
+<li>When using the <code>number</code> prop, and if the value can be parsed as a number (via <code>parseFloat</code>) it
+will return a value of type <code>Number</code> to the <code>v-model</code>, otherwise the original input value is
+returned as type <code>String</code>. This is the same behaviour as the native <code>.number</code> modifier.</li>
+<li>The <code>trim</code> and <code>number</code> modifier props do not affect the value returned by the <code>input</code> or <code>change</code>
+events. These events will always return the string value of the content of <code>&lt;textarea&gt;</code> after
+optional formatting (which may not match the value returned via the <code>v-model</code> <code>update</code> event,
+which handles the modifiers).</li>
+</ul>
+<h2 id="autofocus"><a id="autofocus" name="//apple_ref/cpp/Section/Autofocus" class="dashAnchor"></a><span class="bd-content-title">Autofocus<a class="anchorjs-link" href="form-input.html#autofocus" aria-label="Anchor"></a></span></h2>
+<p><span class="badge badge-info small">NEW in 2.0.0-rc.21</span></p>
+<p>When the <code>autofocus</code> prop is set, the input will be auto-focused when it is inserted into the
+document, or re-activated when inside a Vue <code>&lt;keep-alive&gt;</code> component. Note that this prop <strong>does
+not</strong> set the <code>autofocus</code> attribute on the input.</p>
+<h2 id="native-and-custom-events"><a id="native-and-custom-events" name="//apple_ref/cpp/Section/Native%20and%20custom%20events" class="dashAnchor"></a><span class="bd-content-title">Native and custom events<a class="anchorjs-link" href="form-input.html#native-and-custom-events" aria-label="Anchor"></a></span></h2>
+<p>All native events (other than the custom <code>input</code> and <code>change</code> events) are supported, without the
+need for the <code>.native</code> modifier.</p>
+<p>The custom <code>input</code> and <code>change</code> events receive a single argument of the current <code>value</code> (after any
+formatting has been applied), and are triggered by user interaction.</p>
+<p>The custom <code>update</code> event is passed the input value, and is emitted whenever the <code>v-model</code> needs
+updating (it is emitted before <code>input</code>, <code>change</code>. and <code>blur</code> as needed).</p>
+<p>You can always access the native <code>input</code> and <code>change</code> events by using the <code>.native</code> modifier.</p>
+<h2 id="exposed-input-properties-and-methods"><a id="exposed-input-properties-and-methods" name="//apple_ref/cpp/Section/Exposed%20input%20properties%20and%20methods" class="dashAnchor"></a><span class="bd-content-title">Exposed input properties and methods<a class="anchorjs-link" href="form-input.html#exposed-input-properties-and-methods" aria-label="Anchor"></a></span></h2>
+<p><code>&lt;b-form-input&gt;</code> exposes several of the native input element's properties and methods on the
+component reference (i.e. assign a <code>ref</code> to your <code>&lt;b-form-input ref="foo" ...&gt;</code> and use
+<code>this.$refs['foo'].propertyName</code> or <code>this.$refs['foo'].methodName(...)</code>).</p>
+<h3 id="input-properties"><a id="input-properties" name="//apple_ref/cpp/Section/Input%20properties" class="dashAnchor"></a><span class="bd-content-title">Input properties<a class="anchorjs-link" href="form-input.html#input-properties" aria-label="Anchor"></a></span></h3>
+<div class="table-responsive-sm"><table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>Property</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.selectionStart</code></td>
+<td>Read/Write</td>
+</tr>
+<tr>
+<td><code>.selectionEnd</code></td>
+<td>Read/Write</td>
+</tr>
+<tr>
+<td><code>.selectionDirection</code></td>
+<td>Read/Write</td>
+</tr>
+<tr>
+<td><code>.validity</code></td>
+<td>Read only</td>
+</tr>
+<tr>
+<td><code>.validationMessage</code></td>
+<td>Read only</td>
+</tr>
+<tr>
+<td><code>.willValidate</code></td>
+<td>Read only</td>
+</tr>
+</tbody></table>
+</div><h3 id="input-methods"><a id="input-methods" name="//apple_ref/cpp/Section/Input%20methods" class="dashAnchor"></a><span class="bd-content-title">Input methods<a class="anchorjs-link" href="form-input.html#input-methods" aria-label="Anchor"></a></span></h3>
+<div class="table-responsive-sm"><table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>Method</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.focus()</code></td>
+<td>Focus the input</td>
+</tr>
+<tr>
+<td><code>.blur()</code></td>
+<td>Remove focus from the input</td>
+</tr>
+<tr>
+<td><code>.select()</code></td>
+<td>Selects all text within the input</td>
+</tr>
+<tr>
+<td><code>.setSelectionRange()</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>.setRangeText()</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>.setCustomValidity()</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>.checkValidity()</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>.reportValidity()</code></td>
+<td></td>
+</tr>
+</tbody></table>
+</div><p>Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement">https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement</a> for more information on
+these methods and properties. Support will vary based on input type.</p>
+<h2 id="component-alias"><a id="component-alias" name="//apple_ref/cpp/Section/Component%20alias" class="dashAnchor"></a><span class="bd-content-title">Component alias<a class="anchorjs-link" href="form-input.html#component-alias" aria-label="Anchor"></a></span></h2>
+<p>You can use <code>&lt;b-form-input&gt;</code> by it's shorter alias <code>&lt;b-input&gt;</code>.</p>
+<!-- Component reference added automatically from component package.json -->
+</section><section class="bd-content bd-component-reference"><h2 id="component-reference" tabindex="-1"><a id="component-reference" name="//apple_ref/cpp/Section/Component%20reference" class="dashAnchor"></a><span class="bd-content-title">Component reference<a href="form-input.html#component-reference" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h2><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-form-input" tabindex="-1"><a id="b-form-input" name="//apple_ref/cpp/Section/%3Cb-form-input%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-form-input&gt;</code><a href="form-input.html#comp-ref-b-form-input" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <!----></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/form-input/form-input.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <article class="bd-content"><h4 id="comp-ref-b-form-input-aliases" tabindex="-1"><span class="bd-content-title">
+      Component aliases
+    <a href="form-input.html#comp-ref-b-form-input-aliases" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <p><code>&lt;b-form-input&gt;</code> can also be used via the following aliases:</p> <ul><li><code>&lt;b-input&gt;</code></li></ul> <p class="small text-muted">
+      Note: component aliases are only available when importing all of BootstrapVue or using
+      the component group plugin.
+    </p></article> <article class="bd-content"><h4 id="comp-ref-b-form-input-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="form-input.html#comp-ref-b-form-input-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">id</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">name</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">disabled</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">required</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">form</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">autofocus</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">size</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">state</code> <!----></td><td role="cell" aria-colindex="2">String or Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">value</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">aria-invalid</code> <!----></td><td role="cell" aria-colindex="2">Boolean or String</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">readonly</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">plaintext</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">autocomplete</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">placeholder</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">formatter</code> <!----></td><td role="cell" aria-colindex="2">Function</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">trim</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">number</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">lazy-formatter</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">type</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>text</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">no-wheel</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">min</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">max</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">step</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">list</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><!----><!----></tbody></table></div> <h4 id="comp-ref-b-form-input-v-model" tabindex="-1"><span class="bd-content-title">
+        v-model
+      <a href="form-input.html#comp-ref-b-form-input-v-model" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Prop</th><th role="columnheader" scope="col" aria-colindex="2">Event</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code>value</code></td><td role="cell" aria-colindex="2"><code>update</code></td></tr><!----><!----></tbody></table></div></article> <!----> <article class="bd-content"><h4 id="comp-ref-b-form-input-events" tabindex="-1"><span class="bd-content-title">
+      Events
+    <a href="form-input.html#comp-ref-b-form-input-events" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Event</th><th role="columnheader" scope="col" aria-colindex="2">Arguments</th><th role="columnheader" scope="col" aria-colindex="3">Description</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">input</code></td><td role="cell" aria-colindex="2"><div><code class="text-nowrap">value</code> -  <span>Current value of input</span></div></td><td role="cell" aria-colindex="3">Input event triggered by user interaction. Emitted after any formatting and after the v-model is updated</td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">change</code></td><td role="cell" aria-colindex="2"><div><code class="text-nowrap">value</code> -  <span>Current value of input</span></div></td><td role="cell" aria-colindex="3">Change event triggered by user interaction. Emitted after any formatting and after the v-model is updated.</td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">update</code></td><td role="cell" aria-colindex="2"><div><code class="text-nowrap">value</code> -  <span>Value of input, after any formatting. Not emitted if the value does not change</span></div></td><td role="cell" aria-colindex="3">Emitted to update the v-model</td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">blur</code></td><td role="cell" aria-colindex="2"><div><code class="text-nowrap">event</code> -  <span>Native blur event (before any formatting)</span></div></td><td role="cell" aria-colindex="3">Emitted after the input looses focus</td></tr><!----><!----></tbody></table></div></article> <!----></section><section class="bd-content"><article class="bd-content"><h3 id="importing-individual-components" tabindex="-1"><a id="importing-individual-components" name="//apple_ref/cpp/Section/Importing%20individual%20components" class="dashAnchor"></a><span class="bd-content-title">
+        Importing individual components
+      <a href="form-input.html#importing-individual-components" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> You can
+        import individual components into your project via the following named exports:
+      </p> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Component</th><th role="columnheader" scope="col" aria-colindex="2">Named Export</th><th role="columnheader" scope="col" aria-colindex="3">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-form-input&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BFormInput</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><!----><!----></tbody></table></div> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">import { BFormInput } from 'bootstrap-vue'
+Vue.component('b-form-input', BFormInput)</pre></article> <!----> <article class="bd-content"><h3 id="importing-as-a-plugin" tabindex="-1"><a id="importing-as-a-vuejs-plugin" name="//apple_ref/cpp/Section/Importing%20as%20a%20Vue.js%20plugin" class="dashAnchor"></a><span class="bd-content-title">
+      Importing as a Vue.js plugin
+    <a href="form-input.html#importing-as-a-plugin" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> Importing plugins
+      has been simplified.
+    </p> <p>
+      This plugin includes all of the above listed individual
+      components<!---->.
+      Plugins also include any component aliases.
+    </p> <div class="bv-docs-table table-responsive-sm"><table fileds="namedExport,importPath" aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><caption class="b-table-caption-top">The plugin can be imported via several methods</caption><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Named Export</th><th role="columnheader" scope="col" aria-colindex="2">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">FormInputPlugin</code> <span class="badge small badge-success">PREFERRED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">FormInputPlugin</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">default</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components/form-input</code></td></tr><!----><!----></tbody></table></div> <!----> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">// Importing the named export
+import { FormInputPlugin } from 'bootstrap-vue'
+Vue.use(FormInputPlugin)</pre></article> <aside class="alert alert-warning my-4"><p class="mb-0"><strong class="badge badge-warning">Deprecation Warning as of v2.0.0-rc.22:</strong>
+      Importing components, directives and plugins from <code>bootstrap-vue/es/*</code> has been
+      deprecated. All components, directives and plugins are now available as top-level named
+      exports in the <code>ESM</code> and <code>CommonJS</code> builds. The <code>es/</code>
+      directory build will be removed in a future release.
+    </p></aside></section></section></main></div></div></div></div></div>
+  </body>
+</html>

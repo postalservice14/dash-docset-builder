@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Tooltip | Directives | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Tooltip | Directives | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="Add custom BootstrapVue tooltips to any element. Tooltips can be triggered by hovering, focusing, or clicking an element."><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="Add custom BootstrapVue tooltips to any element. Tooltips can be triggered by hovering, focusing, or clicking an element."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//src/directives/tooltip/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="tooltips"><span class="bd-content-title">Tooltips</span></h1>
+<p class="bd-lead">Documentation and examples for adding custom BootstrapVue tooltips, using Bootstrap v4 CSS for
+styling and animations. Tooltips can be triggered by hovering, focusing, or clicking an element</p>
+<p>Use the <code>v-b-tooltip</code> directive on any element or component where you would like a tooltip to
+appear.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center my-3"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.hover</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tooltip content"</span>&gt;</span>Hover Me<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-tooltip.vue --&gt;</span></pre><h2 id="overview"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><span class="bd-content-title">Overview<a class="anchorjs-link" href="tooltip.html#overview" aria-label="Anchor"></a></span></h2>
+<p>Things to know when using tooltips:</p>
+<ul>
+<li>Tooltips rely on the 3rd party library Popper.js for positioning. The library is bundled with
+BootstrapVue!</li>
+<li>Tooltips with zero-length titles are never displayed.</li>
+<li>Specify container: 'body' (default) to avoid rendering problems in more complex components (like
+input groups, button groups, etc).</li>
+<li>Triggering tooltips on hidden elements will not work.</li>
+<li>Tooltips for <code>disabled</code> elements must be triggered on a wrapper element.</li>
+<li>When triggered from hyperlinks that span multiple lines, tooltips will be centered. Use
+white-space: nowrap; on your <code>&lt;a&gt;</code>s, <code>&lt;b-link&gt;</code>s and <code>&lt;router-link&gt;</code>s to avoid this behavior.</li>
+<li>Tooltips must be hidden before their corresponding elements have been removed from the DOM.</li>
+</ul>
+<h2 id="positioning"><a id="positioning" name="//apple_ref/cpp/Section/Positioning" class="dashAnchor"></a><span class="bd-content-title">Positioning<a class="anchorjs-link" href="tooltip.html#positioning" aria-label="Anchor"></a></span></h2>
+<p>Twelve options are available for positioning: <code>top</code>, <code>topleft</code>, <code>topright</code>, <code>right</code>, <code>righttop</code>,
+<code>rightbottom</code>, <code>bottom</code>, <code>bottomleft</code>, <code>bottomright</code>, <code>left</code>, <code>lefttop</code>, and <code>leftbottom</code> aligned.
+The default position is <code>top</code>. Positioning is relative to the trigger element.</p>
+<div class="bd-example bd-example-tooltip-static">
+  <div class="tooltip bs-tooltip-top bs-tooltip-top-docs" role="tooltip">
+    <div class="arrow" style="left:6px"></div>
+    <div class="tooltip-inner">Tooltip on the top</div>
+  </div>
+  <div class="tooltip bs-tooltip-top bs-tooltip-top-docs" role="tooltip">
+    <div class="arrow" style="right:6px"></div>
+    <div class="tooltip-inner">Tooltip on the topleft</div>
+  </div>
+  <div class="tooltip bs-tooltip-top bs-tooltip-top-docs" role="tooltip">
+    <div class="arrow" style="left:6px"></div>
+    <div class="tooltip-inner">Tooltip on the topright</div>
+  </div>
+  <div class="tooltip bs-tooltip-right bs-tooltip-right-docs" role="tooltip">
+    <div class="arrow" style="top:4px"></div>
+    <div class="tooltip-inner">Tooltip on the right</div>
+  </div>
+  <div class="tooltip bs-tooltip-right bs-tooltip-right-docs" role="tooltip">
+    <div class="arrow" style="bottom:4px"></div>
+    <div class="tooltip-inner">Tooltip on the righttop</div>
+  </div>
+  <div class="tooltip bs-tooltip-right bs-tooltip-right-docs" role="tooltip">
+    <div class="arrow" style="top:4px"></div>
+    <div class="tooltip-inner">Tooltip on the rightbottom</div>
+  </div>
+  <div class="tooltip bs-tooltip-bottom bs-tooltip-bottom-docs" role="tooltip">
+    <div class="arrow" style="left:6px"></div>
+    <div class="tooltip-inner">Tooltip on the bottom</div>
+  </div>
+  <div class="tooltip bs-tooltip-bottom bs-tooltip-bottom-docs" role="tooltip">
+    <div class="arrow" style="right:6px"></div>
+    <div class="tooltip-inner">Tooltip on the bottomleft</div>
+  </div>
+  <div class="tooltip bs-tooltip-bottom bs-tooltip-bottom-docs" role="tooltip">
+    <div class="arrow" style="left:6px"></div>
+    <div class="tooltip-inner">Tooltip on the bottomright</div>
+  </div>
+  <div class="tooltip bs-tooltip-left bs-tooltip-left-docs" role="tooltip">
+    <div class="arrow" style="top:4px"></div>
+    <div class="tooltip-inner">Tooltip on the left</div>
+  </div>
+  <div class="tooltip bs-tooltip-left bs-tooltip-left-docs" role="tooltip">
+    <div class="arrow" style="bottom:4px"></div>
+    <div class="tooltip-inner">Tooltip on the lefttop</div>
+  </div>
+  <div class="tooltip bs-tooltip-left bs-tooltip-left-docs" role="tooltip">
+    <div class="arrow" style="top:4px"></div>
+    <div class="tooltip-inner">Tooltip on the leftbottom</div>
+  </div>
+</div>
+
+<p><strong>Live example</strong></p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.hover.top</span>=<span class="hljs-string">"'ToolTip!'"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>Top<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.hover.right</span>=<span class="hljs-string">"'ToolTip!'"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.hover.left</span>=<span class="hljs-string">"'ToolTip!'"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.hover.bottom</span>=<span class="hljs-string">"'ToolTip!'"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>Bottom<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-tooltip-positioning.vue --&gt;</span></pre><h2 id="triggers"><a id="triggers" name="//apple_ref/cpp/Section/Triggers" class="dashAnchor"></a><span class="bd-content-title">Triggers<a class="anchorjs-link" href="tooltip.html#triggers" aria-label="Anchor"></a></span></h2>
+<p>Tooltips can be triggered (opened/closed) via any combination of <code>click</code>, <code>hover</code> and <code>focus</code>. The
+default trigger is <code>hover focus</code>.</p>
+<p>If a tooltip has more than one trigger, then all triggers must be cleared before the tooltip will
+close. I.e. if a tooltip has the trigger <code>focus click</code>, and it was opened by <code>focus</code>, and the user
+then clicks the trigger element, they must click it again <strong>and</strong> move focus to close the tooltip.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-container</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip</span>=<span class="hljs-string">"'ToolTip!'"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"outline-success"</span>&gt;</span>Hover + Focus<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.hover</span>=<span class="hljs-string">"'ToolTip!'"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"outline-success"</span>&gt;</span>Hover<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.click</span>=<span class="hljs-string">"'ToolTip!'"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"outline-success"</span>&gt;</span>Click<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.focus</span>=<span class="hljs-string">"'ToolTip!'"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"outline-success"</span>&gt;</span>Focus<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-tooltip-triggers.vue --&gt;</span></pre><h3 id="dismiss-on-next-click"><a id="dismiss-on-next-click" name="//apple_ref/cpp/Section/Dismiss%20on%20next%20click" class="dashAnchor"></a><span class="bd-content-title">Dismiss on next click<a class="anchorjs-link" href="tooltip.html#dismiss-on-next-click" aria-label="Anchor"></a></span></h3>
+<p>Use both <code>click</code> and <code>blur</code> if you would like a tooltip that opens only on click of the element, but
+will close when anything else in the document is clicked or receives focus.</p>
+<p>Note that your element <strong>must</strong> be in the document tab sequence for this to work. If your element is
+not tabbable, add the <code>tabindex="0"</code> attribute to the element.</p>
+<h2 id="title-content"><a id="title-content" name="//apple_ref/cpp/Section/Title%20content" class="dashAnchor"></a><span class="bd-content-title">Title content<a class="anchorjs-link" href="tooltip.html#title-content" aria-label="Anchor"></a></span></h2>
+<p>There are several options for providing the title of a tooltip.</p>
+<p>By default, tooltip will use the <code>title</code> attribute of the element as the tooltip content. The title
+can also be passed as an object to <code>v-b-tooltip</code> in the form of</p>
+<!-- eslint-disable no-unused-vars -->
+
+<pre class="hljs js text-monospace p-2"><span class="hljs-keyword">const</span> options = {
+  <span class="hljs-attr">title</span>: <span class="hljs-string">'This is the title'</span>
+}</pre><p>If your title content has basic HTML markup, then you will also need to set the <code>html</code> property to
+true, or use the directive modifier <code>html</code></p>
+<!-- eslint-disable no-unused-vars -->
+
+<pre class="hljs js text-monospace p-2"><span class="hljs-comment">// Object format with HTML</span>
+<span class="hljs-keyword">const</span> options = {
+  <span class="hljs-attr">title</span>: <span class="hljs-string">'This is the &lt;strong&gt;title&lt;/strong&gt;'</span>,
+  <span class="hljs-attr">html</span>: <span class="hljs-literal">true</span>
+}</pre><p>Title can also be a function reference, which is called each time the tooltip is opened.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-container</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.hover</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tip from title attribute"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.hover</span>=<span class="hljs-string">"'String Tip'"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span>&gt;</span>String<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.hover.html</span>=<span class="hljs-string">"tipData"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span>&gt;</span>Data<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.hover.html</span>=<span class="hljs-string">"tipMethod"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span>&gt;</span>Method<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">tipData</span>: <span class="hljs-string">'Tooltip &lt;em&gt;Message&lt;/em&gt;'</span>
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      tipMethod() {
+        <span class="hljs-keyword">return</span> <span class="hljs-string">'&lt;strong&gt;'</span> + <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>() + <span class="hljs-string">'&lt;/strong&gt;'</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-tooltip-content.vue --&gt;</span></pre><h2 id="directive-syntax-and-usage"><a id="directive-syntax-and-usage" name="//apple_ref/cpp/Section/Directive%20syntax%20and%20usage" class="dashAnchor"></a><span class="bd-content-title">Directive syntax and usage<a class="anchorjs-link" href="tooltip.html#directive-syntax-and-usage" aria-label="Anchor"></a></span></h2>
+<pre class="hljs text-monospace p-2">v-b-tooltip:[container].[mod1].[mod2].[...].[modN]="<value>"</value></pre><p>Where [container] can be (optional)</p>
+<ul>
+<li>An element ID (minus the #) to place the tooltip markup in</li>
+<li>If not provided, tooltips are appended to the <code>body</code>. If the trigger element is inside a modal,
+the tooltip will be appended to the modal's container</li>
+</ul>
+<p>Where [modX] can be (all optional):</p>
+<ul>
+<li>Positioning: <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, <code>auto</code>, <code>topleft</code>, <code>topright</code>, <code>bottomleft</code>,
+<code>bottomright</code>, <code>lefttop</code>, <code>leftbottom</code>, <code>righttop</code>, or <code>rightbottom</code> (last one found wins,
+defaults to <code>top</code>)</li>
+<li>Event trigger: <code>click</code>, <code>hover</code>, <code>focus</code>, <code>blur</code> (if none specified, defaults to <code>focus</code> and
+<code>hover</code>. <code>blur</code> is a close handler only, and if specified by itself, will be converted to <code>focus</code>)</li>
+<li><code>nofade</code> to turn off animation</li>
+<li><code>html</code> to enable rendering raw HTML. By default HTML is escaped and converted to text</li>
+<li>A delay value in the format of <code>d###</code> (where <code>###</code> is in ms, defaults to 0);</li>
+<li>An offset value in pixels in the format of <code>o###</code> (where <code>###</code> is the number of pixels, defaults
+to 0. Negative values allowed)</li>
+<li>A boundary setting of <code>window</code> or <code>viewport</code>. The element to constrain the visual placement of the
+tooltip. If not specified, the boundary defaults to the trigger element's scroll parent (in most
+cases this will suffice).</li>
+</ul>
+<p>Where <code>&lt;value&gt;</code> can be (optional):</p>
+<ul>
+<li>A string containing the title of the tooltip</li>
+<li>A function reference to generate the title of the tooltip (receives one arg which is a reference
+to the DOM element triggering the tooltip)</li>
+<li>An object containing more complex configuration of tooltip. See below for accepted object
+properties:</li>
+</ul>
+<p><strong>Options configuration object properties:</strong></p>
+<div class="table-responsive-sm"><table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>animation</code></td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>Apply a CSS fade transition to the tooltip.</td>
+</tr>
+<tr>
+<td><code>container</code></td>
+<td>string or Element or <code>false</code></td>
+<td><code>false</code></td>
+<td>Appends the tooltip to a specific element. Example: <code>container: 'body'</code>. This option is particularly useful in that it allows you to position the tooltip in the flow of the document near the triggering element - which will prevent the tooltip from floating away from the triggering element during a window resize. When set to <code>false</code> the tooltip will be appended to <code>body</code>, or if the trigger element is inside a modal it will append to the modal's container.</td>
+</tr>
+<tr>
+<td><code>delay</code></td>
+<td>Number or Object</td>
+<td><code>0</code></td>
+<td>Delay showing and hiding the tooltip (ms). If a number is supplied, delay is applied to both hide/show. Object structure is: <code>delay: { "show": 500, "hide": 100 }</code></td>
+</tr>
+<tr>
+<td><code>html</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+<td>Allow HTML in the tooltip. If true, HTML tags in the tooltip's title will be rendered in the tooltip. If false, the title will be inserted as plain text. Use text if you're worried about XSS attacks.</td>
+</tr>
+<tr>
+<td><code>placement</code></td>
+<td>String or Function</td>
+<td><code>'top'</code></td>
+<td>How to position the tooltip - <code>auto</code>, <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, <code>topleft</code>, <code>topright</code>, <code>bottomleft</code>, <code>bottomright</code>, <code>lefttop</code>, <code>leftbottom</code>, <code>righttop</code>, or <code>rightbottom</code>. When <code>auto</code> is specified, it will dynamically reorient the tooltip.</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>String or Element or function</td>
+<td><code>''</code></td>
+<td>Default title value if title attribute isn't present. If a function is given, it must return a string.</td>
+</tr>
+<tr>
+<td><code>trigger</code></td>
+<td>String</td>
+<td><code>'hover focus'</code></td>
+<td>How tooltip is triggered: <code>click</code>, <code>hover</code>, <code>focus</code>. You may pass multiple triggers; separate them with a space.</td>
+</tr>
+<tr>
+<td><code>offset</code></td>
+<td>Number or String</td>
+<td><code>0</code></td>
+<td>Offset of the tooltip relative to its target. For more information refer to Popper.js's offset docs.</td>
+</tr>
+<tr>
+<td><code>fallbackPlacement</code></td>
+<td>String or Array</td>
+<td><code>'flip'</code></td>
+<td>Allow to specify which position Popper will use on fallback. Can be <code>flip</code>, <code>clockwise</code>, <code>counterclockwise</code> or an array of placements. For more information refer to Popper.js's behavior docs.</td>
+</tr>
+<tr>
+<td><code>boundary</code></td>
+<td>String or HTMLElement reference</td>
+<td><code>'scrollParent'</code></td>
+<td>The container that the tooltip will be constrained visually. The default should suffice in most cases, but you may need to change this if your target element is in a small container with overflow scroll. Supported values: <code>'scrollParent'</code> (default), <code>'viewport'</code>, <code>'window'</code>, or a reference to an HTML element.</td>
+</tr>
+<tr>
+<td><code>boundaryPadding</code></td>
+<td>Number</td>
+<td><code>5</code></td>
+<td>Amount of pixel used to define a minimum distance between the boundaries and the tooltip. This makes sure the tooltip always has a little padding between the edges of its container.</td>
+</tr>
+</tbody></table>
+</div><h3 id="usage"><a id="usage" name="//apple_ref/cpp/Section/Usage" class="dashAnchor"></a><span class="bd-content-title">Usage<a class="anchorjs-link" href="tooltip.html#usage" aria-label="Anchor"></a></span></h3>
+<p><strong>Simplest usage:</strong></p>
+<pre class="hljs text-monospace p-2">v-b-tooltip="'This is a Tooltip!'"</pre><p>or use the element's <code>title</code> attribute for the tooltip content:</p>
+<pre class="hljs text-monospace p-2">v-b-tooltip title="This is a title Tooltip"</pre><p><strong>Placement examples:</strong></p>
+<pre class="hljs text-monospace p-2">v-b-tooltip.bottom
+v-b-tooltip.right</pre><p><strong>Trigger examples:</strong></p>
+<pre class="hljs text-monospace p-2">v-b-tooltip.hover =&gt; Hover only
+v-b-tooltip.click =&gt; Click only
+v-b-tooltip.hover.focus =&gt; Both hover and focus</pre><p><strong>Combo:</strong></p>
+<pre class="hljs text-monospace p-2">v-b-tooltip.hover.bottom =&gt; Show on hover and place at bottom
+v-b-tooltip.bottom.hover =&gt; Same as above</pre><p><strong>Object:</strong></p>
+<pre class="hljs text-monospace p-2">v-b-tooltip="{title: 'Title', placement: 'bottom'}"</pre><h2 id="hiding-and-showing-tooltips-via-root-events"><a id="hiding-and-showing-tooltips-via-root-events" name="//apple_ref/cpp/Section/Hiding%20and%20showing%20tooltips%20via%20%24root%20events" class="dashAnchor"></a><span class="bd-content-title">Hiding and showing tooltips via $root events<a class="anchorjs-link" href="tooltip.html#hiding-and-showing-tooltips-via-root-events" aria-label="Anchor"></a></span></h2>
+<p>You can close (hide) <strong>all open tooltips</strong> by emitting the <code>bv::hide::tooltip</code> event on $root:</p>
+<pre class="hljs js text-monospace p-2"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::hide::tooltip'</span>)</pre><p>To close a <strong>specific tooltip</strong>, pass the trigger element's <code>id</code> as the first argument:</p>
+<pre class="hljs js text-monospace p-2"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::show::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre><p>To open a <strong>specific tooltip</strong>, pass the trigger element's <code>id</code> as the first argument when emitting
+the <code>bv::show::tooltip</code> $root event:</p>
+<pre class="hljs js text-monospace p-2"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::show::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre><p>To open all popovers simultaneously, omit the <code>id</code> argument when emitting the <code>bv::show::tooltip</code>
+event.</p>
+<p>These events work for both the component <strong>and</strong> directive versions of tooltip.</p>
+<p>Note the <strong>trigger element</strong> must exist in the DOM and be in a visible state in order for the
+tooltip to show.</p>
+<h2 id="disabling-and-enabling-tooltips-via-root-events"><a id="disabling-and-enabling-tooltips-via-root-events" name="//apple_ref/cpp/Section/Disabling%20and%20enabling%20tooltips%20via%20%24root%20events" class="dashAnchor"></a><span class="bd-content-title">Disabling and enabling tooltips via $root events<a class="anchorjs-link" href="tooltip.html#disabling-and-enabling-tooltips-via-root-events" aria-label="Anchor"></a></span></h2>
+<p>You can disable <strong>all open tooltips</strong> by emitting the <code>bv::disable::tooltip</code> event on $root:</p>
+<pre class="hljs js text-monospace p-2"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::disable::tooltip'</span>)</pre><p>To disable a <strong>specific tooltip</strong>, pass the trigger element's <code>id</code> as the first argument:</p>
+<pre class="hljs js text-monospace p-2"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::disable::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre><p>To enable a <strong>specific tooltip</strong>, pass the trigger element's <code>id</code> as the first argument when
+emitting the <code>bv::enable::tooltip</code> $root event:</p>
+<pre class="hljs js text-monospace p-2"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::enable::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre><p>To enable all popovers simultaneously, omit the <code>id</code> argument when emitting the
+<code>bv::enable::tooltip</code> event.</p>
+<p>These events work for both the component <strong>and</strong> directive versions of tooltip.</p>
+<p>Note the <strong>trigger element</strong> must exist in the DOM in order for the tooltip to be enabled or
+disabled.</p>
+<h2 id="see-also"><a id="see-also" name="//apple_ref/cpp/Section/See%20also" class="dashAnchor"></a><span class="bd-content-title">See also<a class="anchorjs-link" href="tooltip.html#see-also" aria-label="Anchor"></a></span></h2>
+<ul>
+<li><a href="popover.html"><code>v-b-popover</code> directive</a></li>
+<li><a href="https://bootstrap-vue.js.org/docs/components/tooltip"><code>&lt;b-tooltip&gt;</code> component</a></li>
+<li><a href="https://bootstrap-vue.js.org/docs/components/popover"><code>&lt;b-popover&gt;</code> component</a></li>
+</ul>
+<!-- Directive reference section auto generated from directive package.json -->
+</section><section class="bd-content bd-component-reference"><h2 id="directive-reference" tabindex="-1"><a id="directive-reference" name="//apple_ref/cpp/Section/Directive%20reference" class="dashAnchor"></a><span class="bd-content-title">Directive reference<a href="tooltip.html#directive-reference" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h2><section class="bd-content"><!----> <article class="bd-content"><h3 id="importing-individual-directives" tabindex="-1"><a id="importing-individual-directives" name="//apple_ref/cpp/Section/Importing%20individual%20directives" class="dashAnchor"></a><span class="bd-content-title">
+        Importing individual directives
+      <a href="tooltip.html#importing-individual-directives" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22 </span> You can
+        import individual directives into your project via the following named exports:
+      </p> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Directive</th><th role="columnheader" scope="col" aria-colindex="2">Named Export</th><th role="columnheader" scope="col" aria-colindex="3">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">v-b-tooltip</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">VBTooltip</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><!----><!----></tbody></table></div> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">import { VBTooltip } from 'bootstrap-vue'
+// Note: Vue automatically prefixes the directive name with 'v-'
+Vue.directive('b-tooltip', VBTooltip)</pre></article> <article class="bd-content"><h3 id="importing-as-a-plugin" tabindex="-1"><a id="importing-as-a-vuejs-plugin" name="//apple_ref/cpp/Section/Importing%20as%20a%20Vue.js%20plugin" class="dashAnchor"></a><span class="bd-content-title">
+      Importing as a Vue.js plugin
+    <a href="tooltip.html#importing-as-a-plugin" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> Importing plugins
+      has been simplified.
+    </p> <p>
+      This plugin includes all of the above listed individual directives.
+    </p> <div class="bv-docs-table table-responsive-sm"><table fileds="namedExport,importPath" aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><caption class="b-table-caption-top">The plugin can be imported via several methods</caption><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Named Export</th><th role="columnheader" scope="col" aria-colindex="2">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">VBTooltipPlugin</code> <span class="badge small badge-success">PREFERRED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">VBTooltipPlugin</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/directives</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">default</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/directives/tooltip</code></td></tr><!----><!----></tbody></table></div> <!----> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">// Importing the named export
+import { VBTooltipPlugin } from 'bootstrap-vue'
+Vue.use(VBTooltipPlugin)</pre></article> <aside class="alert alert-warning my-4"><p class="mb-0"><strong class="badge badge-warning">Deprecation Warning as of v2.0.0-rc.22:</strong>
+      Importing components, directives and plugins from <code>bootstrap-vue/es/*</code> has been
+      deprecated. All components, directives and plugins are now available as top-level named
+      exports in the <code>ESM</code> and <code>CommonJS</code> builds. The <code>es/</code>
+      directory build will be removed in a future release.
+    </p></aside></section></section></main></div></div></div></div></div>
+  </body>
+</html>

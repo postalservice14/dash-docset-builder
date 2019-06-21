@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Form Radio | Components | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Form Radio | Components | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="Cross browser consistent radio inputs and radio groups, using Bootstrap's custom radio input to replace the browser default radio input."><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="Cross browser consistent radio inputs and radio groups, using Bootstrap's custom radio input to replace the browser default radio input."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="modulepreload" href="a6f8df338a2c2a457341.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//src/components/form-radio/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="form-radio-inputs"><span class="bd-content-title">Form Radio Inputs</span></h1>
+<p class="bd-lead">For cross browser consistency, <code>&lt;b-form-radio-group&gt;</code> and <code>&lt;b-form-radio&gt;</code> uses Bootstrap's custom
+radio input to replace the browser default radio input. It is built on top of semantic and
+accessible markup, so it is a solid replacement for the default radio input.</p>
+<h2 id="individual-radios"><a id="individual-radios" name="//apple_ref/cpp/Section/Individual%20radios" class="dashAnchor"></a><span class="bd-content-title">Individual radios<a class="anchorjs-link" href="form-radio.html#individual-radios" aria-label="Anchor"></a></span></h2>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Individual radios"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"some-radios"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"A"</span>&gt;</span>Option A<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"some-radios"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"B"</span>&gt;</span>Option B<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected: <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{ selected }}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">selected</span>: <span class="hljs-string">''</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-radio.vue --&gt;</span></pre><h2 id="grouped-radios"><a id="grouped-radios" name="//apple_ref/cpp/Section/Grouped%20radios" class="dashAnchor"></a><span class="bd-content-title">Grouped radios<a class="anchorjs-link" href="form-radio.html#grouped-radios" aria-label="Anchor"></a></span></h2>
+<p>The individual radio inputs in <code>&lt;b-form-radio-group&gt;</code> can be specified via the <code>options</code> prop, or
+via manual placement of the <code>&lt;b-form-radio&gt;</code> sub component. When using manually placed
+<code>&lt;b-form-radio&gt;</code> components within a <code>&lt;b-form-radio-group&gt;</code>, they will inherit most props and the
+v-model from the <code>&lt;b-form-radio-group&gt;</code>.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Radios using options"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
+        <span class="hljs-attr">id</span>=<span class="hljs-string">"radio-group-1"</span>
+        <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span>
+        <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-options"</span>
+      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Radios using sub-components"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio-group-2"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-sub-component"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"first"</span>&gt;</span>Toggle this custom radio<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"second"</span>&gt;</span>Or toggle this other custom radio<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"third"</span> <span class="hljs-attr">disabled</span>&gt;</span>This one is Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"{ fourth: 4 }"</span>&gt;</span>This is the 4th radio<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected: <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{ selected }}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">selected</span>: <span class="hljs-string">'first'</span>,
+        <span class="hljs-attr">options</span>: [
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Toggle this custom radio'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'first'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Or toggle this other custom radio'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'second'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'This one is Disabled'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'third'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'This is the 4th radio'</span>, <span class="hljs-attr">value</span>: { <span class="hljs-attr">fourth</span>: <span class="hljs-number">4</span> } }
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-radio-group.vue --&gt;</span></pre><p>Feel free to mix and match <code>options</code> prop and <code>&lt;b-form-radio&gt;</code> in <code>&lt;b-form-radio-group&gt;</code>. Manually
+placed <code>&lt;b-form-radio&gt;</code> inputs will appear <em>below</em> any radio inputs generated by the <code>options</code> prop.
+To have them appear <em>above</em> the inputs generated by <code>options</code>, place them in the named slot <code>first</code>.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Radios using options and slots"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
+        <span class="hljs-attr">id</span>=<span class="hljs-string">"radio-slots"</span>
+        <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span>
+        <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-options-slots"</span>
+      &gt;</span>
+        <span class="hljs-comment">&lt;!-- Radios in this slot will appear first --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"first"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"first"</span>&gt;</span>Toggle this custom radio from slot first<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- Radios in the default slot will appear after any option generated radios --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"{ fourth: 4 }"</span>&gt;</span>This is the 4th radio<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"fifth"</span>&gt;</span>This is the 5th radio<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected: <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{ selected }}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">selected</span>: <span class="hljs-string">''</span>,
+        <span class="hljs-attr">options</span>: [
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Or toggle this other custom radio'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'second'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Third radio'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'third'</span> }
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-radio-group-slot.vue --&gt;</span></pre><h2 id="radio-group-options-array"><a id="radio-group-options-array" name="//apple_ref/cpp/Section/Radio%20group%20options%20array" class="dashAnchor"></a><span class="bd-content-title">Radio group options array<a class="anchorjs-link" href="form-radio.html#radio-group-options-array" aria-label="Anchor"></a></span></h2>
+<p>Please see options in <a href="form-select.html"><code>&lt;b-form-select&gt;</code></a> docs for details on passing
+options (value array) to <code>&lt;b-form-radio-group&gt;</code> via the <code>options</code> prop.</p>
+<h2 id="radio-value-and-v-model"><a id="radio-value-and-v-model" name="//apple_ref/cpp/Section/Radio%20value%20and%20v-model" class="dashAnchor"></a><span class="bd-content-title">Radio value and v-model<a class="anchorjs-link" href="form-radio.html#radio-value-and-v-model" aria-label="Anchor"></a></span></h2>
+<p><code>&lt;b-form-radio&gt;</code> and <code>&lt;b-form-radio-group&gt;</code> do not have a value by default. You must explicitly
+supply a value (to which the <code>v-model</code> is set to when the radio is checked) via the <code>value</code> prop.</p>
+<p>The <code>v-model</code> of both <code>&lt;b-form-radio&gt;</code> and <code>&lt;b-form-radio-group&gt;</code> binds to the <code>checked</code> prop. To
+pre-check a radio, you must set the <code>v-model</code> value to the radio's value. Do not use the <code>checked</code>
+prop directly.</p>
+<p>Radio supports values of many types, such as a <code>string</code>, <code>boolean</code>, <code>number</code>, or an <code>object</code>.</p>
+<h2 id="inline-or-stacked-radios"><a id="inline-or-stacked-radios" name="//apple_ref/cpp/Section/Inline%20or%20stacked%20radios" class="dashAnchor"></a><span class="bd-content-title">Inline or stacked radios<a class="anchorjs-link" href="form-radio.html#inline-or-stacked-radios" aria-label="Anchor"></a></span></h2>
+<p>By default <code>&lt;b-form-radio-group&gt;</code> generates inline radio inputs, while <code>&lt;b-form-radio&gt;</code> generates
+stacked radios. Set the prop <code>stacked</code> on <code>&lt;b-form-radio-group&gt;</code> to make the radios appear one over
+the other, or when using radios not in a group, set the <code>inline</code> prop on <code>b-form-radio</code> to true to
+render them inline.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Inline radios (default)"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
+        <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span>
+        <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-inline"</span>
+      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Stacked radios"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
+        <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span>
+        <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">"radios-stacked"</span>
+        <span class="hljs-attr">stacked</span>
+      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected: <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{ selected }}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">selected</span>: <span class="hljs-string">'first'</span>,
+        <span class="hljs-attr">options</span>: [
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'First radio'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'first'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Second radio'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'second'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Third radio'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'third'</span> }
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-radio-stacked.vue --&gt;</span></pre><h2 id="button-style-radios"><a id="button-style-radios" name="//apple_ref/cpp/Section/Button%20style%20radios" class="dashAnchor"></a><span class="bd-content-title">Button style radios<a class="anchorjs-link" href="form-radio.html#button-style-radios" aria-label="Anchor"></a></span></h2>
+<p>Render radios with the look of buttons by setting the prop <code>buttons</code> to <code>true</code> on
+<code>&lt;b-form-radio-group&gt;</code>. Set the button variant by setting the <code>button-variant</code> prop to one of the
+standard Bootstrap button variants (see <a href="button.html"><code>&lt;b-button&gt;</code></a> for supported
+variants). The default <code>button-variant</code> is <code>secondary</code>.</p>
+<p>The <code>buttons</code> prop has precedence over <code>plain</code>, and <code>button-variant</code> has no effect if <code>buttons</code> is
+not set.</p>
+<p>Button style radios will have the class <code>.active</code> automatically applied to their label when they are
+in the checked state.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Button style radios"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
+        <span class="hljs-attr">id</span>=<span class="hljs-string">"btn-radios-1"</span>
+        <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span>
+        <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>
+        <span class="hljs-attr">buttons</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">"radios-btn-default"</span>
+      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Button style radios with outline-primary variant and size lg"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
+        <span class="hljs-attr">id</span>=<span class="hljs-string">"btn-radios-2"</span>
+        <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span>
+        <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>
+        <span class="hljs-attr">buttons</span>
+        <span class="hljs-attr">button-variant</span>=<span class="hljs-string">"outline-primary"</span>
+        <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-btn-outline"</span>
+      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Stacked button style radios"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
+        <span class="hljs-attr">id</span>=<span class="hljs-string">"btn-radios-3"</span>
+        <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span>
+        <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>
+        <span class="hljs-attr">buttons</span>
+        <span class="hljs-attr">stacked</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-btn-stacked"</span>
+      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">selected</span>: <span class="hljs-string">'radio1'</span>,
+        <span class="hljs-attr">options</span>: [
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Radio 1'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'radio1'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Radio 3'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'radio2'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Radio 3 (disabled)'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'radio3'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Radio 4'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'radio4'</span> }
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-radio-buttons.vue --&gt;</span></pre><h2 id="non-custom-style-radio-inputs-plain"><a id="non-custom-style-radio-inputs-plain" name="//apple_ref/cpp/Section/Non-custom%20style%20radio%20inputs%20%28plain%29" class="dashAnchor"></a><span class="bd-content-title">Non-custom style radio inputs (plain)<a class="anchorjs-link" href="form-radio.html#non-custom-style-radio-inputs-plain" aria-label="Anchor"></a></span></h2>
+<p>You can have <code>&lt;b-form-radio&gt;</code> and <code>&lt;b-form-radio-group&gt;</code> render a browser native-styled radio input
+by setting the <code>plain</code> prop.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Plain inline radios"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
+        <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span>
+        <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>
+        <span class="hljs-attr">plain</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">"plain-inline"</span>
+      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Plain stacked radios"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
+        <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span>
+        <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>
+        <span class="hljs-attr">plain</span>
+        <span class="hljs-attr">stacked</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">"plain-stacked"</span>
+      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">selected</span>: <span class="hljs-string">'first'</span>,
+        <span class="hljs-attr">options</span>: [
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'First radio'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'first'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Second radio'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'second'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Third radio'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'third'</span> }
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-radio-plain.vue --&gt;</span></pre><p><strong>Note:</strong> <code>plain</code> will have no effect if <code>buttons</code>/<code>button</code> is set.</p>
+<h2 id="required-constraint"><a id="required-constraint" name="//apple_ref/cpp/Section/Required%20constraint" class="dashAnchor"></a><span class="bd-content-title">Required constraint<a class="anchorjs-link" href="form-radio.html#required-constraint" aria-label="Anchor"></a></span></h2>
+<p>When using individual <code>&lt;b-form-radio&gt;</code> components (not in a <code>&lt;b-form-radio-group&gt;</code>), and you want
+the radio(s) to be <code>required</code> in your form, you <strong>must</strong> provide a <code>name</code> on each <code>&lt;b-form-radio&gt;</code>
+in order for the required constraint to work. All <code>&lt;b-form-radio&gt;</code> components tied to the same
+<code>v-model</code> <strong>must</strong> have the same <code>name</code>.</p>
+<p>The <code>name</code> is required in order for Assistive Technologies (such as screen readers, and keyboard
+only users) to know which radios belong to the same form variable (the name also automatically
+enables native browser keyboard navigation), hence <code>required</code> will only work if <code>name</code> is set.
+<code>&lt;b-form-radio-group&gt;</code> will automatically generate a unique input name if one is not provided on the
+group.</p>
+<h2 id="autofocus"><a id="autofocus" name="//apple_ref/cpp/Section/Autofocus" class="dashAnchor"></a><span class="bd-content-title">Autofocus<a class="anchorjs-link" href="form-radio.html#autofocus" aria-label="Anchor"></a></span></h2>
+<p><span class="badge badge-info small">NEW in 2.0.0-rc.21</span></p>
+<p>When the <code>autofocus</code> prop is set on <code>&lt;b-form-radio&gt;</code>, the input will be auto-focused when it is
+inserted into the document or re-activated when inside a Vue <code>&lt;keep-alive&gt;</code> component. Note that
+this prop <strong>does not</strong> set the <code>autofocus</code> attribute on the input.</p>
+<h2 id="contextual-states"><a id="contextual-states" name="//apple_ref/cpp/Section/Contextual%20states" class="dashAnchor"></a><span class="bd-content-title">Contextual states<a class="anchorjs-link" href="form-radio.html#contextual-states" aria-label="Anchor"></a></span></h2>
+<p>Bootstrap includes validation styles for <code>valid</code> and <code>invalid</code> states on most form controls.</p>
+<p>Generally speaking, you'll want to use a particular state for specific types of feedback:</p>
+<ul>
+<li><code>'invalid'</code> is great for when there's a blocking or required field. A user must fill in this field
+properly to submit the form.</li>
+<li><code>'valid'</code> is ideal for situations when you have per-field validation throughout a form and want to
+encourage a user through the rest of the fields.</li>
+<li><code>null</code> Displays no validation state</li>
+</ul>
+<p>To apply one of the contextual state icons on <code>&lt;b-form-radio&gt;</code>, set the <code>state</code> prop to <code>'invalid'</code>
+(or <code>false</code>), <code>'valid'</code> (or <code>true</code>), or <code>null</code>.</p>
+<p><strong>Note:</strong> Contextual state is not supported for radios rendered in buttons mode.</p>
+<h3 id="contextual-state-with-feedback-example"><a id="contextual-state-with-feedback-example" name="//apple_ref/cpp/Section/Contextual%20state%20with%20feedback%20example" class="dashAnchor"></a><span class="bd-content-title">Contextual state with feedback example<a class="anchorjs-link" href="form-radio.html#contextual-state-with-feedback-example" aria-label="Anchor"></a></span></h3>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">:state</span>=<span class="hljs-string">"state"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-validation"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-invalid-feedback</span> <span class="hljs-attr">:state</span>=<span class="hljs-string">"state"</span>&gt;</span>Please select one<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-invalid-feedback</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-valid-feedback</span> <span class="hljs-attr">:state</span>=<span class="hljs-string">"state"</span>&gt;</span>Thank you<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-valid-feedback</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">options</span>: [
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'First radio'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'first'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Second radio'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'second'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Third radio'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'third'</span> }
+        ]
+      }
+    },
+    <span class="hljs-attr">computed</span>: {
+      state() {
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Boolean</span>(<span class="hljs-keyword">this</span>.value)
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-radio-validation.vue --&gt;</span></pre><h3 id="conveying-contextual-validation-state-to-assistive-technologies-and-colorblind-users"><a id="conveying-contextual-validation-state-to-assistive-technologies-and-colorblind-users" name="//apple_ref/cpp/Section/Conveying%20contextual%20validation%20state%20to%20assistive%20technologies%20and%20colorblind%20users" class="dashAnchor"></a><span class="bd-content-title">Conveying contextual validation state to assistive technologies and colorblind users<a class="anchorjs-link" href="form-radio.html#conveying-contextual-validation-state-to-assistive-technologies-and-colorblind-users" aria-label="Anchor"></a></span></h3>
+<p>Using these contextual states to denote the state of a form control only provides a visual,
+color-based indication, which will not be conveyed to users of assistive technologies - such as
+screen readers - or to colorblind users.</p>
+<p>Ensure that an alternative indication of state is also provided. For instance, you could include a
+hint about state in the form control's <code>&lt;label&gt;</code> text itself, or by providing an additional help
+text block (i.e. <code>&lt;b-form-invalid-feedback&gt;</code>). Specifically for assistive technologies, invalid form
+controls can also be assigned an <code>aria-invalid="true"</code> attribute (see below).</p>
+<h3 id="aria-aria-invalid-attribute"><a id="aria-aria-invalid-attribute" name="//apple_ref/cpp/Section/ARIA%20aria-invalid%20attribute" class="dashAnchor"></a><span class="bd-content-title">ARIA <code>aria-invalid</code> attribute<a class="anchorjs-link" href="form-radio.html#aria-aria-invalid-attribute" aria-label="Anchor"></a></span></h3>
+<p>When <code>&lt;b-form-radio-group&gt;</code> has an invalid contextual state (i.e. <code>invalid</code>) you may also want to
+set the <code>&lt;b-form-radio-group&gt;</code> prop <code>aria-invalid</code> to <code>true</code>.</p>
+<p>Supported <code>aria-invalid</code> values are:</p>
+<ul>
+<li><code>false</code> (default) No errors detected</li>
+<li><code>true</code> The value has failed validation.</li>
+</ul>
+<p><code>aria-invalid</code> is automatically set to <code>true</code> if the <code>state</code> prop is <code>'invalid'</code> (or <code>false</code>).</p>
+<!-- Component reference added automatically from component package.json -->
+</section><section class="bd-content bd-component-reference"><h2 id="component-reference" tabindex="-1"><a id="component-reference" name="//apple_ref/cpp/Section/Component%20reference" class="dashAnchor"></a><span class="bd-content-title">Component reference<a href="form-radio.html#component-reference" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h2><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-form-radio-group" tabindex="-1"><a id="b-form-radio-group" name="//apple_ref/cpp/Section/%3Cb-form-radio-group%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-form-radio-group&gt;</code><a href="form-radio.html#comp-ref-b-form-radio-group" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <!----></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/form-radio/form-radio-group.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <article class="bd-content"><h4 id="comp-ref-b-form-radio-group-aliases" tabindex="-1"><span class="bd-content-title">
+      Component aliases
+    <a href="form-radio.html#comp-ref-b-form-radio-group-aliases" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <p><code>&lt;b-form-radio-group&gt;</code> can also be used via the following aliases:</p> <ul><li><code>&lt;b-radio-group&gt;</code></li></ul> <p class="small text-muted">
+      Note: component aliases are only available when importing all of BootstrapVue or using
+      the component group plugin.
+    </p></article> <article class="bd-content"><h4 id="comp-ref-b-form-radio-group-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="form-radio.html#comp-ref-b-form-radio-group-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">id</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">name</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">disabled</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">required</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">form</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">autofocus</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">validated</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">aria-invalid</code> <!----></td><td role="cell" aria-colindex="2">Boolean or String</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">stacked</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">plain</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">buttons</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">button-variant</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>secondary</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">options</code> <!----></td><td role="cell" aria-colindex="2">Array or Object</td><td role="cell" aria-colindex="3"><code>[]</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">value-field</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>value</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">text-field</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>text</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">html-field</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>html</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">disabled-field</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>disabled</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">size</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">state</code> <!----></td><td role="cell" aria-colindex="2">String or Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">checked</code> <!----></td><td role="cell" aria-colindex="2">String or Object or Number or Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><!----><!----></tbody></table></div> <h4 id="comp-ref-b-form-radio-group-v-model" tabindex="-1"><span class="bd-content-title">
+        v-model
+      <a href="form-radio.html#comp-ref-b-form-radio-group-v-model" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Prop</th><th role="columnheader" scope="col" aria-colindex="2">Event</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code>checked</code></td><td role="cell" aria-colindex="2"><code>input</code></td></tr><!----><!----></tbody></table></div></article> <article class="bd-content"><h4 id="comp-ref-b-form-radio-group-slots" tabindex="-1"><span class="bd-content-title">
+      Slots
+    <a href="form-radio.html#comp-ref-b-form-radio-group-slots" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Slot</th><th role="columnheader" scope="col" aria-colindex="2">Description</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">first</code></td><td role="cell" aria-colindex="2">Slot to place b-form-radio's so that they appear before radios generated from options prop</td></tr><!----><!----></tbody></table></div></article> <article class="bd-content"><h4 id="comp-ref-b-form-radio-group-events" tabindex="-1"><span class="bd-content-title">
+      Events
+    <a href="form-radio.html#comp-ref-b-form-radio-group-events" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Event</th><th role="columnheader" scope="col" aria-colindex="2">Arguments</th><th role="columnheader" scope="col" aria-colindex="3">Description</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">input</code></td><td role="cell" aria-colindex="2"><div><code class="text-nowrap">checked</code> -  <span>current selected Value of radio group.</span></div></td><td role="cell" aria-colindex="3">Emitted when the selected value is changed</td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">change</code></td><td role="cell" aria-colindex="2"><div><code class="text-nowrap">checked</code> -  <span>current selected Value of radio group.</span></div></td><td role="cell" aria-colindex="3">Emitted when selected value is changed due to user interaction</td></tr><!----><!----></tbody></table></div></article> <!----></section><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-form-radio" tabindex="-1"><a id="b-form-radio" name="//apple_ref/cpp/Section/%3Cb-form-radio%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-form-radio&gt;</code><a href="form-radio.html#comp-ref-b-form-radio" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <!----></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/form-radio/form-radio.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <article class="bd-content"><h4 id="comp-ref-b-form-radio-aliases" tabindex="-1"><span class="bd-content-title">
+      Component aliases
+    <a href="form-radio.html#comp-ref-b-form-radio-aliases" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <p><code>&lt;b-form-radio&gt;</code> can also be used via the following aliases:</p> <ul><li><code>&lt;b-radio&gt;</code></li></ul> <p class="small text-muted">
+      Note: component aliases are only available when importing all of BootstrapVue or using
+      the component group plugin.
+    </p></article> <article class="bd-content"><h4 id="comp-ref-b-form-radio-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="form-radio.html#comp-ref-b-form-radio-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">id</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">value</code> <!----></td><td role="cell" aria-colindex="2">Object</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">checked</code> <!----></td><td role="cell" aria-colindex="2">String or Object or Number or Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">inline</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">plain</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">button</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">button-variant</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">aria-label</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">aria-labelledby</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">name</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">disabled</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">required</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">form</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">autofocus</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">size</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">state</code> <!----></td><td role="cell" aria-colindex="2">String or Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><!----><!----></tbody></table></div> <h4 id="comp-ref-b-form-radio-v-model" tabindex="-1"><span class="bd-content-title">
+        v-model
+      <a href="form-radio.html#comp-ref-b-form-radio-v-model" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Prop</th><th role="columnheader" scope="col" aria-colindex="2">Event</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code>checked</code></td><td role="cell" aria-colindex="2"><code>input</code></td></tr><!----><!----></tbody></table></div></article> <!----> <article class="bd-content"><h4 id="comp-ref-b-form-radio-events" tabindex="-1"><span class="bd-content-title">
+      Events
+    <a href="form-radio.html#comp-ref-b-form-radio-events" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Event</th><th role="columnheader" scope="col" aria-colindex="2">Arguments</th><th role="columnheader" scope="col" aria-colindex="3">Description</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">input</code></td><td role="cell" aria-colindex="2"><div><code class="text-nowrap">checked</code> -  <span>current selected Value of radio group.</span></div></td><td role="cell" aria-colindex="3">Emitted when the selected value is changed</td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">change</code></td><td role="cell" aria-colindex="2"><div><code class="text-nowrap">checked</code> -  <span>current selected Value of radio group.</span></div></td><td role="cell" aria-colindex="3">Emitted when selected value is changed due to user interaction</td></tr><!----><!----></tbody></table></div></article> <!----></section><section class="bd-content"><article class="bd-content"><h3 id="importing-individual-components" tabindex="-1"><a id="importing-individual-components" name="//apple_ref/cpp/Section/Importing%20individual%20components" class="dashAnchor"></a><span class="bd-content-title">
+        Importing individual components
+      <a href="form-radio.html#importing-individual-components" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> You can
+        import individual components into your project via the following named exports:
+      </p> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Component</th><th role="columnheader" scope="col" aria-colindex="2">Named Export</th><th role="columnheader" scope="col" aria-colindex="3">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-form-radio-group&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BFormRadioGroup</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-form-radio&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BFormRadio</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><!----><!----></tbody></table></div> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">import { BFormRadioGroup } from 'bootstrap-vue'
+Vue.component('b-form-radio-group', BFormRadioGroup)</pre></article> <!----> <article class="bd-content"><h3 id="importing-as-a-plugin" tabindex="-1"><a id="importing-as-a-vuejs-plugin" name="//apple_ref/cpp/Section/Importing%20as%20a%20Vue.js%20plugin" class="dashAnchor"></a><span class="bd-content-title">
+      Importing as a Vue.js plugin
+    <a href="form-radio.html#importing-as-a-plugin" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> Importing plugins
+      has been simplified.
+    </p> <p>
+      This plugin includes all of the above listed individual
+      components<!---->.
+      Plugins also include any component aliases.
+    </p> <div class="bv-docs-table table-responsive-sm"><table fileds="namedExport,importPath" aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><caption class="b-table-caption-top">The plugin can be imported via several methods</caption><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Named Export</th><th role="columnheader" scope="col" aria-colindex="2">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">FormRadioPlugin</code> <span class="badge small badge-success">PREFERRED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">FormRadioPlugin</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">default</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components/form-radio</code></td></tr><!----><!----></tbody></table></div> <!----> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">// Importing the named export
+import { FormRadioPlugin } from 'bootstrap-vue'
+Vue.use(FormRadioPlugin)</pre></article> <aside class="alert alert-warning my-4"><p class="mb-0"><strong class="badge badge-warning">Deprecation Warning as of v2.0.0-rc.22:</strong>
+      Importing components, directives and plugins from <code>bootstrap-vue/es/*</code> has been
+      deprecated. All components, directives and plugins are now available as top-level named
+      exports in the <code>ESM</code> and <code>CommonJS</code> builds. The <code>es/</code>
+      directory build will be removed in a future release.
+    </p></aside></section></section></main></div></div></div></div></div>
+  </body>
+</html>

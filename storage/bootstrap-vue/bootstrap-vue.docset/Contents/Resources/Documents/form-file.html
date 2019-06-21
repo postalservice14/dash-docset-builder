@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Form File | Components | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Form File | Components | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="Customized, cross-browser consistent, file input control that supports single file, multiple files, and directory upload."><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="Customized, cross-browser consistent, file input control that supports single file, multiple files, and directory upload."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="modulepreload" href="a6f8df338a2c2a457341.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//src/components/form-file/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="form-file-input"><span class="bd-content-title">Form File Input</span></h1>
+<p class="bd-lead">Customized, cross-browser consistent, file input control that supports single file, multiple
+files, and directory upload (for browsers that support directory mode)</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Styled --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span>
+      <span class="hljs-attr">v-model</span>=<span class="hljs-string">"file"</span>
+      <span class="hljs-attr">:state</span>=<span class="hljs-string">"Boolean(file)"</span>
+      <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Choose a file..."</span>
+      <span class="hljs-attr">drop-placeholder</span>=<span class="hljs-string">"Drop file here..."</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected file: {{ file ? file.name : '' }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Plain mode --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"file2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span> <span class="hljs-attr">plain</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected file: {{ file2 ? file2.name : '' }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">file</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">file2</span>: <span class="hljs-literal">null</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-file.vue --&gt;</span></pre><p>For cross browser consistency, Form file defaults to the Bootstrap custom file input to replace the
+browser defaults. They're built on top of semantic and accessible markup, so it is a solid
+replacement for the default file input.</p>
+<h2 id="single-file-default"><a id="single-file-default" name="//apple_ref/cpp/Section/Single%20file%20%28default%29" class="dashAnchor"></a><span class="bd-content-title">Single file (default)<a class="anchorjs-link" href="form-file.html#single-file-default" aria-label="Anchor"></a></span></h2>
+<p>On single file mode, when no file is selected or user cancels Browse dialog, <code>v-model</code> is <code>null</code>
+indicating no file selected. When a file is selected the return value will be a JavaScript
+<a href="https://developer.mozilla.org/en/docs/Web/API/File"><code>File</code></a> object instance.</p>
+<h2 id="multiple-files"><a id="multiple-files" name="//apple_ref/cpp/Section/Multiple%20files" class="dashAnchor"></a><span class="bd-content-title">Multiple files<a class="anchorjs-link" href="form-file.html#multiple-files" aria-label="Anchor"></a></span></h2>
+<p>Multiple file uploading is supported by adding <code>multiple</code> prop to component. In this case <code>v-model</code>
+is <em>always</em> an <code>Array</code>. When no files are selected, an empty array will be returned. When a file or
+files are selected the return value will be an array of JavaScript
+<a href="https://developer.mozilla.org/en/docs/Web/API/File"><code>File</code></a> object instances.</p>
+<h2 id="directory-mode"><a id="directory-mode" name="//apple_ref/cpp/Section/Directory%20mode" class="dashAnchor"></a><span class="bd-content-title">Directory mode<a class="anchorjs-link" href="form-file.html#directory-mode" aria-label="Anchor"></a></span></h2>
+<p>By adding <code>directory</code> prop, the user can select directories instead of files. When a directory is
+selected, the directory and its entire hierarchy of contents are included in the set of selected
+items. The selected file system entries can be obtained using the <code>webkitEntries</code> property.</p>
+<p><strong>CAUTION</strong> This is a non standard feature while being supported by latest Firefox and Chrome
+versions, and should not be relied for production.
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/webkitdirectory">Read more on MDN</a></p>
+<p>Directory mode is not supported when the file input is in plain mode.</p>
+<h2 id="drag-and-drop-support"><a id="drag-and-drop-support" name="//apple_ref/cpp/Section/Drag%20and%20Drop%20support" class="dashAnchor"></a><span class="bd-content-title">Drag and Drop support<a class="anchorjs-link" href="form-file.html#drag-and-drop-support" aria-label="Anchor"></a></span></h2>
+<p>Drop mode is enabled by default. It can disabled by setting the <code>no-drop</code> prop. <code>no-drop</code>has no
+effect in plain mode.</p>
+<p>You can optionally set a different placeholder while dragging via the <code>drop-placeholder</code> prop. The
+default is no drop placeholder text. Only plain text is supported. HTML and components are not
+supported. The <code>drop-placeholder</code> prop has no effect if <code>no-drop</code>is set or in <code>plain</code> mode,</p>
+<h2 id="limiting-to-certain-file-types"><a id="limiting-to-certain-file-types" name="//apple_ref/cpp/Section/Limiting%20to%20certain%20file%20types" class="dashAnchor"></a><span class="bd-content-title">Limiting to certain file types<a class="anchorjs-link" href="form-file.html#limiting-to-certain-file-types" aria-label="Anchor"></a></span></h2>
+<p>You can limit the file types by setting the <code>accept</code> prop to a string containing the allowed file
+type(s). To specify more than one type, separate the values with a comma.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Accept all image formats by IANA media type wildcard--&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">accept</span>=<span class="hljs-string">"image/*"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Accept specific image formats by IANA type --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">accept</span>=<span class="hljs-string">"image/jpeg, image/png, image/gif"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Accept specific image formats by extension --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">accept</span>=<span class="hljs-string">".jpg, .png, .gif"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre><p>To accept any file type, leave <code>accept</code> as null (default). You can mix and match IANA media types
+and extensions.</p>
+<p>Refer to <a href="http://www.iana.org/assignments/media-types/">IANA Media Types</a> for a complete list of
+standard media types.</p>
+<p><strong>Note:</strong> Not all browsers support or respect the <code>accept</code> attribute on file inputs.</p>
+<h2 id="customize-the-placeholder-text"><a id="customize-the-placeholder-text" name="//apple_ref/cpp/Section/Customize%20the%20placeholder%20text" class="dashAnchor"></a><span class="bd-content-title">Customize the placeholder text<a class="anchorjs-link" href="form-file.html#customize-the-placeholder-text" aria-label="Anchor"></a></span></h2>
+<p>Use the prop <code>placeholder</code> to change the prompt text that is shown when no files are selected. Only
+plain text is supported. HTML and components are not supported.</p>
+<h2 id="customize-browse-button-label"><a id="customize-browse-button-label" name="//apple_ref/cpp/Section/Customize%20browse%20button%20label" class="dashAnchor"></a><span class="bd-content-title">Customize browse button label<a class="anchorjs-link" href="form-file.html#customize-browse-button-label" aria-label="Anchor"></a></span></h2>
+<p>If you want to globally change <code>Browse</code> label, you can add something like this to your global
+stylesheets. Also it is advised to use
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:lang">:lang()</a> for multi-language sites.</p>
+<pre class="hljs css text-monospace p-2"><span class="hljs-selector-class">.custom-file-input</span><span class="hljs-selector-pseudo">:lang(en)</span> ~ <span class="hljs-selector-class">.custom-file-label</span><span class="hljs-selector-pseudo">::after</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">'Browse'</span>;
+}</pre><p>Alternatively you can set the content of the custom file browse button text via the <code>browse-text</code>
+prop. Note, only plain text is supported. HTML and components are not supported.</p>
+<h2 id="customize-the-formatting-of-the-selected-file-names"><a id="customize-the-formatting-of-the-selected-file-names" name="//apple_ref/cpp/Section/Customize%20the%20formatting%20of%20the%20selected%20file%20names" class="dashAnchor"></a><span class="bd-content-title">Customize the formatting of the selected file names<a class="anchorjs-link" href="form-file.html#customize-the-formatting-of-the-selected-file-names" aria-label="Anchor"></a></span></h2>
+<p>By default, the custom styled file input lists the file names separated by commas. You can customize
+how the file names are shown either via a custom formatter function or the <code>file-name</code> scoped slot.</p>
+<h3 id="file-name-formatter-function"><a id="file-name-formatter-function" name="//apple_ref/cpp/Section/File%20name%20formatter%20function" class="dashAnchor"></a><span class="bd-content-title">File name formatter function<a class="anchorjs-link" href="form-file.html#file-name-formatter-function" aria-label="Anchor"></a></span></h3>
+<p>Set the prop <code>file-name-formatter</code> to a function that accepts a single argument which is an array of
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/File"><code>File</code></a> objects. The function should return
+a single formatted string (HTML is not supported). The formatter will not be called if no files are
+selected.</p>
+<p>Regardless of if the prop <code>multiple</code> is set or not, the argument to the formatter will always be an
+array.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">:file-name-formatter</span>=<span class="hljs-string">"formatNames"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    <span class="hljs-attr">methods</span>: {
+      formatNames(files) {
+        <span class="hljs-keyword">if</span> (files.length === <span class="hljs-number">1</span>) {
+          <span class="hljs-keyword">return</span> files[<span class="hljs-number">0</span>].name
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${files.length}</span> files selected`</span>
+        }
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- file-formatter-function.vue --&gt;</span></pre><h3 id="file-name-formatting-via-scoped-slot"><a id="file-name-formatting-via-scoped-slot" name="//apple_ref/cpp/Section/File%20name%20formatting%20via%20scoped%20slot" class="dashAnchor"></a><span class="bd-content-title">File name formatting via scoped slot<a class="anchorjs-link" href="form-file.html#file-name-formatting-via-scoped-slot" aria-label="Anchor"></a></span></h3>
+<p>Alternatively, you can use the scoped slot <code>file-name</code> to render the file names. The scoped slot
+will receive the following properties:</p>
+<div class="table-responsive-sm"><table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>files</code></td>
+<td>Array</td>
+<td>Array of <code>File</code> objects</td>
+</tr>
+<tr>
+<td><code>names</code></td>
+<td>Array</td>
+<td>Array of file names</td>
+</tr>
+</tbody></table>
+</div><p>Both properties are always arrays, regardless of the setting of the <code>multiple</code> prop.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">multiple</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"file-name"</span> <span class="hljs-attr">slot-scope</span>=<span class="hljs-string">"{ names }"</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"dark"</span>&gt;</span>{{ names[0] }}<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"names.length &gt; 1"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ml-1"</span>&gt;</span>
+       + {{ names.length - 1 }} More files
+     <span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- file-formatter-slot.vue --&gt;</span></pre><p>When using the <code>file-name</code> slot, the <code>file-name-formatter</code> prop is ignored. Also, the slot will not
+be rendered when there are no file(s) selected.</p>
+<h2 id="non-custom-file-input"><a id="non-custom-file-input" name="//apple_ref/cpp/Section/Non%20custom%20file%20input" class="dashAnchor"></a><span class="bd-content-title">Non custom file input<a class="anchorjs-link" href="form-file.html#non-custom-file-input" aria-label="Anchor"></a></span></h2>
+<p>You can have <code>&lt;b-form-file&gt;</code> render a browser native file input by setting the <code>plain</code> prop. Note
+that many of the custom form-file features do not apply when <code>plain</code> is set.</p>
+<h2 id="contextual-state-feedback"><a id="contextual-state-feedback" name="//apple_ref/cpp/Section/Contextual%20state%20feedback" class="dashAnchor"></a><span class="bd-content-title">Contextual state feedback<a class="anchorjs-link" href="form-file.html#contextual-state-feedback" aria-label="Anchor"></a></span></h2>
+<p>Bootstrap includes validation styles for <code>valid</code> and <code>invalid</code> states on most form controls.</p>
+<p>Generally speaking, you'll want to use a particular state for specific types of feedback:</p>
+<ul>
+<li><code>'invalid'</code> is great for when there's a blocking or required field. A user must fill in this field
+properly to submit the form.</li>
+<li><code>'valid'</code> is ideal for situations when you have per-field validation throughout a form and want to
+encourage a user through the rest of the fields.</li>
+<li><code>null</code> Displays no validation state</li>
+</ul>
+<p>To apply one of the contextual state icons on <code>&lt;b-form-file</code>, set the <code>state</code> prop to <code>'invalid'</code>
+(or <code>false</code>), <code>'valid'</code> ( or <code>true</code>), or <code>null</code>.</p>
+<h2 id="autofocus"><a id="autofocus" name="//apple_ref/cpp/Section/Autofocus" class="dashAnchor"></a><span class="bd-content-title">Autofocus<a class="anchorjs-link" href="form-file.html#autofocus" aria-label="Anchor"></a></span></h2>
+<p><span class="badge badge-info small">NEW in 2.0.0-rc.21</span></p>
+<p>When the <code>autofocus</code> prop is set on <code>&lt;b-form-file&gt;</code>, the input will be auto-focused when it is
+inserted into the document or re-activated when inside a Vue <code>&lt;keep-alive&gt;</code> component. Note that
+this prop <strong>does not</strong> set the <code>autofocus</code> attribute on the input.</p>
+<h2 id="accessibility"><a id="accessibility" name="//apple_ref/cpp/Section/Accessibility" class="dashAnchor"></a><span class="bd-content-title">Accessibility<a class="anchorjs-link" href="form-file.html#accessibility" aria-label="Anchor"></a></span></h2>
+<p>When using the custom version of <code>&lt;b-form-file&gt;</code> input which hides the original input, it is
+<strong>highly recommended</strong> that you supply a document unique ID string via the <code>id</code> prop. This will
+automatically render the extra ARIA attributes required to improve usability for persons using
+assistive technologies.</p>
+<h2 id="clearing-the-file-selection"><a id="clearing-the-file-selection" name="//apple_ref/cpp/Section/Clearing%20the%20file%20selection" class="dashAnchor"></a><span class="bd-content-title">Clearing the file selection<a class="anchorjs-link" href="form-file.html#clearing-the-file-selection" aria-label="Anchor"></a></span></h2>
+<p>With inputs of type file, normally the <code>v-model</code> is uni-directional (meaning you cannot pre-set the
+selected files). However, you can clear the file input's selected files by setting the <code>v-model</code> to
+either <code>null</code>, an empty string, or an empty array).</p>
+<p>Alternatively, <code>&lt;b-form-file&gt;</code> provides a <code>reset()</code> method that can be called to clear the file
+input. To take advantage of the <code>reset()</code> method, you will need to obtain a reference to the
+<code>&lt;b-form-file&gt;</code> component.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"file"</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"file-input"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"clearFiles"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-2"</span>&gt;</span>Reset via method<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"file = null"</span>&gt;</span>Reset via v-model<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span>Selected file: <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>{{ file ? file.name : '' }}<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">file</span>: <span class="hljs-literal">null</span>
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      clearFiles() {
+        <span class="hljs-keyword">this</span>.$refs[<span class="hljs-string">'file-input'</span>].reset()
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-form-file-reset.vue --&gt;</span></pre><p><strong>Implementation note:</strong> As not all browsers allow setting a value of a file input (even to null or
+an empty string), <code>b-form-input</code> employs a technique that works cross-browser that involves changing
+the input type to null and then back to type file.</p>
+<!-- Component reference added automatically from component package.json -->
+</section><section class="bd-content bd-component-reference"><h2 id="component-reference" tabindex="-1"><a id="component-reference" name="//apple_ref/cpp/Section/Component%20reference" class="dashAnchor"></a><span class="bd-content-title">Component reference<a href="form-file.html#component-reference" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h2><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-form-file" tabindex="-1"><a id="b-form-file" name="//apple_ref/cpp/Section/%3Cb-form-file%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-form-file&gt;</code><a href="form-file.html#comp-ref-b-form-file" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <!----></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/form-file/form-file.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <article class="bd-content"><h4 id="comp-ref-b-form-file-aliases" tabindex="-1"><span class="bd-content-title">
+      Component aliases
+    <a href="form-file.html#comp-ref-b-form-file-aliases" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <p><code>&lt;b-form-file&gt;</code> can also be used via the following aliases:</p> <ul><li><code>&lt;b-file&gt;</code></li></ul> <p class="small text-muted">
+      Note: component aliases are only available when importing all of BootstrapVue or using
+      the component group plugin.
+    </p></article> <article class="bd-content"><h4 id="comp-ref-b-form-file-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="form-file.html#comp-ref-b-form-file-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">id</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">name</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">disabled</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">required</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">form</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">autofocus</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">state</code> <!----></td><td role="cell" aria-colindex="2">String or Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">plain</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">value</code> <!----></td><td role="cell" aria-colindex="2">Object</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">accept</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">capture</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">placeholder</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>No file chosen</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">browse-text</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>Browse</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">drop-placeholder</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>Drop files here</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">multiple</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">directory</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">no-traverse</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">no-drop</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">file-name-formatter</code> <!----></td><td role="cell" aria-colindex="2">Function</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><!----><!----></tbody></table></div> <h4 id="comp-ref-b-form-file-v-model" tabindex="-1"><span class="bd-content-title">
+        v-model
+      <a href="form-file.html#comp-ref-b-form-file-v-model" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Prop</th><th role="columnheader" scope="col" aria-colindex="2">Event</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code>value</code></td><td role="cell" aria-colindex="2"><code>input</code></td></tr><!----><!----></tbody></table></div></article> <article class="bd-content"><h4 id="comp-ref-b-form-file-slots" tabindex="-1"><span class="bd-content-title">
+      Slots
+    <a href="form-file.html#comp-ref-b-form-file-slots" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Slot</th><th role="columnheader" scope="col" aria-colindex="2">Description</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">file-name</code></td><td role="cell" aria-colindex="2">Scoped slot for formatting the file names. Scoped props: files - array of File objects, names: array of file names</td></tr><!----><!----></tbody></table></div></article> <article class="bd-content"><h4 id="comp-ref-b-form-file-events" tabindex="-1"><span class="bd-content-title">
+      Events
+    <a href="form-file.html#comp-ref-b-form-file-events" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Event</th><th role="columnheader" scope="col" aria-colindex="2">Arguments</th><th role="columnheader" scope="col" aria-colindex="3">Description</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">change</code></td><td role="cell" aria-colindex="2"><div><code class="text-nowrap">event</code> -  <span></span></div></td><td role="cell" aria-colindex="3">original native change event on input</td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">input</code></td><td role="cell" aria-colindex="2"></td><td role="cell" aria-colindex="3">[see above docs]</td></tr><!----><!----></tbody></table></div></article> <!----></section><section class="bd-content"><article class="bd-content"><h3 id="importing-individual-components" tabindex="-1"><a id="importing-individual-components" name="//apple_ref/cpp/Section/Importing%20individual%20components" class="dashAnchor"></a><span class="bd-content-title">
+        Importing individual components
+      <a href="form-file.html#importing-individual-components" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> You can
+        import individual components into your project via the following named exports:
+      </p> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Component</th><th role="columnheader" scope="col" aria-colindex="2">Named Export</th><th role="columnheader" scope="col" aria-colindex="3">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-form-file&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BFormFile</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><!----><!----></tbody></table></div> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">import { BFormFile } from 'bootstrap-vue'
+Vue.component('b-form-file', BFormFile)</pre></article> <!----> <article class="bd-content"><h3 id="importing-as-a-plugin" tabindex="-1"><a id="importing-as-a-vuejs-plugin" name="//apple_ref/cpp/Section/Importing%20as%20a%20Vue.js%20plugin" class="dashAnchor"></a><span class="bd-content-title">
+      Importing as a Vue.js plugin
+    <a href="form-file.html#importing-as-a-plugin" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> Importing plugins
+      has been simplified.
+    </p> <p>
+      This plugin includes all of the above listed individual
+      components<!---->.
+      Plugins also include any component aliases.
+    </p> <div class="bv-docs-table table-responsive-sm"><table fileds="namedExport,importPath" aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><caption class="b-table-caption-top">The plugin can be imported via several methods</caption><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Named Export</th><th role="columnheader" scope="col" aria-colindex="2">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">FormFilePlugin</code> <span class="badge small badge-success">PREFERRED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">FormFilePlugin</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">default</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components/form-file</code></td></tr><!----><!----></tbody></table></div> <!----> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">// Importing the named export
+import { FormFilePlugin } from 'bootstrap-vue'
+Vue.use(FormFilePlugin)</pre></article> <aside class="alert alert-warning my-4"><p class="mb-0"><strong class="badge badge-warning">Deprecation Warning as of v2.0.0-rc.22:</strong>
+      Importing components, directives and plugins from <code>bootstrap-vue/es/*</code> has been
+      deprecated. All components, directives and plugins are now available as top-level named
+      exports in the <code>ESM</code> and <code>CommonJS</code> builds. The <code>es/</code>
+      directory build will be removed in a future release.
+    </p></aside></section></section></main></div></div></div></div></div>
+  </body>
+</html>

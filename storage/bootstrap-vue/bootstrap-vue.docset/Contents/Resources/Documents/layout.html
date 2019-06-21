@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Layout and Grid System | Components | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Layout and Grid System | Components | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="Use the powerful mobile-first flexbox grid (via the &lt;b-container&gt;, &lt;b-row&gt;, &lt;b-form-row&gt; and &lt;b-col&gt; components) to build layouts of all shapes and sizes thanks to a twelve column system, five default responsive tiers, CSS Sass variables and mixins, and dozens of predefined classes."><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="Use the powerful mobile-first flexbox grid (via the &lt;b-container&gt;, &lt;b-row&gt;, &lt;b-form-row&gt; and &lt;b-col&gt; components) to build layouts of all shapes and sizes thanks to a twelve column system, five default responsive tiers, CSS Sass variables and mixins, and dozens of predefined classes."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="modulepreload" href="a6f8df338a2c2a457341.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//src/components/layout/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="layout-and-grid-system"><span class="bd-content-title">Layout and Grid System</span></h1>
+<p class="bd-lead">Use the powerful mobile-first flexbox grid (via the <code>&lt;b-container&gt;</code>, <code>&lt;b-row&gt;</code>, <code>&lt;b-form-row&gt;</code> and
+<code>&lt;b-col&gt;</code> components) to build layouts of all shapes and sizes thanks to a twelve column system,
+five default responsive tiers, CSS Sass variables and mixins, and dozens of predefined classes.</p>
+<p>BootstrapVue provides several convenient <em>functional</em> components tailored for layout, which can
+simplify your complex page markup compared to traditional Bootstrap v4 markup. Feel free to switch
+back and forth between traditional Bootstrap v4 markup (i.e. <code>&lt;div&gt;</code>s and classes) and BootstrapVue
+functional layout components.</p>
+<h2 id="how-it-works"><a id="how-it-works" name="//apple_ref/cpp/Section/How%20it%20works" class="dashAnchor"></a><span class="bd-content-title">How it works<a class="anchorjs-link" href="layout.html#how-it-works" aria-label="Anchor"></a></span></h2>
+<p>Bootstrap's grid system uses a series of containers, rows, and columns to lay out and align content.
+It's built with flexbox and is fully responsive. Below is an example and an in-depth look at how the
+grid comes together.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>2 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-how-it-works.vue --&gt;</span></pre><p>The above example creates three equal-width columns on small, medium, large, and extra large devices
+using Bootstrap v4's predefined grid classes. Those columns are centered in the page with the parent
+.container.</p>
+<p>Here's how it works:</p>
+<ul>
+<li>Containers provide a means to center your site's contents. Use <code>&lt;b-container&gt;</code> for fixed width or
+<code>&lt;b-container fluid&gt;</code> for full width.</li>
+<li>Rows are horizontal groups of columns that ensure your columns are lined up properly. We use the
+negative margin method on <code>&lt;b-row&gt;</code> to ensure all your content is aligned properly down the left
+side.</li>
+<li>Content should be placed within <code>&lt;b-col&gt;</code> columns, and only columns may be immediate children of
+<code>&lt;b-row&gt;</code>.</li>
+<li>Thanks to flexbox, grid columns without a set width will automatically layout with equal widths.
+For example, four instances of <code>&lt;b-col sm="auto"&gt;</code> will each automatically be 25% wide for small
+breakpoints.</li>
+<li>Column prop <code>cols</code> indicates the number of columns you'd like to use out of the possible 12 per
+row regardless of breakpoint (starting at breakpoint <code>xs</code>). So, if you want three equal-width
+columns at any breakpoint, you can use <code>&lt;b-col cols="4"&gt;</code>.</li>
+<li>Column props <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code> indicate the number of columns you'd like to use out of the
+possible 12 per row. at the various breakpoints. So, if you want three equal-width columns at
+breakpoint <code>sm</code>, you can use <code>&lt;b-col sm="4"&gt;</code>. the special value <code>auto</code> can be used to take up the
+remaining available column space in a row.</li>
+<li>Column widths, internally, are set in percentages, so they're always fluid and sized relative to
+their parent element.</li>
+<li>Columns have horizontal padding to create the gutters between individual columns, however, you can
+remove the margin from <code>&lt;b-row&gt;</code> and padding from <code>&lt;b-col&gt;</code> by setting the <code>no-gutters</code> prop on
+<code>&lt;b-row&gt;</code>.</li>
+<li>There are five grid tiers, one for each responsive breakpoint: all breakpoints (extra small),
+small, medium, large, and extra large.</li>
+<li>Grid tiers are based on minimum widths, meaning they apply to that one tier and all those above it
+(e.g., <code>&lt;b-col sm="4"&gt;</code> applies to small, medium, large, and extra large devices).</li>
+<li>You can use predefined grid classes or Sass mixins for more semantic markup.</li>
+</ul>
+<p>Be aware of the limitations and <a href="https://github.com/philipwalton/flexbugs">bugs around flexbox</a>,
+like the
+<a href="https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers">inability to use some HTML elements as flex containers</a>.</p>
+<h2 id="containers-b-container"><a id="containers-b-container" name="//apple_ref/cpp/Section/Containers%20%3Cb-container%3E" class="dashAnchor"></a><span class="bd-content-title">Containers <code>&lt;b-container&gt;</code><a class="anchorjs-link" href="layout.html#containers-b-container" aria-label="Anchor"></a></span></h2>
+<p>Containers (<code>&lt;b-container&gt;</code>) are the most basic layout element in Bootstrap and is <strong>required when
+using the grid system</strong>. Choose from a responsive, fixed-width container (meaning its max-width
+changes at each breakpoint) by default, or fluid-width (meaning it's 100% wide all the time) by
+setting 'fluid' prop.</p>
+<p>While containers can be nested, most layouts do not require a nested container.</p>
+<p><strong>Fixed width container, based on viewport breakpoints:</strong></p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Content here --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre><p><strong>Fluid container which is always 100% width, regardless of viewport breakpoint:</strong></p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Content here --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre><h2 id="rows-b-row-and-b-form-row"><a id="rows-b-row-and-b-form-row" name="//apple_ref/cpp/Section/Rows%20%3Cb-row%3E%20and%20%3Cb-form-row%3E" class="dashAnchor"></a><span class="bd-content-title">Rows <code>&lt;b-row&gt;</code> and <code>&lt;b-form-row&gt;</code><a class="anchorjs-link" href="layout.html#rows-b-row-and-b-form-row" aria-label="Anchor"></a></span></h2>
+<p><code>&lt;b-row&gt;</code> components must be placed inside a <code>&lt;b-container&gt;</code> component, or an element (such as a
+<code>&lt;div&gt;</code>) that has the class <code>container</code> or <code>container-fluid</code> applied to it.</p>
+<p>You can remove the margin from <code>&lt;b-row&gt;</code> and padding from <code>&lt;b-col&gt;</code> by setting the <code>no-gutters</code> prop
+on <code>&lt;b-row&gt;</code>.</p>
+<p>Or, for compact margins (smaller gutters between columns), use the <code>&lt;b-form-row&gt;</code> component, which
+is typically used in <a href="form.html">forms</a>.</p>
+<h2 id="columns-b-col"><a id="columns-b-col" name="//apple_ref/cpp/Section/Columns%20%3Cb-col%3E" class="dashAnchor"></a><span class="bd-content-title">Columns <code>&lt;b-col&gt;</code><a class="anchorjs-link" href="layout.html#columns-b-col" aria-label="Anchor"></a></span></h2>
+<p><code>&lt;b-col&gt;</code> Must be placed inside a <code>&lt;b-row&gt;</code> component, or an element (such as a <code>&lt;div&gt;</code>) that has
+the class <code>row</code> applied to it, or - in the case of <a href="form.html">forms</a> - inside a
+<code>&lt;b-form-row&gt;</code> component to obtain columns with more compact margins.</p>
+<h2 id="grid-options"><a id="grid-options" name="//apple_ref/cpp/Section/Grid%20options" class="dashAnchor"></a><span class="bd-content-title">Grid options<a class="anchorjs-link" href="layout.html#grid-options" aria-label="Anchor"></a></span></h2>
+<p>While Bootstrap uses <code>ems</code> or <code>rems</code> for defining most sizes, <code>px</code>s are used for grid breakpoints
+and container widths. This is because the viewport width is in pixels and does not change with the
+<a href="https://drafts.csswg.org/mediaqueries-3/#units">font size</a>.</p>
+<p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+        <strong>Extra small</strong><br>
+        <code>&lt;576px</code>
+      </th>
+      <th>
+        <strong>Small</strong><br>
+        <code>&ge;576px</code>
+      </th>
+      <th>
+        <strong>Medium</strong><br>
+        <code>&ge;768px</code>
+      </th>
+      <th>
+        <strong>Large</strong><br>
+        <code>&ge;992px</code>
+      </th>
+      <th>
+        <strong>Extra large</strong><br>
+        <code>&ge;1200px</code>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Max container width</strong></td>
+      <td>None (auto)</td>
+      <td>540px</td>
+      <td>720px</td>
+      <td>960px</td>
+      <td>1140px</td>
+    </tr>
+    <tr>
+      <td><strong>Prop</strong></td>
+      <td><code>cols="*"</code></td>
+      <td><code>sm="*"</code></td>
+      <td><code>md="*"</code></td>
+      <td><code>lg="*"</code></td>
+      <td><code>xl="*"</code></td>
+    </tr>
+    <tr>
+      <td><strong># of columns</strong>
+      </td><td colspan="5">12</td>
+    </tr>
+    <tr>
+      <td><strong>Gutter width</strong>
+      </td><td colspan="5">30px (15px on each side of a column)</td>
+    </tr>
+    <tr>
+      <td><strong>Nestable</strong>
+      </td><td colspan="5">Yes</td>
+    </tr>
+    <tr>
+      <td><strong>Offset</strong></td>
+      <td><code>offset="*"</code></td>
+      <td><code>offset-sm="*"</code></td>
+      <td><code>offset-md="*"</code></td>
+      <td><code>offset-lg="*"</code></td>
+      <td><code>offset-xl="*"</code></td>
+    </tr>
+    <tr>
+      <td><strong>Order</strong></td>
+      <td><code>order="*"</code></td>
+      <td><code>order-sm="*"</code></td>
+      <td><code>order-md="*"</code></td>
+      <td><code>order-lg="*"</code></td>
+      <td><code>order-xl="*"</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="auto-layout-columns"><a id="auto-layout-columns" name="//apple_ref/cpp/Section/Auto-layout%20columns" class="dashAnchor"></a><span class="bd-content-title">Auto-layout columns<a class="anchorjs-link" href="layout.html#auto-layout-columns" aria-label="Anchor"></a></span></h2>
+<p>Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered prop
+like <code>&lt;b-col sm="6"&gt;</code>.</p>
+<h3 id="equal-width-columns"><a id="equal-width-columns" name="//apple_ref/cpp/Section/Equal-width%20columns" class="dashAnchor"></a><span class="bd-content-title">Equal-width columns<a class="anchorjs-link" href="layout.html#equal-width-columns" aria-label="Anchor"></a></span></h3>
+<p>For example, here are two grid layouts that apply to every device and viewport, from xs to xl. Add
+any number of unit-less classes for each breakpoint you need and every column will be the same
+width.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>2 of 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>2 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-equal-width.vue --&gt;</span></pre><p>Equal-width columns can be broken into multiple lines, but there is a
+<a href="https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items">Safari flexbox bug</a>
+that prevents this from working without an explicit flex-basis or border. Our example works thanks
+to the border being set; you can do the same with <code>.col { border: 1px solid transparent; }</code>.
+Alternatively, you can set the flex-basis to the width of the column (e.g.,
+<code>.col { flex: 1 0 50%; }</code>).</p>
+<p>Both these fixes have been documented in a
+<a href="https://output.jsbin.com/micohor">reduced test case outside Bootstrap</a>.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-100"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-equal-width-multiple-lines.vue --&gt;</span></pre><h3 id="setting-one-column-width"><a id="setting-one-column-width" name="//apple_ref/cpp/Section/Setting%20one%20column%20width" class="dashAnchor"></a><span class="bd-content-title">Setting one column width<a class="anchorjs-link" href="layout.html#setting-one-column-width" aria-label="Anchor"></a></span></h3>
+<p>Auto-layout for flexbox grid columns also means you can set the width of one column and have the
+sibling columns automatically resize around it. You may use predefined grid classes (as shown
+below), grid mixins, or inline widths. Note that the other columns will resize no matter the width
+of the center column.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"8"</span>&gt;</span>2 of 3 (wider)<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"5"</span>&gt;</span>2 of 3 (wider)<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-one-width.vue --&gt;</span></pre><h3 id="variable-width-content"><a id="variable-width-content" name="//apple_ref/cpp/Section/Variable%20width%20content" class="dashAnchor"></a><span class="bd-content-title">Variable width content<a class="anchorjs-link" href="layout.html#variable-width-content" aria-label="Anchor"></a></span></h3>
+<p>Use <code>${breakpoint}-auto</code> props to size columns based on the natural width of their content.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"justify-content-md-center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">col</span> <span class="hljs-attr">lg</span>=<span class="hljs-string">"2"</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"12"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"auto"</span>&gt;</span>Variable width content<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">col</span> <span class="hljs-attr">lg</span>=<span class="hljs-string">"2"</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"12"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"auto"</span>&gt;</span>Variable width content<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">col</span> <span class="hljs-attr">lg</span>=<span class="hljs-string">"2"</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-variable-width.vue --&gt;</span></pre><h2 id="responsive-classes"><a id="responsive-classes" name="//apple_ref/cpp/Section/Responsive%20classes" class="dashAnchor"></a><span class="bd-content-title">Responsive classes<a class="anchorjs-link" href="layout.html#responsive-classes" aria-label="Anchor"></a></span></h2>
+<p>Bootstrap's grid includes five tiers of predefined classes for building complex responsive layouts.
+Customize the size of your columns on extra small, small, medium, large, or extra large devices
+however you see fit.</p>
+<h3 id="all-breakpoints"><a id="all-breakpoints" name="//apple_ref/cpp/Section/All%20breakpoints" class="dashAnchor"></a><span class="bd-content-title">All breakpoints<a class="anchorjs-link" href="layout.html#all-breakpoints" aria-label="Anchor"></a></span></h3>
+<p>For grids that are the same from the smallest of devices to the largest, use the <code>col</code> and
+<code>cols="*"</code> props. Specify a number of <code>cols</code> when you need a particularly sized column; otherwise,
+feel free to stick to <code>col</code> (which is applied automatically if no <code>cols</code> are specified).</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>col<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>col<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>col<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>col<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"8"</span>&gt;</span>col-8<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>col-4<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-size-all-breakpoints.vue --&gt;</span></pre><h3 id="stacked-to-horizontal"><a id="stacked-to-horizontal" name="//apple_ref/cpp/Section/Stacked%20to%20horizontal" class="dashAnchor"></a><span class="bd-content-title">Stacked to horizontal<a class="anchorjs-link" href="layout.html#stacked-to-horizontal" aria-label="Anchor"></a></span></h3>
+<p>Using a single set of <code>sm="*"</code> or <code>sm</code> (boolean for equal width @sm) props, you can create a basic
+grid system that starts out stacked on extra small devices before becoming horizontal on desktop
+(medium) devices.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"8"</span>&gt;</span>col-sm-8<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"4"</span>&gt;</span>col-sm-4<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>&gt;</span>col-sm<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>&gt;</span>col-sm<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>&gt;</span>col-sm<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-horizontal-stacked.vue --&gt;</span></pre><h3 id="mix-and-match"><a id="mix-and-match" name="//apple_ref/cpp/Section/Mix%20and%20match" class="dashAnchor"></a><span class="bd-content-title">Mix and match<a class="anchorjs-link" href="layout.html#mix-and-match" aria-label="Anchor"></a></span></h3>
+<p>Don't want your columns to simply stack in some grid tiers? Use a combination of different props for
+each tier as needed. See the example below for a better idea of how it all works.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"12"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"8"</span>&gt;</span>cols="12" md="8"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span>&gt;</span>cols="6" md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span>&gt;</span>cols="6" md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span>&gt;</span>cols="6" md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span>&gt;</span>cols="6" md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span>&gt;</span>cols="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span>&gt;</span>cols="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-mix-and-match.vue --&gt;</span></pre><h2 id="alignment"><a id="alignment" name="//apple_ref/cpp/Section/Alignment" class="dashAnchor"></a><span class="bd-content-title">Alignment<a class="anchorjs-link" href="layout.html#alignment" aria-label="Anchor"></a></span></h2>
+<p>Use flexbox alignment utilities to vertically and horizontally align columns.</p>
+<h3 id="vertical-alignment"><a id="vertical-alignment" name="//apple_ref/cpp/Section/Vertical%20alignment" class="dashAnchor"></a><span class="bd-content-title">Vertical alignment<a class="anchorjs-link" href="layout.html#vertical-alignment" aria-label="Anchor"></a></span></h3>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row bv-example-row-flex-cols"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-v</span>=<span class="hljs-string">"start"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-v</span>=<span class="hljs-string">"center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-v</span>=<span class="hljs-string">"end"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-vertical-alignment.vue --&gt;</span></pre><pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row bv-example-row-flex-cols"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">align-self</span>=<span class="hljs-string">"start"</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">align-self</span>=<span class="hljs-string">"center"</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">align-self</span>=<span class="hljs-string">"end"</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-align-self.vue --&gt;</span></pre><h3 id="horizontal-alignment"><a id="horizontal-alignment" name="//apple_ref/cpp/Section/Horizontal%20alignment" class="dashAnchor"></a><span class="bd-content-title">Horizontal alignment<a class="anchorjs-link" href="layout.html#horizontal-alignment" aria-label="Anchor"></a></span></h3>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-h</span>=<span class="hljs-string">"start"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-h</span>=<span class="hljs-string">"center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-h</span>=<span class="hljs-string">"end"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-h</span>=<span class="hljs-string">"around"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-h</span>=<span class="hljs-string">"between"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-horizontal-alignment.vue --&gt;</span></pre><h2 id="reordering"><a id="reordering" name="//apple_ref/cpp/Section/Reordering" class="dashAnchor"></a><span class="bd-content-title">Reordering<a class="anchorjs-link" href="layout.html#reordering" aria-label="Anchor"></a></span></h2>
+<h3 id="ordering-columns"><a id="ordering-columns" name="//apple_ref/cpp/Section/Ordering%20columns" class="dashAnchor"></a><span class="bd-content-title">Ordering columns<a class="anchorjs-link" href="layout.html#ordering-columns" aria-label="Anchor"></a></span></h3>
+<p>Use <code>order-*</code> props for controlling the visual order of your content. These props are responsive, so
+you can set the order by breakpoint (e.g., <code>order="1" order-md="2"</code>). Includes support for 1 through
+12 across all five grid tiers.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>First, but unordered<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">order</span>=<span class="hljs-string">"12"</span>&gt;</span>Second, but last<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">order</span>=<span class="hljs-string">"1"</span>&gt;</span>Third, but first<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-order.vue --&gt;</span></pre><h3 id="offsetting-columns"><a id="offsetting-columns" name="//apple_ref/cpp/Section/Offsetting%20columns" class="dashAnchor"></a><span class="bd-content-title">Offsetting columns<a class="anchorjs-link" href="layout.html#offsetting-columns" aria-label="Anchor"></a></span></h3>
+<p>You can offset grid columns in two ways: our responsive <code>offset-*</code> props or the
+<a href="spacing-classes.html">margin</a> utility classes. Grid <code>offset-*</code> props are sized to match
+columns while margins utility classes are more useful for quick layouts where the width of the
+offset is variable.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span>&gt;</span>md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"4"</span>&gt;</span>md="4" offset-md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"3"</span>&gt;</span>md="3" offset-md="3"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"3"</span>&gt;</span>md="3" offset-md="3"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"3"</span>&gt;</span>md="6" offset-md="3"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-offset.vue --&gt;</span></pre><p>In addition to column clearing at responsive breakpoints, you may need to reset offsets by setting
+the offset to <code>0</code> at a larger breakpoint:</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"6"</span>&gt;</span>sm="5" md="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">offset-sm</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"0"</span>&gt;</span>sm="5" offset-sm="2" md="6" offset-md="0"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">lg</span>=<span class="hljs-string">"6"</span>&gt;</span>sm="6" md="5" lg="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">lg</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">offset-lg</span>=<span class="hljs-string">"0"</span>&gt;</span>sm="6" md="5" offset-md="2" col-lg="6" offset-lg="0"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-offset-reset.vue --&gt;</span></pre><h3 id="margin-utilities-on-columns"><a id="margin-utilities-on-columns" name="//apple_ref/cpp/Section/Margin%20utilities%20on%20columns" class="dashAnchor"></a><span class="bd-content-title">Margin utilities on columns<a class="anchorjs-link" href="layout.html#margin-utilities-on-columns" aria-label="Anchor"></a></span></h3>
+<p>With the move to flexbox in Bootstrap v4, you can use
+<a href="spacing-classes.html">margin and spacing</a> utility classes like <code>.mr-auto</code> to force
+sibling columns away from one another.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-light text-center"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-3 bg-info"</span>&gt;</span>md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ml-auto p-3 bg-info"</span>&gt;</span>md="4" .ml-auto<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ml-md-auto p-3 bg-info"</span>&gt;</span>md="3" .ml-md-auto<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ml-md-auto p-3 bg-info"</span>&gt;</span>md="3" .ml-md-auto<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"auto"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-auto p-3 bg-info"</span>&gt;</span>cols="auto" .mr-auto<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"auto"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-3 bg-info"</span>&gt;</span>cols="auto"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-margins.vue --&gt;</span></pre><h2 id="nesting-grids"><a id="nesting-grids" name="//apple_ref/cpp/Section/Nesting%20grids" class="dashAnchor"></a><span class="bd-content-title">Nesting grids<a class="anchorjs-link" href="layout.html#nesting-grids" aria-label="Anchor"></a></span></h2>
+<p>To nest your content with the default grid, add a new <code>&lt;b-row&gt;</code> and set of <code>&lt;b-col&gt;</code> components
+within an existing <code>&lt;b-col&gt;</code> component. Nested rows should include a set of columns that add up to
+12 or fewer (it is not required that you use all 12 available columns).</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"9"</span>&gt;</span>
+      Level 1: sm="9"
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"6"</span>&gt;</span>Level 2: cols="8" sm="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"6"</span>&gt;</span>Level 2: cols="4" sm="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-grid-nesting.vue --&gt;</span></pre><!-- Component reference added automatically from component package.json -->
+</section><section class="bd-content bd-component-reference"><h2 id="component-reference" tabindex="-1"><a id="component-reference" name="//apple_ref/cpp/Section/Component%20reference" class="dashAnchor"></a><span class="bd-content-title">Component reference<a href="layout.html#component-reference" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h2><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-container" tabindex="-1"><a id="b-container" name="//apple_ref/cpp/Section/%3Cb-container%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-container&gt;</code><a href="layout.html#comp-ref-b-container" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <a rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary">
+        Functional Component
+      </a></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/layout/container.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <!----> <article class="bd-content"><h4 id="comp-ref-b-container-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="layout.html#comp-ref-b-container-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">tag</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>div</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">fluid</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><!----><!----></tbody></table></div> <!----></article> <!----> <!----> <!----></section><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-row" tabindex="-1"><a id="b-row" name="//apple_ref/cpp/Section/%3Cb-row%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-row&gt;</code><a href="layout.html#comp-ref-b-row" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <a rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary">
+        Functional Component
+      </a></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/layout/row.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <!----> <article class="bd-content"><h4 id="comp-ref-b-row-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="layout.html#comp-ref-b-row-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">tag</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>div</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">no-gutters</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">align-v</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">align-h</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">align-content</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><!----><!----></tbody></table></div> <!----></article> <!----> <!----> <!----></section><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-col" tabindex="-1"><a id="b-col" name="//apple_ref/cpp/Section/%3Cb-col%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-col&gt;</code><a href="layout.html#comp-ref-b-col" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <a rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary">
+        Functional Component
+      </a></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/layout/col.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <!----> <article class="bd-content"><h4 id="comp-ref-b-col-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="layout.html#comp-ref-b-col-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">col</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">cols</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">sm</code> <!----></td><td role="cell" aria-colindex="2">Boolean or String or Number</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">md</code> <!----></td><td role="cell" aria-colindex="2">Boolean or String or Number</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">lg</code> <!----></td><td role="cell" aria-colindex="2">Boolean or String or Number</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">xl</code> <!----></td><td role="cell" aria-colindex="2">Boolean or String or Number</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">offset</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">offset-sm</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">offset-md</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">offset-lg</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">offset-xl</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">order</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">order-sm</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">order-md</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">order-lg</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">order-xl</code> <!----></td><td role="cell" aria-colindex="2">String or Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">align-self</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">tag</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>div</code></td></tr><!----><!----><!----><!----></tbody></table></div> <!----></article> <!----> <!----> <!----></section><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-form-row" tabindex="-1"><a id="b-form-row" name="//apple_ref/cpp/Section/%3Cb-form-row%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-form-row&gt;</code><a href="layout.html#comp-ref-b-form-row" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <a rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary">
+        Functional Component
+      </a></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/layout/form-row.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <!----> <article class="bd-content"><h4 id="comp-ref-b-form-row-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="layout.html#comp-ref-b-form-row-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">tag</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>div</code></td></tr><!----><!----><!----><!----></tbody></table></div> <!----></article> <!----> <!----> <!----></section><section class="bd-content"><article class="bd-content"><h3 id="importing-individual-components" tabindex="-1"><a id="importing-individual-components" name="//apple_ref/cpp/Section/Importing%20individual%20components" class="dashAnchor"></a><span class="bd-content-title">
+        Importing individual components
+      <a href="layout.html#importing-individual-components" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> You can
+        import individual components into your project via the following named exports:
+      </p> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Component</th><th role="columnheader" scope="col" aria-colindex="2">Named Export</th><th role="columnheader" scope="col" aria-colindex="3">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-container&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BContainer</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-row&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BRow</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-col&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BCol</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-form-row&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BFormRow</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><!----><!----></tbody></table></div> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">import { BContainer } from 'bootstrap-vue'
+Vue.component('b-container', BContainer)</pre></article> <!----> <article class="bd-content"><h3 id="importing-as-a-plugin" tabindex="-1"><a id="importing-as-a-vuejs-plugin" name="//apple_ref/cpp/Section/Importing%20as%20a%20Vue.js%20plugin" class="dashAnchor"></a><span class="bd-content-title">
+      Importing as a Vue.js plugin
+    <a href="layout.html#importing-as-a-plugin" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> Importing plugins
+      has been simplified.
+    </p> <p>
+      This plugin includes all of the above listed individual
+      components<!---->.
+      Plugins also include any component aliases.
+    </p> <div class="bv-docs-table table-responsive-sm"><table fileds="namedExport,importPath" aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><caption class="b-table-caption-top">The plugin can be imported via several methods</caption><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Named Export</th><th role="columnheader" scope="col" aria-colindex="2">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">LayoutPlugin</code> <span class="badge small badge-success">PREFERRED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">LayoutPlugin</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">default</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components/layout</code></td></tr><!----><!----></tbody></table></div> <!----> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">// Importing the named export
+import { LayoutPlugin } from 'bootstrap-vue'
+Vue.use(LayoutPlugin)</pre></article> <aside class="alert alert-warning my-4"><p class="mb-0"><strong class="badge badge-warning">Deprecation Warning as of v2.0.0-rc.22:</strong>
+      Importing components, directives and plugins from <code>bootstrap-vue/es/*</code> has been
+      deprecated. All components, directives and plugins are now available as top-level named
+      exports in the <code>ESM</code> and <code>CommonJS</code> builds. The <code>es/</code>
+      directory build will be removed in a future release.
+    </p></aside></section></section></main></div></div></div></div></div>
+  </body>
+</html>

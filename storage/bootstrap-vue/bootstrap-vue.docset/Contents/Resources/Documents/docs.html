@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="Quickly integrate Bootstrap v4 components with Vue.js"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="BootstrapVue, with over 40 plugins and more than 75 custom components, provides one of the most comprehensive implementations of Bootstrap v4 components and grid system for Vue.js. With extensive and automated WAI-ARIA accessibility markup."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//docs/markdown/intro/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="getting-started"><span class="bd-content-title">Getting Started</span></h1> <p class="bd-lead">Get started with BootstrapVue, based on the world's most popular framework - Bootstrap v4, for
+building responsive, mobile-first sites using Vue.js.</p> <ul><li><a href="https://vuejs.org/">Vue.js</a> <code>v2.6</code> is required, <code>v2.6.10</code> is recommended</li> <li><a href="https://getbootstrap.com/">Bootstrap</a> <code>v4.3</code> is required, <code>v4.3.1</code> is
+recommended</li> <li><a href="https://portal-vue.linusb.org/">PortalVue</a> <code>v2.1</code> is required by
+<a href="toast.html">Toasts</a>, <code>v2.1.5</code> is recommended</li> <li><a href="https://jquery.com/">jQuery</a> is <strong>not</strong> required</li></ul> <h2 id="prerequisites"><a id="prerequisites" name="//apple_ref/cpp/Section/Prerequisites" class="dashAnchor"></a><span class="bd-content-title">Prerequisites<a href="docs.html#prerequisites" aria-label="Anchor" class="anchorjs-link"></a></span></h2> <p>Before getting started with BootstrapVue, you should have general familiarity with Vue functionality
+and Bootstrap v4.3 CSS. If you are unfamiliar with Vue and/or Bootstrap, good starting points would
+be:</p> <ul><li><a href="https://vuejs.org/v2/guide/">Vue Guide</a></li> <li><a href="https://vuejs.org/v2/api/">Vue API</a></li> <li><a href="https://getbootstrap.com/">Bootstrap documentation</a></li></ul> <p>In many of the examples in BootstrapVue's documentation, you may see CSS classes used such as <code>ml-2</code>,
+<code>py-1</code>, etc., which are Bootstrap v4.3 utility classes. You can find information on these classes in
+the <a href="utility-classes.html">Utility Classes</a> reference section.</p> <h2 id="using-module-bundlers"><a id="using-module-bundlers" name="//apple_ref/cpp/Section/Using%20module%20bundlers" class="dashAnchor"></a><span class="bd-content-title">Using module bundlers<a href="docs.html#using-module-bundlers" aria-label="Anchor" class="anchorjs-link"></a></span></h2> <p>If you are using module bundlers like <a href="https://webpack.js.org/">webpack</a>,
+<a href="https://rollupjs.org/">rollup.js</a>, etc you may prefer to directly include the package into your
+project. To get started, use <code>yarn</code> or <code>npm</code> to get the latest version of Vue.js, BootstrapVue and
+Bootstrap v4:</p> <pre class="hljs bash text-monospace p-2"><span class="hljs-comment"># With npm</span>
+npm i vue bootstrap-vue bootstrap
+
+<span class="hljs-comment"># With yarn</span>
+yarn add vue bootstrap-vue bootstrap</pre><p>Then, register BootstrapVue plugin in your app entry point:</p> <pre class="hljs js text-monospace p-2"><span class="hljs-comment">// app.js</span>
+<span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">'vue'</span>
+<span class="hljs-keyword">import</span> BootstrapVue <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+
+Vue.use(BootstrapVue)</pre><p>And import Bootstrap and BootstrapVue <code>css</code> files:</p> <pre class="hljs js text-monospace p-2"><span class="hljs-comment">// app.js</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'bootstrap/dist/css/bootstrap.css'</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'bootstrap-vue/dist/bootstrap-vue.css'</span></pre><p>Or import Bootstrap and BootstrapVue <code>scss</code> files via a single custom SCSS file:</p> <pre class="hljs scss text-monospace p-2"><span class="hljs-comment">// custom.scss</span>
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'node_modules/bootstrap/scss/bootstrap'</span>;
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'node_modules/bootstrap-vue/src/index.scss'</span>;</pre><pre class="hljs js text-monospace p-2"><span class="hljs-comment">// app.js</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'custom.scss'</span></pre><p>Be sure to <code>@import</code> or define your custom variable values <em>before</em> including Bootstrap SCSS
+(<code>bootstrap.scss</code>), and include BootstrapVue SCSS (<code>bootstrap-vue.scss</code>) <em>after that</em> to ensure
+variables are set up correctly.</p> <p>Make sure you place all the SCSS <code>@import</code>s into a single SCSS file, and import that single file
+into your project. Importing individual SCSS files into your project will <strong>not</strong> share variable
+values and functions between files by default.</p> <p><strong>Note</strong>: <em>Requires webpack configuration to load CSS/SCSS files
+(<a href="https://webpack.js.org/guides/asset-management/#loading-css">official guide</a>)</em>.</p> <p>For information on theming Bootstrap, check out the <a href="theming.html">Theming</a> reference
+section.</p> <h3 id="aliasing-vue-import"><a id="aliasing-vue-import" name="//apple_ref/cpp/Section/Aliasing%20Vue%20import" class="dashAnchor"></a><span class="bd-content-title">Aliasing Vue import<a href="docs.html#aliasing-vue-import" aria-label="Anchor" class="anchorjs-link"></a></span></h3> <p>BootstrapVue and PortalVue require access to the global <code>Vue</code> reference (via
+<code>import Vue from 'vue'</code>).</p> <div class="alert alert-info mb-3"><p class="mb-0">
+    If you are using a specific build of Vue (i.e. runtime-only vs. compiler + runtime), you will
+    need to set up an alias to <code>'vue'</code> in your bundler config to ensure that your
+    project, BootstrapVue and PortalVue are all using the same build version of Vue. If you are
+    seeing an error such as <code>"$attr and $listeners is readonly"</code>, or
+    <code>"Multiple instances of Vue detected"</code>, then you will need to set up an alias.
+  </p></div> <p><strong>Example: Vue alias in webpack.config.js</strong></p> <pre class="hljs js text-monospace p-2"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-comment">// ...</span>
+  resolve: {
+    <span class="hljs-attr">alias</span>: {
+      <span class="hljs-comment">// If using the runtime only build</span>
+      vue$: <span class="hljs-string">'vue/dist/vue.runtime.esm.js'</span> <span class="hljs-comment">// 'vue/dist/vue.runtime.common.js' for webpack 1</span>
+      <span class="hljs-comment">// Or if using full build of Vue (runtime + compiler)</span>
+      <span class="hljs-comment">// vue$: 'vue/dist/vue.esm.js'      // 'vue/dist/vue.common.js' for webpack 1</span>
+    }
+  }
+}</pre><p><strong>Note:</strong> If your project has multiple webpack config files (i.e. <code>webpack.config.js</code>,
+<code>webpack.renderer.config.js</code>, <code>webpack.vendor.config.js</code>, <code>webpack.server.config.js</code>,
+<code>webpack.client.config.js</code>, etc), you will need to set the appropriate alias in all of them.</p> <p>See the <a href="https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only">Vue.js</a>
+Guide for full details on setting up aliases for <a href="https://webpack.js.org/">webpack</a>,
+<a href="https://rollupjs.org/">rollup.js</a>, <a href="https://parceljs.org/">Parcel</a>, etc.</p> <h2 id="nuxtjs-module"><a id="nuxtjs-module" name="//apple_ref/cpp/Section/Nuxt.js%20module" class="dashAnchor"></a><span class="bd-content-title">Nuxt.js module<a href="docs.html#nuxtjs-module" aria-label="Anchor" class="anchorjs-link"></a></span></h2> <p><a href="https://nuxtjs.org/">Nuxt.js</a> version <code>2.8.1</code> (or greater) is recommended.</p> <p>Install dependencies:</p> <pre class="hljs bash text-monospace p-2"><span class="hljs-comment"># With npm</span>
+npm i bootstrap-vue
+
+<span class="hljs-comment"># With yarn</span>
+yarn add bootstrap-vue</pre><p>Add <code>bootstrap-vue/nuxt</code> to modules section of <strong>nuxt.config.js</strong>.</p> <p>This will include both <code>boostrap.css</code> and <code>bootstrap-vue.css</code> default pre-compiled CSS.</p> <pre class="hljs js text-monospace p-2"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">modules</span>: [<span class="hljs-string">'bootstrap-vue/nuxt'</span>]
+}</pre><p>If you are using custom Bootstrap SCSS, you can disable automatic inclusion of Bootstrap and
+BootstrapVue pre-compiled CSS files by setting the following option(s) to <code>false</code>:</p> <pre class="hljs js text-monospace p-2"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">modules</span>: [<span class="hljs-string">'bootstrap-vue/nuxt'</span>],
+  <span class="hljs-attr">bootstrapVue</span>: {
+    <span class="hljs-attr">bootstrapCSS</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">// Or `css: false`</span>
+    bootstrapVueCSS: <span class="hljs-literal">false</span> <span class="hljs-comment">// Or `bvCSS: false`</span>
+  }
+}</pre><p>BootstrapVue's custom SCSS relies on Bootstrap SCSS variables and mixins. You can include Bootstrap
+and BootstrapVue SCSS in your project's custom SCSS file:</p> <pre class="hljs scss text-monospace p-2"><span class="hljs-comment">// custom.scss</span>
+
+<span class="hljs-comment">// Custom overrides go first</span>
+<span class="hljs-variable">$grid-breakpoints</span>: (
+  xs: <span class="hljs-number">0</span>,
+  sm: <span class="hljs-number">480px</span>,
+  md: <span class="hljs-number">640px</span>,
+  lg: <span class="hljs-number">992px</span>,
+  xl: <span class="hljs-number">1300px</span>
+);
+
+<span class="hljs-comment">// Then include the following</span>
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'bootstrap/scss/bootstrap.scss'</span>;
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'bootstrap-vue/src/index.scss'</span>;
+
+<span class="hljs-comment">// And define any of your custom overrides or additional CSS/SCSS here,</span>
+<span class="hljs-comment">// or via an @import</span></pre><p>In your app main entry point include the single custom SCSS file (when using <code>sass-loader</code>):</p> <pre class="hljs js text-monospace p-2"><span class="hljs-comment">// app.js</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'custom.scss'</span></pre><h3 id="transformasseturls-with-nuxtjs"><a id="transformasseturls-with-nuxtjs" name="//apple_ref/cpp/Section/transformAssetUrls%20with%20Nuxt.js" class="dashAnchor"></a><span class="bd-content-title">transformAssetUrls with Nuxt.js<a href="docs.html#transformasseturls-with-nuxtjs" aria-label="Anchor" class="anchorjs-link"></a></span></h3> <p><span class="badge badge-info small">NEW in v2.0.0-rc.22</span> The BootstrapVue Nuxt plugin module
+will automatically add in the BootstrapVue specific <a href="images.html"><code>transformAssetUrls</code></a>
+image <code>src</code> prop configuration for you.</p> <h3 id="tree-shaking-with-nuxtjs"><a id="tree-shaking-with-nuxtjs" name="//apple_ref/cpp/Section/Tree%20shaking%20with%20Nuxt.js" class="dashAnchor"></a><span class="bd-content-title">Tree shaking with Nuxt.js<a href="docs.html#tree-shaking-with-nuxtjs" aria-label="Anchor" class="anchorjs-link"></a></span></h3> <p><span class="badge badge-info small">ENHANCED in 2.0.0-rc.20</span></p> <p>If you wish to reduce your production bundle size because you only use a subset of the available
+BootstrapVue plugins, you can configure the list of BootstrapVue <code>componentPlugins</code> or
+<code>directivePlugins</code> you want to globally install in your Nuxt.js project.</p> <pre class="hljs js text-monospace p-2"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">modules</span>: [<span class="hljs-string">'bootstrap-vue/nuxt'</span>],
+  <span class="hljs-attr">bootstrapVue</span>: {
+    <span class="hljs-attr">componentPlugins</span>: [
+      <span class="hljs-string">'LayoutPlugin'</span>,
+      <span class="hljs-string">'FormPlugin'</span>,
+      <span class="hljs-string">'FormCheckboxPlugin'</span>,
+      <span class="hljs-string">'FormInputPlugin'</span>,
+      <span class="hljs-string">'FormRadioPlugin'</span>,
+      <span class="hljs-string">'ToastPlugin'</span>,
+      <span class="hljs-string">'ModalPlugin'</span>
+    ],
+    <span class="hljs-attr">directivePlugins</span>: [<span class="hljs-string">'VBPopoverPlugin'</span>, <span class="hljs-string">'VBTooltipPlugin'</span>, <span class="hljs-string">'VBScrollspyPlugin'</span>]
+  }
+}</pre><p><span class="badge badge-info small">NEW in 2.0.0-rc.20</span> There are two additional helper
+plugins for providing the <code>$bvModal</code> and <code>$bvToast</code> injections (if you are not using the
+<code>ModalPlugin</code> or <code>ToastPlugin</code> plugins) that are available in the <code>componentPlugins</code> option:</p> <ul><li><code>BVModalPlugin</code> - provides the injection <code>$bvModal</code> for generating
+<a href="modal.html#modal-message-boxes">message boxes</a>.</li> <li><code>BVToastPlugin</code> - provides the injection <code>$bvToast</code> for generating
+<a href="toast.html#toasts-on-demand">on demand toasts</a>.</li></ul> <p><span class="badge badge-info small">NEW in 2.0.0-rc.20</span> You can also optionally import
+individual components and/or directives, by configuring the list of BootstrapVue <code>components</code> or
+<code>directives</code> you want to globally install in your Nuxt.js project.</p> <pre class="hljs js text-monospace p-2"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">modules</span>: [<span class="hljs-string">'bootstrap-vue/nuxt'</span>],
+  <span class="hljs-attr">bootstrapVue</span>: {
+    <span class="hljs-attr">components</span>: [<span class="hljs-string">'BContainer'</span>, <span class="hljs-string">'BRow'</span>, <span class="hljs-string">'BCol'</span>, <span class="hljs-string">'BFormInput'</span>, <span class="hljs-string">'BButton'</span>, <span class="hljs-string">'BTable'</span>, <span class="hljs-string">'BModal'</span>],
+    <span class="hljs-attr">directives</span>: [<span class="hljs-string">'VBModal'</span>, <span class="hljs-string">'VBPopover'</span>, <span class="hljs-string">'VBTooltip'</span>, <span class="hljs-string">'VBScrollspy'</span>]
+  }
+}</pre><p>Feel free to mix and match plugin imports with individual component and directive imports.</p> <p>Refer to the reference section at the bottom of each of the <a href="components.html">component</a> and
+<a href="directives.html">directive</a> docs for details on the plugin names available (and which components
+and directives are included in each plugin) and component and/or directive import names.</p> <p>Note that when importing individual components, any component aliases will <strong>not</strong> be available.</p> <div class="alert alert-info"><p class="mb-0"><b>Note:</b> Optimal tree shaking only works when your Nuxt.js app is in <code>production</code>
+    mode. You may notice larger bundle sizes when not in `production` mode (i.e. `dev` mode).
+  </p></div> <p>Do not use the Nuxt module If you want to import individual BootstrapVue components into <em>specific</em>
+pages and/or components of your Nuxt app. Instead follow the
+<a href="docs.html#using-module-bundlers">module bundlers</a> section above as well as the
+<a href="docs.html#selective-component-and-directive-inclusion-in-module-bundlers">selective import</a> sections below.</p> <h3 id="passing-custom-bootstrapvue-config-with-nuxtjs"><a id="passing-custom-bootstrapvue-config-with-nuxtjs" name="//apple_ref/cpp/Section/Passing%20custom%20BootstrapVue%20config%20with%20Nuxt.js" class="dashAnchor"></a><span class="bd-content-title">Passing custom BootstrapVue config with Nuxt.js<a href="docs.html#passing-custom-bootstrapvue-config-with-nuxtjs" aria-label="Anchor" class="anchorjs-link"></a></span></h3> <p>If you need to pass a custom
+<a href="settings.html#default-bootstrapvue-configuration">BootstrapVue configuration</a>, you may do so
+by setting the <code>config</code> property in your <code>nuxt.config.js</code>:</p> <pre class="hljs js text-monospace p-2"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">modules</span>: [<span class="hljs-string">'bootstrap-vue/nuxt'</span>],
+  <span class="hljs-attr">bootstrapVue</span>: {
+    <span class="hljs-attr">config</span>: {
+      <span class="hljs-comment">// Custom config options here</span>
+    }
+  }
+}</pre><h3 id="using-pretranspiled-version-of-bootstrapvue-for-nuxtjs"><a id="using-pretranspiled-version-of-bootstrapvue-for-nuxtjs" name="//apple_ref/cpp/Section/Using%20pretranspiled%20version%20of%20BootstrapVue%20for%20Nuxt.js" class="dashAnchor"></a><span class="bd-content-title">Using pretranspiled version of BootstrapVue for Nuxt.js<a href="docs.html#using-pretranspiled-version-of-bootstrapvue-for-nuxtjs" aria-label="Anchor" class="anchorjs-link"></a></span></h3> <p>Nuxt.js module uses the precompiled versions of BootstrapVue for faster development builds and the
+source (<code>src/</code>) of BootstrapVue for higher quality production builds.</p> <p>You can override this option using <code>usePretranspiled</code> option. Setting to <code>true</code> always uses the
+pre-transpiled versions, while setting it to <code>false</code> will always use <code>src/</code>. By default
+<code>usePretranspiled</code> is enabled in development mode only. You should not need to use this option as
+the default is most optimal for performance.</p> <h2 id="vue-cli-2"><a id="vue-cli-2" name="//apple_ref/cpp/Section/Vue%20CLI%202" class="dashAnchor"></a><span class="bd-content-title">Vue CLI 2<a href="docs.html#vue-cli-2" aria-label="Anchor" class="anchorjs-link"></a></span></h2> <p><span class="badge badge-warning small">DEPRECATED</span> Use <a href="docs.html#vue-cli-3">Vue CLI 3</a> instead.</p> <p>BootstrapVue has two Vue CLI templates available:</p> <ul><li><a href="https://github.com/bootstrap-vue/webpack-simple">webpack-simple</a>: Quick scaffold for a proof of
+concept or small app</li> <li><a href="https://github.com/bootstrap-vue/webpack">webpack</a>: Larger, production ready template with more
+options</li></ul> <pre class="hljs bash text-monospace p-2"><span class="hljs-comment"># Ensure Vue CLI is installed and up to date</span>
+npm i -g vue-cli
+
+<span class="hljs-comment"># Initialize a BootstrapVue project in the directory 'my-project'</span>
+vue init bootstrap-vue/webpack-simple my-project
+
+<span class="hljs-comment"># Change into the directory</span>
+<span class="hljs-built_in">cd</span> my-project
+
+<span class="hljs-comment"># Install dependencies</span>
+npm i
+
+<span class="hljs-comment"># Fire up the dev server with HMR</span>
+npm run dev</pre><p>You can repeat the commands above replacing <code>bootstrap-vue/webpack-simple</code> with
+<code>bootstrap-vue/webpack</code> for the webpack template.</p> <h2 id="vue-cli-3"><a id="vue-cli-3" name="//apple_ref/cpp/Section/Vue%20CLI%203" class="dashAnchor"></a><span class="bd-content-title">Vue CLI 3<a href="docs.html#vue-cli-3" aria-label="Anchor" class="anchorjs-link"></a></span></h2> <p>Unlike V2, Vue CLI 3 doesn't use templates.</p> <p>Create a new project in the directory <code>my-project</code>:</p> <pre class="hljs bash text-monospace p-2">npx @vue/cli create my-project</pre><p>Enter the <code>my-project</code> directory and install <code>bootstrap-vue</code>:</p> <pre class="hljs bash text-monospace p-2">npm i bootstrap-vue</pre><p>Under the hood, Vue CLI uses webpack, so we can register the BootstrapVue plugin as with the webpack
+instructions.</p> <pre class="hljs js text-monospace p-2"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">'vue'</span>
+<span class="hljs-keyword">import</span> BootstrapVue <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">'bootstrap/dist/css/bootstrap.css'</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'bootstrap-vue/dist/bootstrap-vue.css'</span>
+
+Vue.use(BootstrapVue)</pre><p>For additional configuration for Vue CLI 3 for using project relative paths for image src props on
+various BootstrapVue components, refer to the Vue CLI 3 section of the
+<a href="images.html#vue-cli-3-support">Image Src Resolving</a> reference page.</p> <h3 id="vue-cli-3-plugin"><a id="vue-cli-3-plugin" name="//apple_ref/cpp/Section/Vue%20CLI%203%20plugin" class="dashAnchor"></a><span class="bd-content-title">Vue CLI 3 plugin<a href="docs.html#vue-cli-3-plugin" aria-label="Anchor" class="anchorjs-link"></a></span></h3> <p>As an alternative, you can use the
+<a href="https://github.com/GregYankovoy/vue-cli-plugin-bootstrap-vue">Bootstrap-Vue Vue CLI 3 plugin</a> to
+help you configure your app.</p> <pre class="hljs bash text-monospace p-2">vue create my-app
+<span class="hljs-built_in">cd</span> my-app
+vue add bootstrap-vue</pre><p>This will create a new app with basic BootstrapVue settings to get your project started.</p> <p>In the future this plugin will provide options for more advanced configurations and templates.</p> <h2 id="selective-component-and-directive-inclusion-in-module-bundlers"><a id="selective-component-and-directive-inclusion-in-module-bundlers" name="//apple_ref/cpp/Section/Selective%20component%20and%20directive%20inclusion%20in%20module%20bundlers" class="dashAnchor"></a><span class="bd-content-title">Selective component and directive inclusion in module bundlers<a href="docs.html#selective-component-and-directive-inclusion-in-module-bundlers" aria-label="Anchor" class="anchorjs-link"></a></span></h2> <p><span class="badge badge-info small">SIMPLIFIED in 2.0.0-rc.20</span></p> <p>When using a module bundler you can optionally import only specific components groups (plugins),
+components and/or directives.</p> <div class="alert alert-info"><p class="mb-0"><b>Note:</b> Optimal tree shaking only works when webpack 4 is in
+    <a href="https://webpack.js.org/guides/tree-shaking"><code>production</code></a> mode and
+    javascript minification is enabled.
+  </p></div> <h3 id="component-groups-and-directives-as-vue-plugins"><a id="component-groups-and-directives-as-vue-plugins" name="//apple_ref/cpp/Section/Component%20groups%20and%20directives%20as%20Vue%20plugins" class="dashAnchor"></a><span class="bd-content-title">Component groups and directives as Vue plugins<a href="docs.html#component-groups-and-directives-as-vue-plugins" aria-label="Anchor" class="anchorjs-link"></a></span></h3> <p><span class="badge badge-info small">CHANGED in 2.0.0-rc.22</span></p> <p>You can import component groups and directives as Vue plugins by importing from the <code>components</code> or
+<code>directives</code> directory:</p> <pre class="hljs js text-monospace p-2"><span class="hljs-comment">// This imports all the layout components such as &lt;b-container&gt;, &lt;b-row&gt;, &lt;b-col&gt;:</span>
+<span class="hljs-keyword">import</span> { LayoutPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(LayoutPlugin)
+
+<span class="hljs-comment">// This imports &lt;b-modal&gt; as well as the v-b-modal directive as a plugin:</span>
+<span class="hljs-keyword">import</span> { ModalPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(ModalPlugin)
+
+<span class="hljs-comment">// This imports &lt;b-card&gt; along with all the &lt;b-card-*&gt; sub-components as a plugin:</span>
+<span class="hljs-keyword">import</span> { CardPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(CardPlugin)
+
+<span class="hljs-comment">// This imports directive v-b-scrollspy as a plugin:</span>
+<span class="hljs-keyword">import</span> { VBScrollspyPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(VBScrollspyPlugin)</pre><p>When importing as plugins, all subcomponents and related directives are imported in most cases. i.e.
+When importing <code>&lt;b-nav&gt;</code>, all the <code>&lt;nav-*&gt;</code> sub components are also included, as well all dropdown
+sub components. Component shorthand aliases (if any) are also included in the plugin. Refer to the
+component and directive documentation for details.</p> <p>There are two additional helper plugins for providing the <code>$bvModal</code> and <code>$bvToast</code> injections (if
+you are not using the <code>ModalPlugin</code> or <code>ToastPlugin</code> plugins) which are available for import from
+<code>'bootstrap-vue'</code>:</p> <ul><li><code>BVModalPlugin</code> - provides the injection <code>$bvModal</code> for generating
+<a href="modal.html#modal-message-boxes">message boxes</a>.</li> <li><code>BVToastPlugin</code> - provides the injection <code>$bvToast</code> for generating
+<a href="toast.html#toasts-on-demand">on demand toasts</a>.</li></ul> <h3 id="individual-components-and-directives"><a id="individual-components-and-directives" name="//apple_ref/cpp/Section/Individual%20components%20and%20directives" class="dashAnchor"></a><span class="bd-content-title">Individual components and directives<a href="docs.html#individual-components-and-directives" aria-label="Anchor" class="anchorjs-link"></a></span></h3> <p><span class="badge badge-info small">CHANGED in 2.0.0-rc.22</span></p> <p>If you would like to only pull in a specific component or set of components, you can do this by
+directly importing those components.</p> <p>To cherry pick a component/directive, start by importing it in the file where it is being used:</p> <pre class="hljs js text-monospace p-2"><span class="hljs-comment">// Place all imports from 'bootstrap-vue' in a single import</span>
+<span class="hljs-comment">// statement for optimal bundle sizes</span>
+<span class="hljs-keyword">import</span> { BModal, VBModal } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span></pre><p>Then add it to your component definition:</p> <pre class="hljs js text-monospace p-2">Vue.component(<span class="hljs-string">'my-component'</span>, {
+  <span class="hljs-attr">components</span>: {
+    <span class="hljs-string">'b-modal'</span>: BModal
+  },
+  <span class="hljs-attr">directives</span>: {
+    <span class="hljs-comment">// Note that Vue automatically prefixes directive names with `v-`</span>
+    <span class="hljs-string">'b-modal'</span>: VBModal
+  }
+  <span class="hljs-comment">// ...</span>
+})</pre><p>Or register them globally:</p> <pre class="hljs js text-monospace p-2">Vue.component(<span class="hljs-string">'b-modal'</span>, BModal)
+<span class="hljs-comment">// Note that Vue automatically prefixes directive names with `v-`</span>
+Vue.directive(<span class="hljs-string">'b-modal'</span>, VBModal)</pre><p>Vue allows for various component and directive name syntaxes here, so feel free to utilize
+<samp>kebab-casing</samp> (shown), <samp>camelCasing</samp>, <samp>PascalCasing</samp>, and/or
+object property shorthand (components only).</p> <h2 id="browser"><a id="browser" name="//apple_ref/cpp/Section/Browser" class="dashAnchor"></a><span class="bd-content-title">Browser<a href="docs.html#browser" aria-label="Anchor" class="anchorjs-link"></a></span></h2> <p>Add the Boostrap and BootstrapVue CSS URLs in your HTML <code>&lt;head&gt;</code> section, followed by the required
+JavaScript files.</p> <p>When supporting older browsers (see <a href="docs.html#browser-support">Browser Support</a> below), you will need to
+include a polyfill for handling modern JavaScript features before loading Vue and BoostrapVue
+JavaScript files.</p> <pre class="hljs html text-monospace p-2"><span class="hljs-comment">&lt;!-- Add this to &lt;head&gt; --&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Load required Bootstrap and BootstrapVue CSS --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"//unpkg.com/bootstrap/dist/css/bootstrap.min.css"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"</span> /&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Load polyfills to support older browsers --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"//polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver"</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Load Vue followed by BootstrapVue --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"//unpkg.com/vue@latest/dist/vue.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre><h2 id="build-variants"><a id="build-variants" name="//apple_ref/cpp/Section/Build%20variants" class="dashAnchor"></a><span class="bd-content-title">Build variants<a href="docs.html#build-variants" aria-label="Anchor" class="anchorjs-link"></a></span></h2> <p>Choosing the best variant for your build environment / packager helps less bundle sizes. If your
+bundler supports es modules, it will automatically prefer it over commonjs.</p> <div class="table-responsive-sm"><table class="b-table table table-bordered table-striped bv-docs-table"><thead class="thead-default"><tr><th>Variant</th> <th>Environments</th> <th>Package path</th></tr></thead> <tbody><tr><td><strong>ESM module</strong></td> <td>webpack 2+ / rollup.js</td> <td><code>esm/index.js</code></td></tr> <tr><td><strong>ESM bundle</strong></td> <td>webpack 2+ / rollup.js</td> <td><code>dist/bootstrap-vue.esm.js</code> <em>or</em> <code>dist/bootstrap-vue.esm.min.js</code></td></tr> <tr><td>commonjs2</td> <td>webpack 1 / ...</td> <td><code>dist/bootstrap-vue.common.js</code> <em>or</em> <code>dist/bootstrap-vue.common.min.js</code></td></tr> <tr><td>UMD</td> <td>Browser</td> <td><code>dist/bootstrap-vue.js</code> <em>or</em> <code>dist/bootstrap-vue.min.js</code></td></tr> <tr><td>ES module</td> <td>webpack 2+ / rollup.js</td> <td><code>es/index.js</code> <span class="badge badge-warning">Deprecated in 2.0.0-rc.22</span></td></tr></tbody></table></div><p>All of the build variants listed above have been pre-transpiled targeting the browsers supported by
+BootstrapVue. However, if you are targeting only modern browsers, you may want to import
+<code>BootstrapVue</code> from <code>src/index.js</code>, and whitelisting <code>bootstrap-vue/src</code> for transpilation via your
+own project. This can potentially reduce bundle sizes.</p> <p>BootstrapVue relies on <code>Popper.js</code> (for Tooltip, Popover, and Dropdown positioning), <code>PortalVue</code>
+(for toasts), and <code>vue-functional-data-merge</code> (for functional components) and parts of <code>core-js</code>.
+These four dependencies are included in the <code>UMD</code> bundle.</p> <h2 id="migrating-a-project-already-using-bootstrap"><a id="migrating-a-project-already-using-bootstrap" name="//apple_ref/cpp/Section/Migrating%20a%20project%20already%20using%20Bootstrap" class="dashAnchor"></a><span class="bd-content-title">Migrating a project already using Bootstrap<a href="docs.html#migrating-a-project-already-using-bootstrap" aria-label="Anchor" class="anchorjs-link"></a></span></h2> <p>If you've already been using Bootstrap v4, there are a couple adjustments you may need to make to
+your project:</p> <ul><li>Remove the bootstrap.js file from your page scripts or build pipeline</li> <li>If Bootstrap is the only thing relying on jQuery, you can safely remove it &mdash; BootstrapVue <strong>does
+not</strong> depend on jQuery</li> <li>Convert your native Bootstrap HTML markup into the simplified BootstrapVue custom component markup</li></ul> <h2 id="browser-support"><a id="browser-support" name="//apple_ref/cpp/Section/Browser%20support" class="dashAnchor"></a><span class="bd-content-title">Browser support<a href="docs.html#browser-support" aria-label="Anchor" class="anchorjs-link"></a></span></h2> <h3 id="css"><a id="css" name="//apple_ref/cpp/Section/CSS" class="dashAnchor"></a><span class="bd-content-title">CSS<a href="docs.html#css" aria-label="Anchor" class="anchorjs-link"></a></span></h3> <p>BootstrapVue is to be used with Bootstrap v4.3 CSS/SCSS. Please see
+<a href="https://getbootstrap.com/docs/4.3/getting-started/browsers-devices">Browsers and devices</a> for more
+information about browsers currently supported by Bootstrap v4.</p> <h3 id="js"><a id="js" name="//apple_ref/cpp/Section/JS" class="dashAnchor"></a><span class="bd-content-title">JS<a href="docs.html#js" aria-label="Anchor" class="anchorjs-link"></a></span></h3> <p>BootstrapVue is written in Vue.js! So it is up to your project and bundler which browsers are
+supported.</p> <p>Following features and APIs are used by BootstrapVue:</p> <ul><li>ES5 (e.g. <code>Array.from()</code>, <code>Array.isArray()</code>, <code>Object.assign()</code>, <code>Object.is()</code>, etc.)</li> <li><code>Promise</code></li> <li><code>MutationObserver</code></li></ul> <p>If you want to support older IE, Android and iOS devices, you may want to use
+<a href="https://github.com/zloirock/core-js">core-js</a> and
+<a href="https://www.npmjs.com/package/mutationobserver-shim">mutationobserver-shim</a>:</p> <ul><li><code>npm install core-js regenerator-runtime mutationobserver-shim</code></li> <li>Import the polyfills in your app main entry point:</li></ul> <pre class="hljs js text-monospace p-2"><span class="hljs-keyword">import</span> <span class="hljs-string">'core-js/stable"'</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'regenerator-runtime/runtime'</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'mutationobserver-shim'</span>
+<span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">'vue'</span>
+<span class="hljs-keyword">import</span> BootstrapVue <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span></pre><p>If using deprecated <a href="https://babeljs.io/docs/en/babel-polyfill/">@babel/polyfill</a>:</p> <ul><li><code>npm install @babel/polyfill mutationobserver-shim</code></li> <li>Import the polyfills in your app main entry point:</li></ul> <pre class="hljs js text-monospace p-2"><span class="hljs-keyword">import</span> <span class="hljs-string">'@babel/polyfill'</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'mutationobserver-shim'</span>
+<span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">'vue'</span>
+<span class="hljs-keyword">import</span> BootstrapVue <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span></pre><p>Alternatively, use <a href="https://polyfill.io/">Polyfill.io</a> to dynamically serve browser specific
+polyfills via <code>&lt;script&gt;</code> tags in the HTML <code>&lt;head&gt;</code> section. See the <a href="docs.html#browser">Browser</a> section
+above for an example.</p> <h2 id="tooling-support"><a id="tooling-support" name="//apple_ref/cpp/Section/Tooling%20support" class="dashAnchor"></a><span class="bd-content-title">Tooling support<a href="docs.html#tooling-support" aria-label="Anchor" class="anchorjs-link"></a></span></h2> <h3 id="vs-code--vetur"><a id="vs-code-vetur" name="//apple_ref/cpp/Section/VS%20Code%20%2B%20Vetur" class="dashAnchor"></a><span class="bd-content-title">VS Code + Vetur<a href="docs.html#vs-code--vetur" aria-label="Anchor" class="anchorjs-link"></a></span></h3> <p>If you are using <a href="https://code.visualstudio.com/">VS Code</a> as your text editor, BootstrapVue has
+intellisense autocompletion for component attributes available when using the
+<a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur">Vetur extension</a>.</p> <p><a href="https://twitter.com/AlexSashaRegan/status/912769997776158723">Twitter: Vetur + BootstrapVue</a></p></section></main></div></div></div></div></div>
+  </body>
+</html>

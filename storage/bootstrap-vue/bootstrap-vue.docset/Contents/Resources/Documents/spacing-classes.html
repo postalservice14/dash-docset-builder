@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Spacing classes | Reference | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="Quickly integrate Bootstrap v4 components with Vue.js"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Spacing classes | Reference | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="BootstrapVue, with over 40 plugins and more than 75 custom components, provides one of the most comprehensive implementations of Bootstrap v4 components and grid system for Vue.js. With extensive and automated WAI-ARIA accessibility markup."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//docs/markdown/reference/spacing-classes/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="spacing"><span class="bd-content-title">Spacing</span></h1>
+<p class="bd-lead">Bootstrap v4 CSS includes a wide range of shorthand responsive margin and padding utility classes
+to modify an element's appearance.</p>
+<h2 id="how-it-works"><a id="how-it-works" name="//apple_ref/cpp/Section/How%20it%20works" class="dashAnchor"></a><span class="bd-content-title">How it works<a class="anchorjs-link" href="spacing-classes.html#how-it-works" aria-label="Anchor"></a></span></h2>
+<p>Assign responsive-friendly margin or padding values to an element or a subset of its sides with
+shorthand classes. Includes support for individual properties, all properties, and vertical and
+horizontal properties. Classes are built from a default Sass map ranging from .25rem to 3rem.</p>
+<h2 id="notation"><a id="notation" name="//apple_ref/cpp/Section/Notation" class="dashAnchor"></a><span class="bd-content-title">Notation<a class="anchorjs-link" href="spacing-classes.html#notation" aria-label="Anchor"></a></span></h2>
+<p>Spacing utilities that apply to all breakpoints, from xs to xl, have no breakpoint abbreviation in
+them. This is because those classes are applied from <code>min-width: 0</code> and up, and thus are not bound
+by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.</p>
+<p>The classes are named using the format <code>{property}{sides}-{size}</code> for <code>xs</code> and
+<code>{property}{sides}-{breakpoint}-{size}</code> for <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>xl</code>.</p>
+<p>Where <em>property</em> is one of:</p>
+<ul>
+<li><code>m</code> - for classes that set margin</li>
+<li><code>p</code> - for classes that set padding</li>
+</ul>
+<p>Where <em>sides</em> is one of:</p>
+<ul>
+<li><code>t</code> - for classes that set margin-top or padding-top</li>
+<li><code>b</code> - for classes that set margin-bottom or padding-bottom</li>
+<li><code>l</code> - for classes that set margin-left or padding-left</li>
+<li><code>r</code> - for classes that set margin-right or padding-right</li>
+<li><code>x</code> - for classes that set both _-left and _-right</li>
+<li><code>y</code> - for classes that set both _-top and _-bottom</li>
+<li>blank - for classes that set a margin or padding on all 4 sides of the element</li>
+</ul>
+<p>Where <em>size</em> is one of:</p>
+<ul>
+<li><code>0</code> - for classes that eliminate the margin or padding by setting it to 0</li>
+<li><code>1</code> - (by default) for classes that set the margin or padding to $spacer * .25</li>
+<li><code>2</code> - (by default) for classes that set the margin or padding to $spacer * .5</li>
+<li><code>3</code> - (by default) for classes that set the margin or padding to $spacer</li>
+<li><code>4</code> - (by default) for classes that set the margin or padding to $spacer * 1.5</li>
+<li><code>5</code> - (by default) for classes that set the margin or padding to $spacer * 3</li>
+</ul>
+<p><em>(You can add more sizes by adding entries to the $spacers Sass map variable.)</em></p>
+<h2 id="examples"><a id="examples" name="//apple_ref/cpp/Section/Examples" class="dashAnchor"></a><span class="bd-content-title">Examples<a class="anchorjs-link" href="spacing-classes.html#examples" aria-label="Anchor"></a></span></h2>
+<p>Here are some representative examples of these classes:</p>
+<pre class="hljs css text-monospace p-2"><span class="hljs-selector-class">.mt-0</span> {
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span> <span class="hljs-meta">!important</span>;
+}
+
+<span class="hljs-selector-class">.ml-1</span> {
+  <span class="hljs-attribute">margin-left</span>: ($spacer * <span class="hljs-number">0.25</span>) <span class="hljs-meta">!important</span>;
+}
+
+<span class="hljs-selector-class">.px-2</span> {
+  <span class="hljs-attribute">padding-left</span>: ($spacer * <span class="hljs-number">0.5</span>) <span class="hljs-meta">!important</span>;
+  <span class="hljs-attribute">padding-right</span>: ($spacer * <span class="hljs-number">0.5</span>) <span class="hljs-meta">!important</span>;
+}
+
+<span class="hljs-selector-class">.p-3</span> {
+  <span class="hljs-attribute">padding</span>: $spacer <span class="hljs-meta">!important</span>;
+}</pre><h2 id="horizontal-centering"><a id="horizontal-centering" name="//apple_ref/cpp/Section/Horizontal%20centering" class="dashAnchor"></a><span class="bd-content-title">Horizontal centering<a class="anchorjs-link" href="spacing-classes.html#horizontal-centering" aria-label="Anchor"></a></span></h2>
+<p>Additionally, Bootstrap also includes an <code>.mx-auto</code> class for horizontally centering fixed-width
+block level content &mdash; that is, content that has <code>display: block</code> and a <code>width</code> set&mdash;by setting the
+horizontal margins to <code>auto</code>.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mx-auto bg-info"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 200px;"</span>&gt;</span>Centered element<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- horizontal-centering.vue --&gt;</span></pre></section></main></div></div></div></div></div>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Media | Components | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Media | Components | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="The media object helps build complex and repetitive components where some media is positioned alongside content that doesn't wrap around said media."><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="The media object helps build complex and repetitive components where some media is positioned alongside content that doesn't wrap around said media."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="modulepreload" href="a6f8df338a2c2a457341.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//src/components/media/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="media"><span class="bd-content-title">Media</span></h1>
+<p class="bd-lead">The media object helps build complex and repetitive components where some media is positioned
+alongside content that doesn't wrap around said media. Plus, it does this with only two required
+classes thanks to flexbox.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-media</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"aside"</span> <span class="hljs-attr">blank</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"#ccc"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"64"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"placeholder"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-0"</span>&gt;</span>Media Title<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+        Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc
+        ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-media</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"aside"</span> <span class="hljs-attr">blank</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"#ccc"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"64"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"placeholder"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-0"</span>&gt;</span>Nested Media<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-0"</span>&gt;</span>
+          Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in
+          faucibus.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-media</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-media</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-media.vue --&gt;</span></pre><h2 id="usage"><a id="usage" name="//apple_ref/cpp/Section/Usage" class="dashAnchor"></a><span class="bd-content-title">Usage<a class="anchorjs-link" href="media.html#usage" aria-label="Anchor"></a></span></h2>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-media</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"aside"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Media Aside"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Media Body<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Some text<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- b-[Optional: add media children here for nesting] --&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-media</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre><h2 id="no-body-with-sub-components"><a id="no-body-with-sub-components" name="//apple_ref/cpp/Section/No%20body%20%28with%20sub-components%29" class="dashAnchor"></a><span class="bd-content-title">No body (with sub-components)<a class="anchorjs-link" href="media.html#no-body-with-sub-components" aria-label="Anchor"></a></span></h2>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-media</span> <span class="hljs-attr">no-body</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-media-aside</span> <span class="hljs-attr">vertical-align</span>=<span class="hljs-string">"center"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">blank</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"#ccc"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"128"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"256"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"placeholder"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-media-aside</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-media-body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ml-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-0"</span>&gt;</span>Media Title<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+          sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce
+          condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-0"</span>&gt;</span>
+          Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis
+          natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-media</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"aside"</span> <span class="hljs-attr">blank</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"#ccc"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"64"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"placeholder"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-0"</span>&gt;</span>Nested Media<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+          Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in
+          faucibus.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">b-media</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-media-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-media</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-media-no-body.vue --&gt;</span></pre><h2 id="order"><a id="order" name="//apple_ref/cpp/Section/Order" class="dashAnchor"></a><span class="bd-content-title">Order<a class="anchorjs-link" href="media.html#order" aria-label="Anchor"></a></span></h2>
+<p>Change the order of content in media objects by adding <code>right-align</code> property.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-media</span> <span class="hljs-attr">right-align</span> <span class="hljs-attr">vertical-align</span>=<span class="hljs-string">"center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"aside"</span> <span class="hljs-attr">blank</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"#ccc"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"80"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"placeholder"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-0 mb-1"</span>&gt;</span>Media object<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-0"</span>&gt;</span>
+      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+      Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
+      nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-media</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-media-order.vue --&gt;</span></pre><h2 id="nesting"><a id="nesting" name="//apple_ref/cpp/Section/Nesting" class="dashAnchor"></a><span class="bd-content-title">Nesting<a class="anchorjs-link" href="media.html#nesting" aria-label="Anchor"></a></span></h2>
+<p>You can easily nest media objects by including another <code>&lt;b-media&gt;</code> inside parent's body.</p>
+<h2 id="vertical-align"><a id="vertical-align" name="//apple_ref/cpp/Section/Vertical%20align" class="dashAnchor"></a><span class="bd-content-title">Vertical align<a class="anchorjs-link" href="media.html#vertical-align" aria-label="Anchor"></a></span></h2>
+<p>Aside can be vertical aligned using <code>vertical-align</code> should be either <code>top</code>, <code>center</code> or <code>end</code>.
+Default is <code>top</code>.</p>
+<h2 id="media-list"><a id="media-list" name="//apple_ref/cpp/Section/Media%20list" class="dashAnchor"></a><span class="bd-content-title">Media list<a class="anchorjs-link" href="media.html#media-list" aria-label="Anchor"></a></span></h2>
+<p>Because the media object has so few structural requirements, you can also use these component as
+list HTML elements. On your <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>, add the class <code>list-unstyled</code> to remove any browser
+default list styles, and then use the <code>&lt;b-media&gt;</code> component with <code>tag</code> prop set to <code>li</code>. As always,
+use spacing utilities wherever needed to fine tune.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-unstyled"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-media</span> <span class="hljs-attr">tag</span>=<span class="hljs-string">"li"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"aside"</span> <span class="hljs-attr">blank</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"#abc"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"64"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"placeholder"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-0 mb-1"</span>&gt;</span>List-based media object<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-0"</span>&gt;</span>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+        Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc
+        ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-media</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-media</span> <span class="hljs-attr">tag</span>=<span class="hljs-string">"li"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-4"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"aside"</span> <span class="hljs-attr">blank</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"#cba"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"64"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"placeholder"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-0 mb-1"</span>&gt;</span>List-based media object<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-0"</span>&gt;</span>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+        Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc
+        ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-media</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-media</span> <span class="hljs-attr">tag</span>=<span class="hljs-string">"li"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"aside"</span> <span class="hljs-attr">blank</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"#bac"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"64"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"placeholder"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-0 mb-1"</span>&gt;</span>List-based media object<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-0"</span>&gt;</span>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+        Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc
+        ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-media</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-media-list.vue --&gt;</span></pre><!-- Component reference added automatically from component package.json -->
+</section><section class="bd-content bd-component-reference"><h2 id="component-reference" tabindex="-1"><a id="component-reference" name="//apple_ref/cpp/Section/Component%20reference" class="dashAnchor"></a><span class="bd-content-title">Component reference<a href="media.html#component-reference" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h2><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-media" tabindex="-1"><a id="b-media" name="//apple_ref/cpp/Section/%3Cb-media%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-media&gt;</code><a href="media.html#comp-ref-b-media" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <a rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary">
+        Functional Component
+      </a></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/media/media.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <!----> <article class="bd-content"><h4 id="comp-ref-b-media-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="media.html#comp-ref-b-media-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">tag</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>div</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">right-align</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">vertical-align</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>top</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">no-body</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><!----><!----></tbody></table></div> <!----></article> <article class="bd-content"><h4 id="comp-ref-b-media-slots" tabindex="-1"><span class="bd-content-title">
+      Slots
+    <a href="media.html#comp-ref-b-media-slots" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Slot</th><th role="columnheader" scope="col" aria-colindex="2">Description</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">aside</code></td><td role="cell" aria-colindex="2">Media Aside</td></tr><!----><!----></tbody></table></div></article> <!----> <!----></section><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-media-aside" tabindex="-1"><a id="b-media-aside" name="//apple_ref/cpp/Section/%3Cb-media-aside%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-media-aside&gt;</code><a href="media.html#comp-ref-b-media-aside" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <a rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary">
+        Functional Component
+      </a></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/media/media-aside.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <!----> <article class="bd-content"><h4 id="comp-ref-b-media-aside-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="media.html#comp-ref-b-media-aside-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">tag</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>div</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">vertical-align</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>top</code></td></tr><!----><!----><!----><!----></tbody></table></div> <!----></article> <!----> <!----> <!----></section><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-media-body" tabindex="-1"><a id="b-media-body" name="//apple_ref/cpp/Section/%3Cb-media-body%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-media-body&gt;</code><a href="media.html#comp-ref-b-media-body" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <a rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary">
+        Functional Component
+      </a></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/media/media-body.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <!----> <article class="bd-content"><h4 id="comp-ref-b-media-body-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="media.html#comp-ref-b-media-body-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">tag</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>div</code></td></tr><!----><!----><!----><!----></tbody></table></div> <!----></article> <!----> <!----> <!----></section><section class="bd-content"><article class="bd-content"><h3 id="importing-individual-components" tabindex="-1"><a id="importing-individual-components" name="//apple_ref/cpp/Section/Importing%20individual%20components" class="dashAnchor"></a><span class="bd-content-title">
+        Importing individual components
+      <a href="media.html#importing-individual-components" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> You can
+        import individual components into your project via the following named exports:
+      </p> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Component</th><th role="columnheader" scope="col" aria-colindex="2">Named Export</th><th role="columnheader" scope="col" aria-colindex="3">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-media&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BMedia</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-media-aside&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BMediaAside</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-media-body&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BMediaBody</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><!----><!----></tbody></table></div> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">import { BMedia } from 'bootstrap-vue'
+Vue.component('b-media', BMedia)</pre></article> <!----> <article class="bd-content"><h3 id="importing-as-a-plugin" tabindex="-1"><a id="importing-as-a-vuejs-plugin" name="//apple_ref/cpp/Section/Importing%20as%20a%20Vue.js%20plugin" class="dashAnchor"></a><span class="bd-content-title">
+      Importing as a Vue.js plugin
+    <a href="media.html#importing-as-a-plugin" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> Importing plugins
+      has been simplified.
+    </p> <p>
+      This plugin includes all of the above listed individual
+      components<!---->.
+      Plugins also include any component aliases.
+    </p> <div class="bv-docs-table table-responsive-sm"><table fileds="namedExport,importPath" aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><caption class="b-table-caption-top">The plugin can be imported via several methods</caption><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Named Export</th><th role="columnheader" scope="col" aria-colindex="2">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">MediaPlugin</code> <span class="badge small badge-success">PREFERRED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">MediaPlugin</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">default</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components/media</code></td></tr><!----><!----></tbody></table></div> <!----> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">// Importing the named export
+import { MediaPlugin } from 'bootstrap-vue'
+Vue.use(MediaPlugin)</pre></article> <aside class="alert alert-warning my-4"><p class="mb-0"><strong class="badge badge-warning">Deprecation Warning as of v2.0.0-rc.22:</strong>
+      Importing components, directives and plugins from <code>bootstrap-vue/es/*</code> has been
+      deprecated. All components, directives and plugins are now available as top-level named
+      exports in the <code>ESM</code> and <code>CommonJS</code> builds. The <code>es/</code>
+      directory build will be removed in a future release.
+    </p></aside></section></section></main></div></div></div></div></div>
+  </body>
+</html>

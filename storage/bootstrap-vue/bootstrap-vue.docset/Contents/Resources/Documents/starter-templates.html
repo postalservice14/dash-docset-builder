@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Starter Templates | Reference | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Starter Templates | Reference | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="There are several ways you can create your app, from basic client side HTML all the way up to using a build system and compilers."><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="There are several ways you can create your app, from basic client side HTML all the way up to using a build system and compilers."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//docs/markdown/reference/starter-templates/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="starter-templates"><span class="bd-content-title">Starter Templates</span></h1>
+<p class="bd-lead">There are several ways you can create your app, from basic client side HTML all the way up to
+using a build system and compilers.</p>
+<p>In all cases, you should have familiarity with using <a href="https://vuejs.org">Vue</a>. A good resource for
+Vue tutorials is <a href="https://laracasts.com/search?q=vue">Laracasts</a>.</p>
+<h2 id="basic-example"><a id="basic-example" name="//apple_ref/cpp/Section/Basic%20example" class="dashAnchor"></a><span class="bd-content-title">Basic example<a class="anchorjs-link" href="starter-templates.html#basic-example" aria-label="Anchor"></a></span></h2>
+<p>Get started quickly without the need for a build system, by using standard <code>&lt;script&gt;</code> and <code>&lt;link&gt;</code>
+tags to load the required JavaScript and CSS in your page.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Required meta tags --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1, shrink-to-fit=no"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"content-type"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"text/html; charset=UTF-8"</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>My first BootstrapVue app<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Required Stylesheets --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span>
+      <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>
+      <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>
+      <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"</span>
+    /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span>
+      <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>
+      <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>
+      <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"</span>
+    /&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Required scripts --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/vue"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Our application root element --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"app"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-container</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-jumbotron</span> <span class="hljs-attr">header</span>=<span class="hljs-string">"BootstrapVue"</span> <span class="hljs-attr">lead</span>=<span class="hljs-string">"Bootstrap v4 Components for Vue.js 2"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>For more information visit our website<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">b-btn</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://bootstrap-vue.js.org/"</span>&gt;</span>More Info<span class="hljs-tag">&lt;/<span class="hljs-name">b-btn</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">b-jumbotron</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span>
+          <span class="hljs-attr">horizontal</span>
+          <span class="hljs-attr">:label-cols</span>=<span class="hljs-string">"4"</span>
+          <span class="hljs-attr">description</span>=<span class="hljs-string">"Let us know your name."</span>
+          <span class="hljs-attr">label</span>=<span class="hljs-string">"Enter your name"</span>
+        &gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">v-model.trim</span>=<span class="hljs-string">"name"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">:show</span>=<span class="hljs-string">"showAlert"</span>&gt;</span>Hello {{ name }}<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Start running your app --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+      <span class="hljs-built_in">window</span>.app = <span class="hljs-keyword">new</span> Vue({
+        <span class="hljs-attr">el</span>: <span class="hljs-string">'#app'</span>,
+        <span class="hljs-attr">data</span>: {
+          <span class="hljs-attr">name</span>: <span class="hljs-string">''</span>
+        },
+        <span class="hljs-attr">computed</span>: {
+          showAlert() {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name.length &gt; <span class="hljs-number">4</span> ? <span class="hljs-literal">true</span> : <span class="hljs-literal">false</span>
+          }
+        }
+      })
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></pre><h2 id="vue-cli-2"><a id="vue-cli-2" name="//apple_ref/cpp/Section/Vue%20CLI%202" class="dashAnchor"></a><span class="bd-content-title">Vue CLI 2<a class="anchorjs-link" href="starter-templates.html#vue-cli-2" aria-label="Anchor"></a></span></h2>
+<h3 id="webpack-simple-example"><a id="webpack-simple-example" name="//apple_ref/cpp/Section/webpack-simple%20example" class="dashAnchor"></a><span class="bd-content-title"><code>webpack-simple</code> example<a class="anchorjs-link" href="starter-templates.html#webpack-simple-example" aria-label="Anchor"></a></span></h3>
+<p>Starter template: <a href="https://github.com/bootstrap-vue/webpack-simple">https://github.com/bootstrap-vue/webpack-simple</a></p>
+<p>Note: you may need to adjust the template package.json file to use the latest BootstrapVue version</p>
+<p>Coming soon!</p>
+<h3 id="webpack-example"><a id="webpack-example" name="//apple_ref/cpp/Section/webpack%20example" class="dashAnchor"></a><span class="bd-content-title"><code>webpack</code> example<a class="anchorjs-link" href="starter-templates.html#webpack-example" aria-label="Anchor"></a></span></h3>
+<p>Starter template: <a href="https://github.com/bootstrap-vue/webpack">https://github.com/bootstrap-vue/webpack</a></p>
+<p>Note: you may need to adjust the template package.json file to use the latest BootstrapVue version</p>
+<p>Coming soon!</p>
+<h2 id="vue-cli-3"><a id="vue-cli-3" name="//apple_ref/cpp/Section/Vue%20CLI%203" class="dashAnchor"></a><span class="bd-content-title">Vue CLI 3<a class="anchorjs-link" href="starter-templates.html#vue-cli-3" aria-label="Anchor"></a></span></h2>
+<p>Vue CLI 3 is the newest way to create Vue apps.</p>
+<p>A Vue CLI 3 BootStrapVue plugin is available for setting up a basic app. refer to the
+<a href="docs.html#vue-cli-3-plugin">Getting Started</a> docs page for more details.</p>
+<h2 id="building-with-customized-bootstrap-v4-css"><a id="building-with-customized-bootstrap-v4-css" name="//apple_ref/cpp/Section/Building%20with%20customized%20Bootstrap%20v4%20CSS" class="dashAnchor"></a><span class="bd-content-title">Building with customized Bootstrap v4 CSS<a class="anchorjs-link" href="starter-templates.html#building-with-customized-bootstrap-v4-css" aria-label="Anchor"></a></span></h2>
+<p>If you are using a build system, and would like to customize the Bootstrap v4 CSS, the following
+references will be handy starting points:</p>
+<ul>
+<li>Article on
+<a href="https://medium.com/@_Dreamstream/integrating-and-customising-bootstrap-4-in-vue-js-cbc29ba7688e">Integrating and Customising Bootstrap v4 in vue-js</a>
+hosted on medium.com</li>
+<li>Official Bootstrap <a href="https://getbootstrap.com/docs/4.3/getting-started/theming/">Theming Bootstrap</a>
+guide</li>
+</ul>
+<h2 id="individual-component-import"><a id="individual-component-import" name="//apple_ref/cpp/Section/Individual%20component%20import" class="dashAnchor"></a><span class="bd-content-title">Individual component import<a class="anchorjs-link" href="starter-templates.html#individual-component-import" aria-label="Anchor"></a></span></h2>
+<p>There are a few methods that you can use to import individual components and directives.</p>
+<p>You will need <code>vue-loader</code> configured to handle the compiling any components that are internally
+single file <code>.vue</code> components.</p>
+<p>The BootstrapVue distribution now includes <code>ES</code> modules for all components and directives. These are
+located in the <code>bootstrap-vue/es/components/</code> and <code>bootstrap-vue/es/directives/</code> directories, when
+using the NPM bundle. When building from the BootstrapVue repo source the directories will be
+created when you run <code>yarn build</code>.</p>
+<h3 id="importing-individual-components-and-directives-as-es-modules"><a id="importing-individual-components-and-directives-as-es-modules" name="//apple_ref/cpp/Section/Importing%20individual%20components%20and%20directives%20as%20ES%20modules" class="dashAnchor"></a><span class="bd-content-title">Importing individual components and directives as ES modules<a class="anchorjs-link" href="starter-templates.html#importing-individual-components-and-directives-as-es-modules" aria-label="Anchor"></a></span></h3>
+<p>Components and directives appear in sub directories, grouped by functionality. As an example, you
+can import <code>&lt;b-card&gt;</code> (plus it's sub components) and <code>&lt;b-table&gt;</code> as follows:</p>
+<pre class="hljs js text-monospace p-2"><span class="hljs-comment">// Import the individual components</span>
+<span class="hljs-keyword">import</span> BCard <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue/es/components/card/card'</span>
+<span class="hljs-keyword">import</span> BCardBody <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue/es/components/card/card-body'</span>
+<span class="hljs-keyword">import</span> BCardFooter <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue/es/components/card/card-footer'</span>
+<span class="hljs-keyword">import</span> BCardHeader <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue/es/components/card/card-header'</span>
+<span class="hljs-keyword">import</span> BCardImg <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue/es/components/card/card-img'</span>
+<span class="hljs-keyword">import</span> BTable <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue/es/components/table/table'</span>
+
+<span class="hljs-comment">// Add components globally</span>
+Vue.component(<span class="hljs-string">'b-card'</span>, BCard)
+Vue.component(<span class="hljs-string">'b-card-body'</span>, BCardBody)
+Vue.component(<span class="hljs-string">'b-card-footer'</span>, BCardFooter)
+Vue.component(<span class="hljs-string">'b-card-header'</span>, BCardHeader)
+Vue.component(<span class="hljs-string">'b-card-img'</span>, BCardImg)
+Vue.component(<span class="hljs-string">'b-table'</span>, BTable)
+
+<span class="hljs-comment">// Or make available to your component or app</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  <span class="hljs-attr">components</span>: {
+    BCard,
+    BCardBody,
+    BCardFooter,
+    BCardHeader,
+    BCardImg,
+    BTable
+  }
+  <span class="hljs-comment">// ...</span>
+}</pre><h3 id="importing-component-groups-and-directives-as-vue-plugins"><a id="importing-component-groups-and-directives-as-vue-plugins" name="//apple_ref/cpp/Section/Importing%20component%20groups%20and%20directives%20as%20Vue%20plugins" class="dashAnchor"></a><span class="bd-content-title">Importing component groups and directives as Vue plugins<a class="anchorjs-link" href="starter-templates.html#importing-component-groups-and-directives-as-vue-plugins" aria-label="Anchor"></a></span></h3>
+<p>A component group and/or directive can be imported as a Vue plugin by importing the component group
+or directive directory. Importing <code>&lt;b-card&gt;</code> (and related sub-components) and <code>&lt;b-table&gt;</code> can be
+done with:</p>
+<pre class="hljs js text-monospace p-2"><span class="hljs-comment">// Import the components as Vue plugins</span>
+<span class="hljs-keyword">import</span> { Card, Table } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue/es/components'</span>
+
+<span class="hljs-comment">// Add the plugins to Vue</span>
+Vue.use(Card)
+Vue.use(Table)</pre><p>Now you can use the <code>&lt;b-card&gt;</code> (including the <code>&lt;b-card-*&gt;</code> sub-components) and <code>&lt;b-table&gt;</code>
+components in your project templates.</p>
+<p>Note that some component plugins automatically import other directives and components (i.e. the
+<code>modal</code> plugin also imports the <code>v-b-modal</code> directive, and <code>nav</code> plugin automatically imports all
+<code>nav-*</code> sub-components and the dropdown sub-components). Refer to the component reference or
+directive reference at the bottom of each documentation page for details.</p>
+</section></main></div></div></div></div></div>
+  </body>
+</html>

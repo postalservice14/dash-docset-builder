@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Toasts | Components | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Toasts | Components | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="Push notifications to your visitors with a toast, a lightweight and easily customizable alert message."><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="Push notifications to your visitors with a toast, a lightweight and easily customizable alert message."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="modulepreload" href="a6f8df338a2c2a457341.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//src/components/toast/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="toasts"><span class="bd-content-title">Toasts</span></h1>
+<p class="bd-lead">Push notifications to your visitors with a <code>&lt;b-toast&gt;</code> and <code>&lt;b-toaster&gt;</code>, lightweight components
+which are easily customizable for generating alert messages.</p>
+<p>Toasts are lightweight notifications designed to mimic the push notifications that have been
+popularized by mobile and desktop operating systems.</p>
+<p>Toasts are intended to be small interruptions to your visitors or users, and therefore should
+contain minimal, to-the-point, non-interactive content.</p>
+<div class="alert alert-warning">
+  <p class="mb-0">
+    <strong>BETA warning:</strong><br>
+    Toasts are in their preliminary stages of being developed, and usage and custom CSS is subject
+    to change in future releases.
+  </p>
+</div>
+
+<h2 id="overview"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><span class="bd-content-title">Overview<a class="anchorjs-link" href="toast.html#overview" aria-label="Anchor"></a></span></h2>
+<p>To encourage extensible and predictable toasts, we recommend providing a header (title) and body.
+Toast headers use the style <code>'display: flex'</code>, allowing easy alignment of content thanks to
+Bootstrap's <a href="utility-classes.html">margin and flexbox utility classes</a>.</p>
+<p>Toasts are slightly translucent, too, so they blend over whatever they might appear over. For
+browsers that support the <code>backdrop-filter</code> CSS property, they also attempt to blur the elements
+under the toast.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-3 bg-secondary progress-bar-striped"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"min-height: 170px;"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"$bvToast.show('example-toast')"</span>&gt;</span>
+      Show toast
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-toast</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"example-toast"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"BootstrapVue"</span> <span class="hljs-attr">static</span> <span class="hljs-attr">no-auto-hide</span>&gt;</span>
+      Hello, world! This is a toast message.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-toast</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- toast-intro.vue --&gt;</span></pre><p><strong>Note:</strong> we are using the <code>static</code> prop in the above example to render the toast in-pace in the
+document, rather than transporting it to a <code>&lt;b-toaster&gt;</code> target container. And we have added classes
+<code>bg-secondary</code> and <code>progress-bar-striped</code> to the outer <code>&lt;div&gt;</code> for illustrative purposes of toast
+transparency only.</p>
+<h3 id="toast-features-and-notes"><a id="toast-features-and-notes" name="//apple_ref/cpp/Section/Toast%20features%20and%20notes" class="dashAnchor"></a><span class="bd-content-title">Toast features and notes<a class="anchorjs-link" href="toast.html#toast-features-and-notes" aria-label="Anchor"></a></span></h3>
+<ul>
+<li>Toasts can be generated on demand via the injection <code>this.$bvToast</code> object, or manually created
+using the <code>&lt;b-toast&gt;</code> component.</li>
+<li>Toasts will auto hide after a default of 5 seconds (5000ms). The duration can be changed via the
+<code>auto-hide-delay</code> prop (value is specified in milliseconds), and disabled with the <code>no-auto-hide</code>
+prop.</li>
+<li>When auto-hide is enabled, and you hover over the toast, the auto-hide countdown will be paused
+until you un-hover the toast. You can disabled this feature by setting the <code>no-hover-pause</code> prop
+to <code>true</code>.</li>
+<li>Toasts include a close button on their top right to allow users to manually dismiss them. The
+close button can be removed via the <code>no-close-button</code> prop.</li>
+<li>Titles are optional, but should be included, titles are rendered inside a <code>&lt;strong&gt;</code> element,
+unless using the <code>toast-title</code> slot.</li>
+<li>If you disable the auto-hide feature, avoid hiding the close button, or if you hide the close
+button be sure to allow the toast to auto-dismiss.</li>
+<li>Toast transparency can be disabled by setting the <code>solid</code> prop to <code>true</code>.</li>
+<li>Toasts will show inside a named <code>&lt;b-toaster&gt;</code> target component. BootstrapVue comes with several
+pre-defined toaster targets. Toasts will check for the named toaster in the document before they
+are shown, and will dynamically create the named toaster target if one is not found.</li>
+<li>Toaster targets are defined completely with CSS for controlling the positioning of the contained
+<code>&lt;b-toast&gt;</code> components.</li>
+<li>Toasts can can targeted to any named toaster.</li>
+<li>Toasts are wrapped in a <code>&lt;div&gt;</code> with class <code>b-toast</code> to allow for Vue list-transition support when
+displayed in a toaster component.</li>
+</ul>
+<p>BootstrapVue uses <a href="https://portal-vue.linusb.org/">PortalVue</a> to transport toasts into the toasters.</p>
+<h2 id="toasts-on-demand"><a id="toasts-on-demand" name="//apple_ref/cpp/Section/Toasts%20on%20demand" class="dashAnchor"></a><span class="bd-content-title">Toasts on demand<a class="anchorjs-link" href="toast.html#toasts-on-demand" aria-label="Anchor"></a></span></h2>
+<p>Generate a dynamic toast from anywhere in your app via the <code>this.$bvToast</code> Vue component <em>instance</em>
+injection, without the need to place a <a href="toast.html#b-toast-component"><code>&lt;b-toast&gt;</code></a> component in your app.</p>
+<p>Use the <code>this.$bvToast.toast()</code> method to generate on demand toasts. The method accepts two
+arguments:</p>
+<ul>
+<li><code>message</code>: the content of the toast body (either a string, or an array of <code>VNodes</code>). Required.
+Toasts with an empty message will not be shown. See the <a href="toast.html#advanced-usage">Advanced usage</a> section
+for an example of passing an array of <code>VNodes</code> as the message.</li>
+<li><code>options</code>: an optional options object for providing a title and/or additional configuration
+options. The <code>title</code> option can be either a string or an array of <code>VNodes</code></li>
+</ul>
+<p>The options argument accepts most of the props that the <code>&lt;b-toast&gt;</code> component accepts (with the
+exception of <code>static</code>, and <code>visible</code>) in <samp>camelCase</samp> name format instead of
+<samp>kebab-case</samp>.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"makeToast()"</span>&gt;</span>Show Toast<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"makeToast(true)"</span>&gt;</span>Show Toast (appended)<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">toastCount</span>: <span class="hljs-number">0</span>
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      makeToast(append = <span class="hljs-literal">false</span>) {
+        <span class="hljs-keyword">this</span>.toastCount++
+        <span class="hljs-keyword">this</span>.$bvToast.toast(<span class="hljs-string">`This is toast number <span class="hljs-subst">${<span class="hljs-keyword">this</span>.toastCount}</span>`</span>, {
+          <span class="hljs-attr">title</span>: <span class="hljs-string">'BootstrapVue Toast'</span>,
+          <span class="hljs-attr">autoHideDelay</span>: <span class="hljs-number">5000</span>,
+          <span class="hljs-attr">appendToast</span>: append
+        })
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- toasts-bv-toast-example.vue --&gt;</span></pre><p>Once a toast which was generated using <code>this.$bvToast.toast()</code> has been hidden, it will
+automatically be destroyed and removed from the document.</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>The <code>this.$bvToast</code> injection is only available when using the full <code>BootstrapVue</code> plugin or the
+<code>Toast</code> plugin. It is not available if importing just the <code>b-toast</code> or <code>b-toaster</code> components.</li>
+<li>A new <code>$bvToast</code> injection (mixin) is created for each Vue virtual machine (i.e. each instantiated
+component), and is not usable via direct access to the <code>Vue.prototype</code>, as it needs access to the
+instance's <code>this</code> and <code>$root</code> contexts.</li>
+<li>Toasts generated via <code>this.$bvToast.toast()</code> are children of the Vue instance that calls the
+<code>this.$bvToast.toast()</code> method, and will be hidden and destroyed if that Vue instance (i.e. your
+component or app) is also destroyed.</li>
+<li>Toasts require a message. Toasts on demand with an empty message will silently not be shown.</li>
+</ul>
+<h2 id="options"><a id="options" name="//apple_ref/cpp/Section/Options" class="dashAnchor"></a><span class="bd-content-title">Options<a class="anchorjs-link" href="toast.html#options" aria-label="Anchor"></a></span></h2>
+<p>Toasts have various options that can control their style and behaviour. Options are available both
+as props on the <code>&lt;b-toast&gt;</code> component and as properties of the options object passed to
+<code>this.$bvToast.toast()</code>. When passing options to <code>this.$bvToast.toast()</code>, use the
+<samp>camelCase</samp> version of the component prop name, i.e. use <code>noAutoHide</code> instead of
+<code>no-auto-hide</code>.</p>
+<h3 id="title"><a id="title" name="//apple_ref/cpp/Section/Title" class="dashAnchor"></a><span class="bd-content-title">Title<a class="anchorjs-link" href="toast.html#title" aria-label="Anchor"></a></span></h3>
+<p>Add a title to your toast via the <code>title</code> option. Just like the toast <code>message</code>, the title can be a
+simple string, or an array of vNodes. See the <a href="toast.html#advanced-usage">Advanced usage</a> section for an
+example of passing an array of <code>VNodes</code> as the message and title.</p>
+<h3 id="transparency"><a id="transparency" name="//apple_ref/cpp/Section/Transparency" class="dashAnchor"></a><span class="bd-content-title">Transparency<a class="anchorjs-link" href="toast.html#transparency" aria-label="Anchor"></a></span></h3>
+<p>Toasts have a semi-transparent background by default. To disable the default transparency, just set
+the <code>solid</code> prop to <code>true</code></p>
+<h3 id="variants"><a id="variants" name="//apple_ref/cpp/Section/Variants" class="dashAnchor"></a><span class="bd-content-title">Variants<a class="anchorjs-link" href="toast.html#variants" aria-label="Anchor"></a></span></h3>
+<p>BootstrapVue toasts provide custom CSS to define color variants. Variants follow the standard
+Bootstrap v4 variant names. If you have custom SCSS defined Bootstrap color variants, the toast
+custom SCSS will automatically create toast variants for you.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"makeToast()"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>Default<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"makeToast('primary')"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"secondary"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"makeToast('secondary')"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"danger"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"makeToast('danger')"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>Danger<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"warning"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"makeToast('warning')"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"makeToast('success')"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"makeToast('info')"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>Info<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    <span class="hljs-attr">methods</span>: {
+      makeToast(variant = <span class="hljs-literal">null</span>) {
+        <span class="hljs-keyword">this</span>.$bvToast.toast(<span class="hljs-string">'Toast body content'</span>, {
+          <span class="hljs-attr">title</span>: <span class="hljs-string">`Variant <span class="hljs-subst">${variant || <span class="hljs-string">'default'</span>}</span>`</span>,
+          <span class="hljs-attr">variant</span>: variant,
+          <span class="hljs-attr">solid</span>: <span class="hljs-literal">true</span>
+        })
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- toast-variants.vue --&gt;</span></pre><h3 id="toaster-target"><a id="toaster-target" name="//apple_ref/cpp/Section/Toaster%20target" class="dashAnchor"></a><span class="bd-content-title">Toaster target<a class="anchorjs-link" href="toast.html#toaster-target" aria-label="Anchor"></a></span></h3>
+<p>BootstrapVue comes with the following "built-in" toaster names (and associated styles defined in
+SCSS):</p>
+<ul>
+<li><code>b-toaster-top-right</code></li>
+<li><code>b-toaster-top-left</code></li>
+<li><code>b-toaster-top-center</code></li>
+<li><code>b-toaster-top-full</code></li>
+<li><code>b-toaster-bottom-right</code></li>
+<li><code>b-toaster-bottom-left</code></li>
+<li><code>b-toaster-bottom-center</code></li>
+<li><code>b-toaster-bottom-full</code></li>
+</ul>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toast('b-toaster-top-right')"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>b-toaster-top-right<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toast('b-toaster-top-left')"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>b-toaster-top-left<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toast('b-toaster-top-center')"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>b-toaster-top-center<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toast('b-toaster-top-full')"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>b-toaster-top-full<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toast('b-toaster-bottom-right', true)"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>b-toaster-bottom-right<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toast('b-toaster-bottom-left', true)"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>b-toaster-bottom-left<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toast('b-toaster-bottom-center', true)"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>b-toaster-bottom-center<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toast('b-toaster-bottom-full', true)"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>b-toaster-bottom-full<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">counter</span>: <span class="hljs-number">0</span>
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      toast(toaster, append = <span class="hljs-literal">false</span>) {
+        <span class="hljs-keyword">this</span>.counter++
+        <span class="hljs-keyword">this</span>.$bvToast.toast(<span class="hljs-string">`Toast <span class="hljs-subst">${<span class="hljs-keyword">this</span>.counter}</span> body content`</span>, {
+          <span class="hljs-attr">title</span>: <span class="hljs-string">`Toaster <span class="hljs-subst">${toaster}</span>`</span>,
+          <span class="hljs-attr">toaster</span>: toaster,
+          <span class="hljs-attr">solid</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">appendToast</span>: append
+        })
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- toast-targets.vue --&gt;</span></pre><p><strong>Notes:</strong></p>
+<ul>
+<li>Toaster target names that have not been defined in CSS will render at the bottom of the document,
+stacked and not positioned (appended to <code>&lt;body&gt;</code> inside a <code>&lt;b-toaster&gt;</code> with class name and ID set
+to the toaster target name). The only default styling the toaster will have is a <code>z-index</code> of
+<code>1100</code>.</li>
+<li>Avoid using <code>b-toaster-top-*</code> toasters together, or <code>b-toaster-bottom-*</code> toasters together, at the
+same time in your app as notifications could be obscured/overlap on small screens (i.e. <code>xs</code>).</li>
+</ul>
+<h3 id="prepend-and-append"><a id="prepend-and-append" name="//apple_ref/cpp/Section/Prepend%20and%20append" class="dashAnchor"></a><span class="bd-content-title">Prepend and append<a class="anchorjs-link" href="toast.html#prepend-and-append" aria-label="Anchor"></a></span></h3>
+<p>Toasts default to prepending themselves to the top of the toasts shown in the specified toaster in
+the order they were created. To append new toasts to the bottom, set the <code>append-toast</code> prop to
+<code>true</code>.</p>
+<h3 id="auto-hide"><a id="auto-hide" name="//apple_ref/cpp/Section/Auto-hide" class="dashAnchor"></a><span class="bd-content-title">Auto-hide<a class="anchorjs-link" href="toast.html#auto-hide" aria-label="Anchor"></a></span></h3>
+<p>Change to auto hide delay time via the <code>auto-hide-delay</code> prop (value is in milliseconds), which
+defaults to <code>5000</code> (minimum value <code>1000</code>). Or, disable the auto-hide feature completely by setting
+the <code>no-auto-hide</code> prop to <code>true</code>.</p>
+<p>When auto-hide is enabled, hovering over the toast will pause the auto-hide timer. When you un-hover
+the toast, the auto-hide timer will be resumed. You can disable this feature by setting the
+<code>no-hover-pause</code> prop to <code>true</code>.</p>
+<h3 id="toast-roles"><a id="toast-roles" name="//apple_ref/cpp/Section/Toast%20roles" class="dashAnchor"></a><span class="bd-content-title">Toast roles<a class="anchorjs-link" href="toast.html#toast-roles" aria-label="Anchor"></a></span></h3>
+<p>Toasts are rendered with a default <code>role</code> attribute of <code>'alert'</code> and <code>aria-live</code> attribute of
+<code>'assertive'</code>. For toasts that are meant for a casual notification, set the <code>is-status</code> prop to
+<code>true</code>, which will change the <code>role</code> and <code>aria-live</code> attributes to <code>'status'</code> and <code>'polite'</code>
+respectively.</p>
+<p>For more information, please the the <a href="toast.html#accessibility">Accessibility</a> section below.</p>
+<h3 id="links"><a id="links" name="//apple_ref/cpp/Section/Links" class="dashAnchor"></a><span class="bd-content-title">Links<a class="anchorjs-link" href="toast.html#links" aria-label="Anchor"></a></span></h3>
+<p>Optionally convert the toast body to a link (<code>&lt;a&gt;</code>) or <code>&lt;router-link&gt;</code> (or <code>&lt;nuxt-link&gt;</code>) via the
+<code>href</code> and <code>to</code> props respectively. When set, the entire toast body becomes a link.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toast()"</span>&gt;</span>Toast with link<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    <span class="hljs-attr">methods</span>: {
+      toast() {
+        <span class="hljs-keyword">this</span>.$bvToast.toast(<span class="hljs-string">`Toast with action link`</span>, {
+          <span class="hljs-attr">href</span>: <span class="hljs-string">'#foo'</span>,
+          <span class="hljs-attr">title</span>: <span class="hljs-string">'Example'</span>
+        })
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- toast-link.vue --&gt;</span></pre><h2 id="b-toast-component"><a id="b-toast-component" name="//apple_ref/cpp/Section/%3Cb-toast%3E%20component" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-toast&gt;</code> component<a class="anchorjs-link" href="toast.html#b-toast-component" aria-label="Anchor"></a></span></h2>
+<p>When you have a custom component that would like to display just a single toast at a time, use the
+<code>&lt;b-toast&gt;</code> component. The <code>&lt;b-toast&gt;</code> component can be placed anywhere in your custom component or
+app, and does not render an element (they render a comment placeholder node which will not affect
+layout).</p>
+<p>The toast can be made visible via a <code>v-model</code> (which is tied to the <code>visible</code> prop), or shown using
+the component's <code>show()</code> and <code>hide()</code> instance methods, or via the <code>this.$bvToast.show(id)</code> and
+<code>this.$bvToast.hide(id)</code> methods (requires that a unique ID be set on the <code>&lt;b-toast&gt;</code> component).</p>
+<p>Toasts, by default will be paced into the <code>b-toaster-top-right</code> <code>&lt;b-toaster&gt;</code> component. The toaster
+specified by the <code>toaster</code> prop will be created on demand if it doesn't already exist in document.</p>
+<p>You can force a <code>&lt;b-toast&gt;</code> to appear in-place in the document by setting the <code>static</code> prop to
+<code>true</code>. you still need to show and hide the toast, but it will not be transported into a toaster
+component.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"$bvToast.show('my-toast')"</span>&gt;</span>Show toast<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-toast</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-toast"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"warning"</span> <span class="hljs-attr">solid</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"toast-title"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-flex flex-grow-1 align-items-baseline"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">blank</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"#ff5555"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-2"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"12"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"12"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-auto"</span>&gt;</span>Notice!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-muted mr-2"</span>&gt;</span>42 seconds ago<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      This is the content of the toast.
+      It is short and to the point.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-toast</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- toast-component.vue --&gt;</span></pre><h3 id="slots"><a id="slots" name="//apple_ref/cpp/Section/Slots" class="dashAnchor"></a><span class="bd-content-title">Slots<a class="anchorjs-link" href="toast.html#slots" aria-label="Anchor"></a></span></h3>
+<ul>
+<li><code>toast-title</code>: Content to replace the default title element.</li>
+<li><code>default</code>: Content of the toast body</li>
+</ul>
+<p>Both slots are optionally scoped with the following scope:</p>
+<div class="table-responsive-sm"><table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>Method or property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>hide()</code></td>
+<td>Hides the toast when called. Useful if you are providing your own close button.</td>
+</tr>
+</tbody></table>
+</div><p>Slots are only available when using the <code>&lt;b-toast&gt;</code> component.</p>
+<h2 id="b-toaster-target-component"><a id="b-toaster-target-component" name="//apple_ref/cpp/Section/%3Cb-toaster%3E%20target%20component" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-toaster&gt;</code> target component<a class="anchorjs-link" href="toast.html#b-toaster-target-component" aria-label="Anchor"></a></span></h2>
+<p>The <code>&lt;b-toaster&gt;</code> component provides a container where toasts will appear (the <em>Toaster</em>). Toasters
+require a unique name, and toasts can be targeted to appear in a specific named toaster.</p>
+<p>In most cases you will not need to directly use this component, as <code>&lt;b-toast&gt;</code> will automatically
+insert a <code>&lt;b-toaster&gt;</code> component (appended to <code>&lt;body&gt;</code>) with the requested toaster name if one is
+not found in the document. But sometimes you may want to explicitly place a toaster in your app.</p>
+<p>The toaster <code>name</code> becomes the ID of the inserted container, and will also be used a class name on
+the rendered toaster container.</p>
+<p>Toaster positioning and the positioning of toasts inside the toaster is driven completely by CSS
+classes (based on the name of the toaster)</p>
+<p>The following "built-in" toaster names (and associated styles) are defined in BootstrapVue's custom
+SCSS:</p>
+<ul>
+<li><code>b-toaster-top-right</code></li>
+<li><code>b-toaster-top-left</code></li>
+<li><code>b-toaster-top-center</code></li>
+<li><code>b-toaster-top-full</code></li>
+<li><code>b-toaster-bottom-right</code></li>
+<li><code>b-toaster-bottom-left</code></li>
+<li><code>b-toaster-bottom-center</code></li>
+<li><code>b-toaster-bottom-full</code></li>
+</ul>
+<p>The above toasters place the toasts in a stacked (columnar format), fixed within the viewport
+(meaning they will always be in view regardless of viewport scroll position). If there are more
+toasts than can fit on the viewport screen, some will be visually hidden offscreen until other
+toasts are closed/hidden.</p>
+<p><code>&lt;b-toast&gt;</code> uses the <code>b-toaster-top-right</code> toaster by default.</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>If a <code>&lt;b-toaster&gt;</code> with the same name already exists in document (either auto-created by
+<code>&lt;b-toast&gt;</code>, <code>this.$bvToast.toast()</code>, or manually placed), then <code>&lt;b-toaster&gt;</code> will just render an
+empty <code>&lt;div&gt;</code> element and issue a console warning.</li>
+<li>If manually placing a <code>&lt;b-toaster&gt;</code> component, make sure it is placed as the last element in
+bottom of your app root element, so that it will be available to all pages in your app.</li>
+<li>Toasters that get destroyed will be auto re-created if a new toast targeted for the toaster name
+is shown.</li>
+<li>In the majority of use cases, you should not need to manually place/create a <code>&lt;b-toaster&gt;</code>
+component in your app, as they will be auto generated on demand if needed. But if you need to
+override any of the toaster default settings, ensure that you place the toaster in your app in a
+location that will not be destroyed due to changes in the route.</li>
+</ul>
+<h2 id="advanced-usage"><a id="advanced-usage" name="//apple_ref/cpp/Section/Advanced%20usage" class="dashAnchor"></a><span class="bd-content-title">Advanced usage<a class="anchorjs-link" href="toast.html#advanced-usage" aria-label="Anchor"></a></span></h2>
+<p>When using the <code>this.$bvToast.toast(...)</code> method for generating toasts, you may want the toast
+content to be more than just a string message. As mentioned in the
+<a href="toast.html#toasts-on-demand">Toasts on demand</a> section above, you can pass arrays of <code>vNodes</code> as the message
+and title for more complex content.</p>
+<p>Remember to keep toast content simple and to the point. Avoid placing interactive components or
+elements inside toasts, as this can cause issues for users of assistive technologies. Refer to the
+<a href="toast.html#accessibility">Accessibility</a> section below.</p>
+<p>Below is an example of using Vue's
+<a href="https://vuejs.org/v2/guide/render-function.html#The-Virtual-DOM"><code>this.$createElement()</code></a> method
+for generating more complex toast content:</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"popToast"</span>&gt;</span>Show Toast with custom content<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">count</span>: <span class="hljs-number">0</span>
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      popToast() {
+        <span class="hljs-comment">// Use a shorter name for this.$createElement</span>
+        <span class="hljs-keyword">const</span> h = <span class="hljs-keyword">this</span>.$createElement
+        <span class="hljs-comment">// Increment the toast count</span>
+        <span class="hljs-keyword">this</span>.count++
+        <span class="hljs-comment">// Create the message</span>
+        <span class="hljs-keyword">const</span> vNodesMsg = h(
+          <span class="hljs-string">'p'</span>,
+          { <span class="hljs-attr">class</span>: [<span class="hljs-string">'text-center'</span>, <span class="hljs-string">'mb-0'</span>] },
+          [
+            h(<span class="hljs-string">'b-spinner'</span>, { <span class="hljs-attr">props</span>: { <span class="hljs-attr">type</span>: <span class="hljs-string">'grow'</span>, <span class="hljs-attr">small</span>: <span class="hljs-literal">true</span> } }),
+            <span class="hljs-string">' Flashy '</span>,
+            h(<span class="hljs-string">'strong'</span>, {}, <span class="hljs-string">'toast'</span>),
+            <span class="hljs-string">` message #<span class="hljs-subst">${<span class="hljs-keyword">this</span>.count}</span> `</span>,
+            h(<span class="hljs-string">'b-spinner'</span>, { <span class="hljs-attr">props</span>: { <span class="hljs-attr">type</span>: <span class="hljs-string">'grow'</span>, <span class="hljs-attr">small</span>: <span class="hljs-literal">true</span> } })
+          ]
+        )
+        <span class="hljs-comment">// Create the title</span>
+        <span class="hljs-keyword">const</span> vNodesTitle = h(
+          <span class="hljs-string">'div'</span>,
+          { <span class="hljs-attr">class</span>: [<span class="hljs-string">'d-flex'</span>, <span class="hljs-string">'flex-grow-1'</span>, <span class="hljs-string">'align-items-baseline'</span>, <span class="hljs-string">'mr-2'</span>] },
+          [
+            h(<span class="hljs-string">'strong'</span>, { <span class="hljs-attr">class</span>: <span class="hljs-string">'mr-2'</span> }, <span class="hljs-string">'The Title'</span>),
+            h(<span class="hljs-string">'small'</span>, { <span class="hljs-attr">class</span>: <span class="hljs-string">'ml-auto text-italics'</span> }, <span class="hljs-string">'5 minutes ago'</span>)
+          ]
+        )
+        <span class="hljs-comment">// Pass the vNodes as an array for message and title</span>
+        <span class="hljs-keyword">this</span>.$bvToast.toast([vNodesMsg], {
+          <span class="hljs-attr">title</span>: [vNodesTitle],
+          <span class="hljs-attr">solid</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">variant</span>: <span class="hljs-string">'info'</span>
+        })
+      }
+    }
+ }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- toasts-advanced.vue --&gt;</span></pre><h2 id="accessibility"><a id="accessibility" name="//apple_ref/cpp/Section/Accessibility" class="dashAnchor"></a><span class="bd-content-title">Accessibility<a class="anchorjs-link" href="toast.html#accessibility" aria-label="Anchor"></a></span></h2>
+<p>Toasts are intended to be <strong>small interruptions</strong> to your visitors or users, so to help those with
+screen readers and similar assistive technologies, toasts are wrapped in an aria-live region.
+Changes to live regions (such as injecting/updating a toast component) are automatically announced
+by screen readers without needing to move the user&rsquo;s focus or otherwise interrupt the user.
+Additionally, <code>aria-atomic="true"</code> is automatically set to ensure that the entire toast is always
+announced as a single (atomic) unit, rather than announcing what was changed (which could lead to
+problems if you only update part of the toast&rsquo;s content, or if displaying the same toast content at
+a later point in time).</p>
+<h3 id="accessibility-tips"><a id="accessibility-tips" name="//apple_ref/cpp/Section/Accessibility%20tips" class="dashAnchor"></a><span class="bd-content-title">Accessibility tips<a class="anchorjs-link" href="toast.html#accessibility-tips" aria-label="Anchor"></a></span></h3>
+<p>Typically, toast messages should display one or two-line non-critical messages that <strong>do not</strong>
+require user interaction. Without taking extra steps, toasts can have numerous accessibility issues
+that can impact both people with and without disabilities. The following list, while not complete,
+provides general guidelines when using toasts.</p>
+<ul>
+<li>If the information needed is important for the process, e.g. for a list of errors in a form, then
+use the <a href="alert.html"><code>&lt;b-alert&gt;</code></a> component instead of <code>&lt;b-toast&gt;</code>.</li>
+<li><code>&lt;b-toast&gt;</code>, by default, sets the attributes <code>role</code> to <code>'alert'</code> and <code>aria-live</code> to <code>'assertive'</code>.
+If it&rsquo;s an important message like an error, this default setting is appropriate, otherwise set the
+prop <code>is-status</code> to <code>true</code> which will change the attributes <code>role</code> to <code>'status'</code> and <code>aria-live</code>
+to <code>'polite'</code>.</li>
+<li>Avoid popping up a toast message on page load. Performing unexpected actions on page load is very
+confusing to screen reader users. If a toast is needed on page load or route change, delay showing
+the toast by several seconds so that the screen reader will finishing announcing information about
+the current page without interruption by a the toast.</li>
+<li>When setting prop <code>auto-hide</code> to <code>false</code>, you must have a close button to allow users to dismiss
+the toast. If you have also set prop <code>no-close-button</code> to true, you must provide your own close
+button or dismiss the toast by some other means. Toasts have a tab index of <code>0</code> so that they can
+be reached by keyboard-only users.</li>
+<li>Avoid initiating many toasts in quick succession, as screen readers may interrupt reading the
+current toast and announce the new toast, causing the context of the previous toast to be missed.</li>
+<li>For toasts with long textual content, adjust the <code>auto-hide-delay</code> to a larger timout, to allow
+users time to read the content of the toast. A good length of time to keep messages up is 4
+seconds plus 1 extra second for every 100 words, rounding up. This is approximately how fast the
+average person reads. That means the shortest default that should be used as a best practice is 5
+seconds (5000ms). In addition to a reasonable default timeout, you could also allow the user to
+choose how long they want toasts to stay up for. Most people inherently understand whether they
+are fast or slow readers. Having a profile setting that is part of the user login will allow slow
+readers to pick a longer time if the messages are going away too fast, and fast readers to pick a
+short time if the messages are staying up too long.</li>
+<li>To account for memory loss and distraction as well as disability-related issues such as ADHD, a
+best practice would be to implement a location where users can refer to a list of past toast
+messages which have been shown. Preferably this list should be sortable, with the default being
+chronological.</li>
+</ul>
+<h3 id="internet-explorer-screen-reader-support"><a id="internet-explorer-screen-reader-support" name="//apple_ref/cpp/Section/Internet%20Explorer%20screen%20reader%20support" class="dashAnchor"></a><span class="bd-content-title">Internet Explorer screen reader support<a class="anchorjs-link" href="toast.html#internet-explorer-screen-reader-support" aria-label="Anchor"></a></span></h3>
+<p>Unfortunately, IE 11 when used with <a href="https://github.com/nvaccess/nvda">NVDA</a> or
+<a href="http://www.freedomscientific.com/products/software/jaws/">JAWS</a> screen readers, will not properly
+announce/voice toasts when they appear. If you have a large non-sighted user-base using IE 11, you
+may want to create an additional off-screen <code>aria-live</code> region for IE 11 browsers only (created on
+page load) where copies of toast message text are placed dynamically, in addition to displaying
+toasts.</p>
+<!-- Component reference added automatically from component package.json -->
+</section><section class="bd-content bd-component-reference"><h2 id="component-reference" tabindex="-1"><a id="component-reference" name="//apple_ref/cpp/Section/Component%20reference" class="dashAnchor"></a><span class="bd-content-title">Component reference<a href="toast.html#component-reference" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h2><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-toast" tabindex="-1"><a id="b-toast" name="//apple_ref/cpp/Section/%3Cb-toast%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-toast&gt;</code><a href="toast.html#comp-ref-b-toast" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <!----></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/toast/toast.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <!----> <article class="bd-content"><h4 id="comp-ref-b-toast-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="toast.html#comp-ref-b-toast-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">id</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">title</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">toaster</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"><code>b-toaster-top-right</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">visible</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">variant</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">is-status</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">append-toast</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">no-auto-hide</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">auto-hide-delay</code> <!----></td><td role="cell" aria-colindex="2">Number or String</td><td role="cell" aria-colindex="3"><code>5000</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">no-close-button</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">no-fade</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">no-hover-pause</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">solid</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">toast-class</code> <!----></td><td role="cell" aria-colindex="2">String or Object or Array</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">header-class</code> <!----></td><td role="cell" aria-colindex="2">String or Object or Array</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">body-class</code> <!----></td><td role="cell" aria-colindex="2">String or Object or Array</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">href</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">to</code> <!----></td><td role="cell" aria-colindex="2">String or Object</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">static</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><!----><!----></tbody></table></div> <h4 id="comp-ref-b-toast-v-model" tabindex="-1"><span class="bd-content-title">
+        v-model
+      <a href="toast.html#comp-ref-b-toast-v-model" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Prop</th><th role="columnheader" scope="col" aria-colindex="2">Event</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code>visible</code></td><td role="cell" aria-colindex="2"><code>change</code></td></tr><!----><!----></tbody></table></div></article> <article class="bd-content"><h4 id="comp-ref-b-toast-slots" tabindex="-1"><span class="bd-content-title">
+      Slots
+    <a href="toast.html#comp-ref-b-toast-slots" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Slot</th><th role="columnheader" scope="col" aria-colindex="2">Description</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">toast-title</code></td><td role="cell" aria-colindex="2">Toast title. Optionally scoped.</td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">default</code></td><td role="cell" aria-colindex="2">Toast body content. Optionally scoped.</td></tr><!----><!----></tbody></table></div></article> <article class="bd-content"><h4 id="comp-ref-b-toast-events" tabindex="-1"><span class="bd-content-title">
+      Events
+    <a href="toast.html#comp-ref-b-toast-events" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Event</th><th role="columnheader" scope="col" aria-colindex="2">Arguments</th><th role="columnheader" scope="col" aria-colindex="3">Description</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">change</code></td><td role="cell" aria-colindex="2"><div><code class="text-nowrap">visible</code> -  <span>true if toast is visible, false otherwise.</span></div></td><td role="cell" aria-colindex="3">Toast visibility state. Used to update the v-model.</td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">show</code></td><td role="cell" aria-colindex="2"><div><code class="text-nowrap">bvEvt</code> -  <span>BvEvent object.</span></div></td><td role="cell" aria-colindex="3">always emits just before toast is shown.</td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">shown</code></td><td role="cell" aria-colindex="2"><div><code class="text-nowrap">bvEvt</code> -  <span>BvEvent object.</span></div></td><td role="cell" aria-colindex="3">always emits when toast is shown.</td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">hide</code></td><td role="cell" aria-colindex="2"><div><code class="text-nowrap">bvEvt</code> -  <span>BvEvent object.</span></div></td><td role="cell" aria-colindex="3">always emits just before toast has hidden.</td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">hidden</code></td><td role="cell" aria-colindex="2"><div><code class="text-nowrap">bvEvt</code> -  <span>BvEvent object.</span></div></td><td role="cell" aria-colindex="3">always emits after toast is hidden</td></tr><!----><!----></tbody></table></div></article> <!----></section><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-toaster" tabindex="-1"><a id="b-toaster" name="//apple_ref/cpp/Section/%3Cb-toaster%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-toaster&gt;</code><a href="toast.html#comp-ref-b-toaster" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <!----></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/toast/toaster.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <!----> <article class="bd-content"><h4 id="comp-ref-b-toaster-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="toast.html#comp-ref-b-toaster-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">name</code> <span class="badge badge-info">Required</span></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">aria-live</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">aria-atomic</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">role</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><!----><!----></tbody></table></div> <!----></article> <!----> <!----> <!----></section><section class="bd-content"><article class="bd-content"><h3 id="importing-individual-components" tabindex="-1"><a id="importing-individual-components" name="//apple_ref/cpp/Section/Importing%20individual%20components" class="dashAnchor"></a><span class="bd-content-title">
+        Importing individual components
+      <a href="toast.html#importing-individual-components" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> You can
+        import individual components into your project via the following named exports:
+      </p> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Component</th><th role="columnheader" scope="col" aria-colindex="2">Named Export</th><th role="columnheader" scope="col" aria-colindex="3">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-toast&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BToast</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-toaster&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BToaster</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><!----><!----></tbody></table></div> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">import { BToast } from 'bootstrap-vue'
+Vue.component('b-toast', BToast)</pre></article> <!----> <article class="bd-content"><h3 id="importing-as-a-plugin" tabindex="-1"><a id="importing-as-a-vuejs-plugin" name="//apple_ref/cpp/Section/Importing%20as%20a%20Vue.js%20plugin" class="dashAnchor"></a><span class="bd-content-title">
+      Importing as a Vue.js plugin
+    <a href="toast.html#importing-as-a-plugin" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> Importing plugins
+      has been simplified.
+    </p> <p>
+      This plugin includes all of the above listed individual
+      components<!---->.
+      Plugins also include any component aliases.
+    </p> <div class="bv-docs-table table-responsive-sm"><table fileds="namedExport,importPath" aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><caption class="b-table-caption-top">The plugin can be imported via several methods</caption><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Named Export</th><th role="columnheader" scope="col" aria-colindex="2">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">ToastPlugin</code> <span class="badge small badge-success">PREFERRED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">ToastPlugin</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">default</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components/toast</code></td></tr><!----><!----></tbody></table></div> <!----> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">// Importing the named export
+import { ToastPlugin } from 'bootstrap-vue'
+Vue.use(ToastPlugin)</pre></article> <aside class="alert alert-warning my-4"><p class="mb-0"><strong class="badge badge-warning">Deprecation Warning as of v2.0.0-rc.22:</strong>
+      Importing components, directives and plugins from <code>bootstrap-vue/es/*</code> has been
+      deprecated. All components, directives and plugins are now available as top-level named
+      exports in the <code>ESM</code> and <code>CommonJS</code> builds. The <code>es/</code>
+      directory build will be removed in a future release.
+    </p></aside></section></section></main></div></div></div></div></div>
+  </body>
+</html>

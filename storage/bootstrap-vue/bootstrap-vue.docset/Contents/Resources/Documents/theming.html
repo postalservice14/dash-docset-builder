@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Theming Bootstrap | Reference | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Theming Bootstrap | Reference | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="Theming is accomplished by SASS variables, SASS maps, and custom CSS. There's no dedicated theme stylesheet; instead, you can enable the built-in theme to add gradients, shadows, and more."><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="Theming is accomplished by SASS variables, SASS maps, and custom CSS. There's no dedicated theme stylesheet; instead, you can enable the built-in theme to add gradients, shadows, and more."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//docs/markdown/reference/theming/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="theming-bootstrap--bootstrapvue"><span class="bd-content-title">Theming Bootstrap &amp; BootstrapVue</span></h1>
+<p class="bd-lead">Theming is accomplished by Sass variables, Sass maps, and custom CSS. There's no dedicated theme
+stylesheet; instead, you can enable the built-in theme to add gradients, shadows, and more.</p>
+<p>While BootstrapVue uses Bootstrap's CSS, certain features of BootstrapVue uses custom CSS (i.e.
+stacked tables, etc). Our custom CSS relies on variables defined the Bootstrap v4.x SCSS. The
+<code>bootstrap-vue.css</code> is compiled using the default Bootstrap v4.x variables. Using the BootstrapVue
+source SCSS, you can have your variable overrides (such as breakpoints, etc) adjust the custom
+BootstrapVue css.</p>
+<h2 id="custom-scss"><a id="custom-scss" name="//apple_ref/cpp/Section/Custom%20SCSS" class="dashAnchor"></a><span class="bd-content-title">Custom SCSS<a class="anchorjs-link" href="theming.html#custom-scss" aria-label="Anchor"></a></span></h2>
+<p>To use your own theme and colors in <code>bootstrap-vue</code>, you will need to create a <code>custom.scss</code> file in
+your project, which you can include in your main app:</p>
+<p><strong>Via template:</strong></p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>&gt;</span>
+  @import 'assets/custom.scss';
+  @import '~bootstrap/scss/bootstrap.scss';
+  @import '~bootstrap-vue/src/index.scss';
+
+  body {
+    margin: 0;
+  }
+  // ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></pre><p><strong>Via app main entry point:</strong></p>
+<p>Create a SCSS file:</p>
+<pre class="hljs scss text-monospace p-2"><span class="hljs-comment">// custom.scss</span>
+
+<span class="hljs-comment">// Define your variable overrides here</span>
+<span class="hljs-variable">$enable-shadows</span>: true;
+<span class="hljs-variable">$enable-gradients</span>: true;
+<span class="hljs-variable">$grid-breakpoints</span>: (
+  xs: <span class="hljs-number">0</span>,
+  sm: <span class="hljs-number">456px</span>,
+  md: <span class="hljs-number">789px</span>,
+  lg: <span class="hljs-number">999px</span>,
+  xl: <span class="hljs-number">1234px</span>
+);
+
+<span class="hljs-comment">// Include Bootstrap and BootstrapVue SCSS files</span>
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'~bootstrap/scss/bootstrap.scss'</span>;
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'~bootstrap-vue/src/index.scss'</span>;</pre><p>Then import that single SCSS file into your app code entry point:</p>
+<pre class="hljs js text-monospace p-2"><span class="hljs-comment">// app.js</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'custom.scss'</span></pre><p>The <code>_custom.scss</code> file, which needs to be loaded before Bootstrap's SCSS, will include your
+Bootstrap v4 variable overrides (i.e. colors, shadows, font sizes, breakpoints, etc). You can find
+all of the possible variables in <code>node_modules/bootstrap/scss/_variables.scss</code>.</p>
+<p>Do not forget to include <code>node-sass</code> and <code>sass-loader</code> to use <code>scss</code> in Vue:</p>
+<pre class="hljs sh text-monospace p-2">npm install --save-dev node-sass sass-loader</pre><p><strong>Note:</strong> You may need to adjust the SCSS import paths based on your build environment.</p>
+<h2 id="see-also"><a id="see-also" name="//apple_ref/cpp/Section/See%20also" class="dashAnchor"></a><span class="bd-content-title">See also<a class="anchorjs-link" href="theming.html#see-also" aria-label="Anchor"></a></span></h2>
+<ul>
+<li>If you are defining custom breakpoint names, please see the
+<a href="settings.html">BootstrapVue settings</a> page on how to update BootstrapVue <code>&lt;b-col&gt;</code> and
+<code>&lt;b-form-group&gt;</code> breakpoint specific props.</li>
+<li>For more details on theming Bootstrap's SCSS/CSS, refer to the
+<a href="https://getbootstrap.com/docs/4.3/getting-started/theming/"><strong>Official Bootstrap v4 Theming Documentation</strong></a>.</li>
+</ul>
+</section></main></div></div></div></div></div>
+  </body>
+</html>

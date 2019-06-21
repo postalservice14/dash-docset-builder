@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Progress | Components | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Progress | Components | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="A custom progress component for displaying simple or complex progress bars, featuring support for horizontally stacked bars, animated backgrounds, and text labels."><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="A custom progress component for displaying simple or complex progress bars, featuring support for horizontally stacked bars, animated backgrounds, and text labels."><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="modulepreload" href="a6f8df338a2c2a457341.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//src/components/progress/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="progress"><span class="bd-content-title">Progress</span></h1>
+<p class="bd-lead">Use our custom progress component for displaying simple or complex progress bars, featuring
+support for horizontally stacked bars, animated backgrounds, and text labels.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">show-progress</span> <span class="hljs-attr">animated</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">show-value</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value * (6 / 10)"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value * (2.5 / 10)"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"warning"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value * (1.5 / 10)"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"danger"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"rendomValue"</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-number">45</span>,
+        <span class="hljs-attr">max</span>: <span class="hljs-number">100</span>
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      rendomValue() {
+        <span class="hljs-keyword">this</span>.value = <span class="hljs-built_in">Math</span>.random() * <span class="hljs-keyword">this</span>.max
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-progress.vue --&gt;</span></pre><h2 id="value"><a id="value" name="//apple_ref/cpp/Section/Value" class="dashAnchor"></a><span class="bd-content-title">Value<a class="anchorjs-link" href="progress.html#value" aria-label="Anchor"></a></span></h2>
+<p>Set the maximum value with the <code>max</code> prop (default is <code>100</code>), and the current value via the <code>value</code>
+prop (default <code>0</code>).</p>
+<p>When creating multiple bars in a single process, place the value prop on the individual
+<code>&lt;b-progress-bar&gt;</code> sub components (see the <strong>Multiple Bars</strong> section below for more details)</p>
+<h2 id="labels"><a id="labels" name="//apple_ref/cpp/Section/Labels" class="dashAnchor"></a><span class="bd-content-title">Labels<a class="anchorjs-link" href="progress.html#labels" aria-label="Anchor"></a></span></h2>
+<p>Add labels to your progress bars by either enabling <code>show-progress</code> (percentage of max) or
+<code>show-value</code>for the current absolute value. You may also set the precision (number of digits after
+the decimal) via the <code>precision</code> prop (default is <code>0</code>digits after the decimal).</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>No label<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Value label<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">show-value</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Progress label<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">show-progress</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Value label with precision<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">:precision</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">show-value</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Progress label with precision<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">:precision</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">show-progress</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-number">33.333333333</span>,
+        <span class="hljs-attr">max</span>: <span class="hljs-number">50</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-progress-labels.vue --&gt;</span></pre><h3 id="custom-progress-label"><a id="custom-progress-label" name="//apple_ref/cpp/Section/Custom%20progress%20label" class="dashAnchor"></a><span class="bd-content-title">Custom progress label<a class="anchorjs-link" href="progress.html#custom-progress-label" aria-label="Anchor"></a></span></h3>
+<p>Need more control over the label? Provide your own label by using the default slot within a
+<code>&lt;b-progress-bar&gt;</code> sub-component, or by using the <code>label</code> or <code>label-html</code> property on
+<code>&lt;b-progress-bar&gt;</code>:</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Custom label via default slot<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"2rem"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span>&gt;</span>
+        Progress: <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{ value.toFixed(2) }} / {{ max }}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Custom label via property<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:label</span>=<span class="hljs-string">"`${((value / max) * 100).toFixed(2)}%`"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Custom label via property (HTML support)<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:label-html</span>=<span class="hljs-string">"`&lt;del&gt;${value}&lt;/del&gt;`"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-number">33.333333333</span>,
+        <span class="hljs-attr">max</span>: <span class="hljs-number">50</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-progress-custom-labels.vue --&gt;</span></pre><p>Precedence order for label methods (top-most has precedence):</p>
+<ul>
+<li>default slot of <code>&lt;b-progress-bar&gt;</code></li>
+<li><code>label</code> prop of <code>&lt;b-progress-bar&gt;</code></li>
+<li><code>show-progress</code> prop of <code>&lt;b-progress-bar&gt;</code></li>
+<li><code>show-value</code> prop of <code>&lt;b-progress-bar&gt;</code></li>
+<li><code>show-progress</code> prop of <code>&lt;b-progress&gt;</code></li>
+<li><code>show-value</code> prop of <code>&lt;b-progress&gt;</code></li>
+<li>no label</li>
+</ul>
+<h2 id="width-and-height"><a id="width-and-height" name="//apple_ref/cpp/Section/Width%20and%20height" class="dashAnchor"></a><span class="bd-content-title">Width and height<a class="anchorjs-link" href="progress.html#width-and-height" aria-label="Anchor"></a></span></h2>
+<p><code>&lt;b-progress&gt;</code> will always expand to the maximum with of it's parent container. To change the width,
+place <code>&lt;b-progress&gt;</code> in a standard Bootstrap column or apply one of the standard Bootstrap width
+classes.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Default width<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Custom widths<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-75 mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-50 mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-25"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-number">75</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-progress-width.vue --&gt;</span></pre><p>The height of the progress bar can be controlled with the <code>height</code> prop. The height value should be
+a standard CSS dimension (<code>px</code>, <code>rem</code>, <code>em</code>, etc). The default height is <code>1rem</code>.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Default height<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">show-progress</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Custom heights<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"2rem"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">show-progress</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"20px"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">show-progress</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"2px"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-number">75</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-progress-height.vue --&gt;</span></pre><h2 id="backgrounds"><a id="backgrounds" name="//apple_ref/cpp/Section/Backgrounds" class="dashAnchor"></a><span class="bd-content-title">Backgrounds<a class="anchorjs-link" href="progress.html#backgrounds" aria-label="Anchor"></a></span></h2>
+<p>Use background variants to change the appearance of individual progress bars. The default variant is
+<code>primary</code>.</p>
+<h3 id="solid-background-variants"><a id="solid-background-variants" name="//apple_ref/cpp/Section/Solid%20background%20variants" class="dashAnchor"></a><span class="bd-content-title">Solid background variants<a class="anchorjs-link" href="progress.html#solid-background-variants" aria-label="Anchor"></a></span></h3>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"bar in bars"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row mb-1"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-2"</span>&gt;</span>{{ bar.variant }}:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-10 pt-1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"bar.value"</span> <span class="hljs-attr">:variant</span>=<span class="hljs-string">"bar.variant"</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">"bar.variant"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">bars</span>: [
+          { <span class="hljs-attr">variant</span>: <span class="hljs-string">'success'</span>, <span class="hljs-attr">value</span>: <span class="hljs-number">75</span> },
+          { <span class="hljs-attr">variant</span>: <span class="hljs-string">'info'</span>, <span class="hljs-attr">value</span>: <span class="hljs-number">75</span> },
+          { <span class="hljs-attr">variant</span>: <span class="hljs-string">'warning'</span>, <span class="hljs-attr">value</span>: <span class="hljs-number">75</span> },
+          { <span class="hljs-attr">variant</span>: <span class="hljs-string">'danger'</span>, <span class="hljs-attr">value</span>: <span class="hljs-number">75</span> },
+          { <span class="hljs-attr">variant</span>: <span class="hljs-string">'primary'</span>, <span class="hljs-attr">value</span>: <span class="hljs-number">75</span> },
+          { <span class="hljs-attr">variant</span>: <span class="hljs-string">'secondary'</span>, <span class="hljs-attr">value</span>: <span class="hljs-number">75</span> },
+          { <span class="hljs-attr">variant</span>: <span class="hljs-string">'dark'</span>, <span class="hljs-attr">value</span>: <span class="hljs-number">75</span> }
+        ],
+        <span class="hljs-attr">timer</span>: <span class="hljs-literal">null</span>
+      }
+    },
+    mounted() {
+      <span class="hljs-keyword">this</span>.timer = setInterval(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">this</span>.bars.forEach(<span class="hljs-function"><span class="hljs-params">bar</span> =&gt;</span> (bar.value = <span class="hljs-number">25</span> + <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">75</span>))
+      }, <span class="hljs-number">2000</span>)
+    },
+    beforeDestroy() {
+      clearInterval(<span class="hljs-keyword">this</span>.timer)
+      <span class="hljs-keyword">this</span>.timer = <span class="hljs-literal">null</span>
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-progress-backgrounds.vue --&gt;</span></pre><h3 id="striped-backgrounds"><a id="striped-backgrounds" name="//apple_ref/cpp/Section/Striped%20backgrounds" class="dashAnchor"></a><span class="bd-content-title">Striped backgrounds<a class="anchorjs-link" href="progress.html#striped-backgrounds" aria-label="Anchor"></a></span></h3>
+<p>Set <code>striped</code> to apply a stripe via CSS gradient over the progress bar's background variant.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">:striped</span>=<span class="hljs-string">"striped"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">:striped</span>=<span class="hljs-string">"striped"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"75"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"warning"</span> <span class="hljs-attr">:striped</span>=<span class="hljs-string">"striped"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"danger"</span> <span class="hljs-attr">:striped</span>=<span class="hljs-string">"striped"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"secondary"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"striped = !striped"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+      {{ striped ? 'Remove' : 'Add' }} Striped
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">striped</span>: <span class="hljs-literal">true</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-progress-striped.vue --&gt;</span></pre><h3 id="animated-backgrounds"><a id="animated-backgrounds" name="//apple_ref/cpp/Section/Animated%20backgrounds" class="dashAnchor"></a><span class="bd-content-title">Animated backgrounds<a class="anchorjs-link" href="progress.html#animated-backgrounds" aria-label="Anchor"></a></span></h3>
+<p>The striped gradient can also be animated by setting the <code>animated</code>prop.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">striped</span> <span class="hljs-attr">:animated</span>=<span class="hljs-string">"animate"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">striped</span> <span class="hljs-attr">:animated</span>=<span class="hljs-string">"animate"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"75"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"warning"</span> <span class="hljs-attr">striped</span> <span class="hljs-attr">:animated</span>=<span class="hljs-string">"animate"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"danger"</span> <span class="hljs-attr">:animated</span>=<span class="hljs-string">"animate"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"secondary"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"animate = !animate"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+      {{ animate ? 'Stop' : 'Start' }} Animation
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">animate</span>: <span class="hljs-literal">true</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-progress-animated.vue --&gt;</span></pre><p>Notes:</p>
+<ul>
+<li>if <code>animated</code> is true, <code>striped</code> will automatically be enabled.</li>
+<li>Animated progress bars don't work in Opera 12 &mdash; as they don't support CSS3 animations.</li>
+</ul>
+<h2 id="multiple-bars"><a id="multiple-bars" name="//apple_ref/cpp/Section/Multiple%20bars" class="dashAnchor"></a><span class="bd-content-title">Multiple bars<a class="anchorjs-link" href="progress.html#multiple-bars" aria-label="Anchor"></a></span></h2>
+<p>Include multiple <code>&lt;b-progress-bar&gt;</code> sub-components in a <code>&lt;b-progress&gt;</code> component to build a
+horizontally stacked set of progress bars.</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"values[0]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"values[1]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"values[2]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">show-progress</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"values[0]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"values[1]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"values[2]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">show-value</span> <span class="hljs-attr">striped</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"values[0]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"values[1]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"values[2]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"values[0]"</span> <span class="hljs-attr">show-progress</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"values[1]"</span> <span class="hljs-attr">animated</span> <span class="hljs-attr">show-progress</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"values[2]"</span> <span class="hljs-attr">striped</span> <span class="hljs-attr">show-progress</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">values</span>: [<span class="hljs-number">15</span>, <span class="hljs-number">30</span>, <span class="hljs-number">20</span>],
+        <span class="hljs-attr">max</span>: <span class="hljs-number">100</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- b-progress-multiple.vue --&gt;</span></pre><p><code>&lt;b-progress-bar&gt;</code> will inherit most of the props from the <code>&lt;b-progress&gt;</code> parent component, but you
+can override any of the props by setting them on the <code>&lt;b-progress-bar&gt;</code></p>
+<p>Notes:</p>
+<ul>
+<li><code>height</code>, if specified, should always set on the <code>&lt;b-progress&gt;</code> component.</li>
+<li><code>&lt;b-progress-bar&gt;</code> will not inherit <code>value</code> from <code>&lt;b-progress&gt;</code>.</li>
+</ul>
+<!-- Component reference added automatically from component package.json -->
+</section><section class="bd-content bd-component-reference"><h2 id="component-reference" tabindex="-1"><a id="component-reference" name="//apple_ref/cpp/Section/Component%20reference" class="dashAnchor"></a><span class="bd-content-title">Component reference<a href="progress.html#component-reference" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h2><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-progress" tabindex="-1"><a id="b-progress" name="//apple_ref/cpp/Section/%3Cb-progress%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-progress&gt;</code><a href="progress.html#comp-ref-b-progress" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <!----></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/progress/progress.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <!----> <article class="bd-content"><h4 id="comp-ref-b-progress-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="progress.html#comp-ref-b-progress-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">variant</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">striped</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">animated</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">height</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">precision</code> <!----></td><td role="cell" aria-colindex="2">Number</td><td role="cell" aria-colindex="3"><code>0</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">show-progress</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">show-value</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"><code>false</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">max</code> <!----></td><td role="cell" aria-colindex="2">Number</td><td role="cell" aria-colindex="3"><code>100</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">value</code> <!----></td><td role="cell" aria-colindex="2">Number</td><td role="cell" aria-colindex="3"><code>0</code></td></tr><!----><!----><!----><!----></tbody></table></div> <!----></article> <!----> <!----> <!----></section><section class="bd-content"><header class="row align-items-center"><div class="col-sm-9"><h3 id="comp-ref-b-progress-bar" tabindex="-1"><a id="b-progress-bar" name="//apple_ref/cpp/Section/%3Cb-progress-bar%3E" class="dashAnchor"></a><span class="bd-content-title"><code>&lt;b-progress-bar&gt;</code><a href="progress.html#comp-ref-b-progress-bar" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <!----></div> <div class="text-sm-right col-sm-3"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/progress/progress-bar.js" class="btn btn-outline-secondary btn-sm">
+        View source
+      </a></div></header> <!----> <article class="bd-content"><h4 id="comp-ref-b-progress-bar-props" tabindex="-1"><span class="bd-content-title">
+      Properties
+    <a href="progress.html#comp-ref-b-progress-bar-props" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h4> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Property</th><th role="columnheader" scope="col" aria-colindex="2">Type</th><th role="columnheader" scope="col" aria-colindex="3">Default Value</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">value</code> <!----></td><td role="cell" aria-colindex="2">Number</td><td role="cell" aria-colindex="3"><code>0</code></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">label-html</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">max</code> <!----></td><td role="cell" aria-colindex="2">Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">precision</code> <!----></td><td role="cell" aria-colindex="2">Number</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">variant</code> <!----></td><td role="cell" aria-colindex="2">String</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">striped</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">animated</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">show-progress</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">show-value</code> <!----></td><td role="cell" aria-colindex="2">Boolean</td><td role="cell" aria-colindex="3"></td></tr><!----><!----><!----><!----></tbody></table></div> <!----></article> <!----> <!----> <!----></section><section class="bd-content"><article class="bd-content"><h3 id="importing-individual-components" tabindex="-1"><a id="importing-individual-components" name="//apple_ref/cpp/Section/Importing%20individual%20components" class="dashAnchor"></a><span class="bd-content-title">
+        Importing individual components
+      <a href="progress.html#importing-individual-components" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> You can
+        import individual components into your project via the following named exports:
+      </p> <div class="bv-docs-table table-responsive-sm"><table aria-busy="false" aria-colcount="3" class="table b-table table-striped table-bordered"><!----><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Component</th><th role="columnheader" scope="col" aria-colindex="2">Named Export</th><th role="columnheader" scope="col" aria-colindex="3">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-progress&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BProgress</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">&lt;b-progress-bar&gt;</code></td><td role="cell" aria-colindex="2"><code class="text-nowrap">BProgressBar</code></td><td role="cell" aria-colindex="3"><code class="text-nowrap">bootstrap-vue</code></td></tr><!----><!----></tbody></table></div> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">import { BProgress } from 'bootstrap-vue'
+Vue.component('b-progress', BProgress)</pre></article> <!----> <article class="bd-content"><h3 id="importing-as-a-plugin" tabindex="-1"><a id="importing-as-a-vuejs-plugin" name="//apple_ref/cpp/Section/Importing%20as%20a%20Vue.js%20plugin" class="dashAnchor"></a><span class="bd-content-title">
+      Importing as a Vue.js plugin
+    <a href="progress.html#importing-as-a-plugin" aria-label="Anchor" target="_self" class="anchorjs-link"></a></span></h3> <p><span class="badge small badge-info">CHANGED in 2.0.0-rc.22</span> Importing plugins
+      has been simplified.
+    </p> <p>
+      This plugin includes all of the above listed individual
+      components<!---->.
+      Plugins also include any component aliases.
+    </p> <div class="bv-docs-table table-responsive-sm"><table fileds="namedExport,importPath" aria-busy="false" aria-colcount="2" class="table b-table table-striped table-bordered"><caption class="b-table-caption-top">The plugin can be imported via several methods</caption><!----><thead role="rowgroup" class="thead-default"><!----><tr role="row"><th role="columnheader" scope="col" aria-colindex="1">Named Export</th><th role="columnheader" scope="col" aria-colindex="2">Import Path</th></tr></thead><!----><tbody role="rowgroup"><!----><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">ProgressPlugin</code> <span class="badge small badge-success">PREFERRED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">ProgressPlugin</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components</code></td></tr><tr role="row"><td role="cell" aria-colindex="1"><code class="text-nowrap">default</code> <span class="badge small badge-warning">DEPRECATED</span></td><td role="cell" aria-colindex="2"><code class="text-nowrap">bootstrap-vue/es/components/progress</code></td></tr><!----><!----></tbody></table></div> <!----> <p><strong>Example:</strong></p> <pre class="hljs js text-monospace p-2">// Importing the named export
+import { ProgressPlugin } from 'bootstrap-vue'
+Vue.use(ProgressPlugin)</pre></article> <aside class="alert alert-warning my-4"><p class="mb-0"><strong class="badge badge-warning">Deprecation Warning as of v2.0.0-rc.22:</strong>
+      Importing components, directives and plugins from <code>bootstrap-vue/es/*</code> has been
+      deprecated. All components, directives and plugins are now available as top-level named
+      exports in the <code>ESM</code> and <code>CommonJS</code> builds. The <code>es/</code>
+      directory build will be removed in a future release.
+    </p></aside></section></section></main></div></div></div></div></div>
+  </body>
+</html>

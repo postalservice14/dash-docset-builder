@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html data-n-head-ssr lang="en" data-n-head="lang">
+  <head data-n-head="">
+    <title data-n-head="true">Component img src resolving | Reference | BootstrapVue</title><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="true" data-hid="charset" charset="utf-8"><meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="true" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="true" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="BootstrapVue"><meta data-n-head="true" data-hid="theme-color" name="theme-color" content="#563d7c"><meta data-n-head="true" data-hid="og:type" name="og:type" property="og:type" content="website"><meta data-n-head="true" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="BootstrapVue"><meta data-n-head="true" data-hid="og:title" name="og:title" property="og:title" content="Component img src resolving | Reference | BootstrapVue"><meta data-n-head="true" data-hid="description" name="description" content="Using project relative image URLs for BootstrapVue custom components with vue-loader"><meta data-n-head="true" data-hid="og:description" name="og:description" property="og:description" content="Using project relative image URLs for BootstrapVue custom components with vue-loader"><link data-n-head="true" rel="manifest" href="manifest.6f2333a4.json"><link data-n-head="true" rel="shortcut icon" href="icon_64.66da43.png"><link data-n-head="true" rel="apple-touch-icon" href="icon_512.66da43.png" sizes="512x512"><script data-n-head="true" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script><link rel="modulepreload" href="7b406ad7c44e0fe00214.js" as="script"><link rel="modulepreload" href="b4e55ea5edaee0e03ac2.js" as="script"><link rel="preload" href="0b422b9b7778a001b18c.css" as="style"><link rel="modulepreload" href="8630d3aa2270701a8bef.js" as="script"><link rel="preload" href="09b55d35c4824defe718.css" as="style"><link rel="modulepreload" href="358202706ad34f81ab46.js" as="script"><link rel="stylesheet" href="0b422b9b7778a001b18c.css"><link rel="stylesheet" href="09b55d35c4824defe718.css">
+  </head>
+  <body data-n-head="">
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="container-fluid"><div class="row flex-xl-nowrap2"><div class="bd-content col-12 pb-md-3"><div role="group" class="btn-group btn-group-sm float-right mt-2 mb-0 mb-lg-2"><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs" class="btn btn-light">Report an issue</a><a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev//docs/markdown/reference/images/README.md" class="btn btn-light">Edit this page</a></div><div class="clearfix d-bock d-lg-none"></div><main class="bd-main bd-components"><section class="bd-content"><a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="component-img-src-resolving"><span class="bd-content-title">Component img src resolving</span></h1>
+<h2 id="using-project-relative-image-urls-for-bootstrapvue-custom-components"><a id="using-project-relative-image-urls-for-bootstrapvue-custom-components" name="//apple_ref/cpp/Section/Using%20project%20relative%20image%20URLs%20for%20BootstrapVue%20custom%20components" class="dashAnchor"></a><span class="bd-content-title">Using project relative image URLs for BootstrapVue custom components<a class="anchorjs-link" href="images.html#using-project-relative-image-urls-for-bootstrapvue-custom-components" aria-label="Anchor"></a></span></h2>
+<p>vue-loader automatically converts project relative <code>src</code> attributes on <code>&lt;img&gt;</code> tags, but doesn't
+automatically for BootstrapVue custom components that accept image src url tags.</p>
+<h2 id="vue-loader-transformasseturls-to-resolve-img-paths"><a id="vue-loader-transformasseturls-to-resolve-img-paths" name="//apple_ref/cpp/Section/Vue%20Loader%20transformAssetUrls%20to%20resolve%20img%20paths" class="dashAnchor"></a><span class="bd-content-title">Vue Loader <code>transformAssetUrls</code> to resolve img paths<a class="anchorjs-link" href="images.html#vue-loader-transformasseturls-to-resolve-img-paths" aria-label="Anchor"></a></span></h2>
+<p>To have your project convert these custom component image URLs for you, you will need to customize
+the <a href="https://vue-loader.vuejs.org/options.html#transformasseturls"><code>transformAssetUrls</code></a> <code>option</code>
+for <code>vue-loader</code> in your webpack config.</p>
+<p>The default value for <code>transformAssetUrls</code> is:</p>
+<!-- eslint-disable no-unused-vars -->
+
+<pre class="hljs js text-monospace p-2"><span class="hljs-keyword">const</span> options = {
+  <span class="hljs-attr">transformAssetUrls</span>: {
+    <span class="hljs-attr">video</span>: [<span class="hljs-string">'src'</span>, <span class="hljs-string">'poster'</span>],
+    <span class="hljs-attr">source</span>: <span class="hljs-string">'src'</span>,
+    <span class="hljs-attr">img</span>: <span class="hljs-string">'src'</span>,
+    <span class="hljs-attr">image</span>: <span class="hljs-string">'xlink:href'</span>
+  }
+}</pre><p>To allow BootstrapVue components to use project relative URLs, use the following configuration:</p>
+<!-- eslint-disable no-unused-vars -->
+
+<pre class="hljs js text-monospace p-2"><span class="hljs-keyword">const</span> options = {
+  <span class="hljs-attr">transformAssetUrls</span>: {
+    <span class="hljs-attr">video</span>: [<span class="hljs-string">'src'</span>, <span class="hljs-string">'poster'</span>],
+    <span class="hljs-attr">source</span>: <span class="hljs-string">'src'</span>,
+    <span class="hljs-attr">img</span>: <span class="hljs-string">'src'</span>,
+    <span class="hljs-attr">image</span>: <span class="hljs-string">'xlink:href'</span>,
+    <span class="hljs-string">'b-img'</span>: <span class="hljs-string">'src'</span>,
+    <span class="hljs-string">'b-img-lazy'</span>: [<span class="hljs-string">'src'</span>, <span class="hljs-string">'blank-src'</span>],
+    <span class="hljs-string">'b-card'</span>: <span class="hljs-string">'img-src'</span>,
+    <span class="hljs-string">'b-card-img'</span>: <span class="hljs-string">'src'</span>,
+    <span class="hljs-string">'b-card-img-lazy'</span>: [<span class="hljs-string">'src'</span>, <span class="hljs-string">'blank-src'</span>],
+    <span class="hljs-string">'b-carousel-slide'</span>: <span class="hljs-string">'img-src'</span>,
+    <span class="hljs-string">'b-embed'</span>: <span class="hljs-string">'src'</span>
+  }
+}</pre><p>This will allow you to use the following format in your <code>.vue</code> files:</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"~/static/picture.jpg"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">b-card-img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"~/static/picture.jpg"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-card-img</span>&gt;</span></pre><h3 id="vue-cli-3-support"><a id="vue-cli-3-support" name="//apple_ref/cpp/Section/Vue%20CLI%203%20Support" class="dashAnchor"></a><span class="bd-content-title">Vue CLI 3 Support<a class="anchorjs-link" href="images.html#vue-cli-3-support" aria-label="Anchor"></a></span></h3>
+<p>Vue CLI 3 changed the way that webpack compiles a Vue app, in order to make BootstrapVue work again,
+you need to do the following steps:</p>
+<ol>
+<li>Create <code>vue.config.js</code> in the root directory (next to <code>package.json</code>).</li>
+<li>Put the following code</li>
+</ol>
+<pre class="hljs js text-monospace p-2"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">chainWebpack</span>: <span class="hljs-function"><span class="hljs-params">config</span> =&gt;</span> {
+    config.module
+      .rule(<span class="hljs-string">'vue'</span>)
+      .use(<span class="hljs-string">'vue-loader'</span>)
+      .loader(<span class="hljs-string">'vue-loader'</span>)
+      .tap(<span class="hljs-function"><span class="hljs-params">options</span> =&gt;</span> {
+        options[<span class="hljs-string">'transformAssetUrls'</span>] = {
+          <span class="hljs-attr">img</span>: <span class="hljs-string">'src'</span>,
+          <span class="hljs-attr">image</span>: <span class="hljs-string">'xlink:href'</span>,
+          <span class="hljs-string">'b-img'</span>: <span class="hljs-string">'src'</span>,
+          <span class="hljs-string">'b-img-lazy'</span>: [<span class="hljs-string">'src'</span>, <span class="hljs-string">'blank-src'</span>],
+          <span class="hljs-string">'b-card'</span>: <span class="hljs-string">'img-src'</span>,
+          <span class="hljs-string">'b-card-img'</span>: <span class="hljs-string">'src'</span>,
+          <span class="hljs-string">'b-card-img-lazy'</span>: [<span class="hljs-string">'src'</span>, <span class="hljs-string">'blank-src'</span>],
+          <span class="hljs-string">'b-carousel-slide'</span>: <span class="hljs-string">'img-src'</span>,
+          <span class="hljs-string">'b-embed'</span>: <span class="hljs-string">'src'</span>
+        }
+
+        <span class="hljs-keyword">return</span> options
+      })
+  }
+}</pre><h3 id="configuring-transformasseturls-in-nuxtjs"><a id="configuring-transformasseturls-in-nuxtjs" name="//apple_ref/cpp/Section/Configuring%20transformAssetUrls%20in%20Nuxt.js" class="dashAnchor"></a><span class="bd-content-title">Configuring <code>transformAssetUrls</code> in Nuxt.js<a class="anchorjs-link" href="images.html#configuring-transformasseturls-in-nuxtjs" aria-label="Anchor"></a></span></h3>
+<p>In your <code>nuxt.config.js</code> file, add the following to your build section:</p>
+<pre class="hljs js text-monospace p-2"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">build</span>: {
+    extend(config, ctx) {
+      <span class="hljs-keyword">const</span> vueLoader = config.module.rules.find(<span class="hljs-function"><span class="hljs-params">rule</span> =&gt;</span> rule.loader === <span class="hljs-string">'vue-loader'</span>)
+      vueLoader.options.transformAssetUrls = {
+        <span class="hljs-attr">video</span>: [<span class="hljs-string">'src'</span>, <span class="hljs-string">'poster'</span>],
+        <span class="hljs-attr">source</span>: <span class="hljs-string">'src'</span>,
+        <span class="hljs-attr">img</span>: <span class="hljs-string">'src'</span>,
+        <span class="hljs-attr">image</span>: <span class="hljs-string">'xlink:href'</span>,
+        <span class="hljs-string">'b-img'</span>: <span class="hljs-string">'src'</span>,
+        <span class="hljs-string">'b-img-lazy'</span>: [<span class="hljs-string">'src'</span>, <span class="hljs-string">'blank-src'</span>],
+        <span class="hljs-string">'b-card'</span>: <span class="hljs-string">'img-src'</span>,
+        <span class="hljs-string">'b-card-img'</span>: <span class="hljs-string">'src'</span>,
+        <span class="hljs-string">'b-card-img-lazy'</span>: [<span class="hljs-string">'src'</span>, <span class="hljs-string">'blank-src'</span>],
+        <span class="hljs-string">'b-carousel-slide'</span>: <span class="hljs-string">'img-src'</span>,
+        <span class="hljs-string">'b-embed'</span>: <span class="hljs-string">'src'</span>
+      }
+    }
+  }
+}</pre><p><span class="badge badge-info small">NEW in v2.0.0-rc.22</span> If using the
+<a href="docs.html#nuxtjs-module">BootstrapVue Nuxt</a> module with Nuxt.js, the plugin module will automatically
+add in the BootstrapVue specific <code>transformAssetUrls</code> configuration for you.</p>
+<h2 id="using-require-to-resolve-image-paths"><a id="using-require-to-resolve-image-paths" name="//apple_ref/cpp/Section/Using%20require%20to%20resolve%20image%20paths" class="dashAnchor"></a><span class="bd-content-title">Using <code>require</code> to resolve image paths<a class="anchorjs-link" href="images.html#using-require-to-resolve-image-paths" aria-label="Anchor"></a></span></h2>
+<p>If you cannot set the <code>transformAssetUrls</code> in your view-loader config, you can alternatively use the
+<code>require</code> method:</p>
+<pre class="hljs html text-monospace p-2"><span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">:src</span>=<span class="hljs-string">"require('../static/picture.jpg')"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">b-card-img</span> <span class="hljs-attr">:src</span>=<span class="hljs-string">"require('../static/picture.jpg')"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-card-img</span>&gt;</span></pre></section></main></div></div></div></div></div>
+  </body>
+</html>
